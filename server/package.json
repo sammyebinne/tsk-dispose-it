@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "server side for disposeIT app",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "npm test",
     "start": "nodemon index.js"
