@@ -1,7 +1,7 @@
 # tsk-dispose-it
 InceptionU - C7 - Project 2
 Group name: TSK!
-Team members: 
+Team members: Koltan Huget
 
 Simple CRUD functionality app that guides users in proper waste disposal practices.
 
