@@ -10,6 +10,7 @@ function App() {
     <div className="container">
       <Header />
       <SearchForm onSearch={search} />
+      <p>testing testing testing</p>
     </div>
   );
 }
