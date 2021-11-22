@@ -351,6 +351,7 @@ const disposeData = [
       "chili powder",
       "pepper",
       "salts",
+      "seasoning",
     ],
     instruction: {
       heading1: "​Spices and herbs",
@@ -782,6 +783,355 @@ const disposeData = [
     votes: 0,
     image:
       "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/crab-160px.jpg",
+  },
+  {
+    category: "Printers, scanners and fax machines",
+    keywords: ["scanner", "printer", "printers", "fax machine", "typewriter"],
+    instruction: {
+      heading1: "Printers, scanners and fax machines​",
+      body1: {
+        condition:
+          "Take old and broken printers, scanners, fax machines, typewriters and accompanying cables and cords to an electronics recycling drop-off.",
+        bin: "Recycling drop-off",
+      },
+    },
+    moreInfo:
+      "Some restrictions apply. For full details, see Electronics Recycling program. If you take electronics to a landfill and bring other garbage in your load, landfill charges will apply. Clear all personal information from electronics prior to dropping off (e.g. wipe hard drives, clear SIM cards etc.) Do NOT put electronics in your blue cart as these items can damage the equipment at the recycling facility.",
+    votes: 0,
+  },
+  {
+    category: "Small household items",
+    keywords: [
+      "scissors",
+      "dishes",
+      "plates",
+      "lamps",
+      "lampshades",
+      "knives",
+      "window blinds",
+      "umbrellas",
+      "umbrella",
+      "air mattress",
+      "picture frame",
+      "garden hose",
+      "snow shovel",
+      "sewing machine",
+      "wicker basket",
+    ],
+    instruction: {
+      heading1: "​Useable household goods",
+      body1: {
+        condition:
+          "Reuse useable household goods, give to family and friends or donate to participating charities such as: Calgary Drop In Centre, Women in Need Society.",
+        bin: "Donate",
+      },
+      heading2: "Broken and unusable household goods",
+      body2: {
+        condition:
+          "Put small unusable housewares in your black cart as garbage.",
+        bin: "Garbage",
+      },
+    },
+    moreInfo:
+      "Package glass items and knives safely by putting them into a puncture-resistant, non-breakable container (e.g. plastic tub, plastic pail, laundry detergent container, etc.) Or wrap in two layers of paper and place in a tied bag. Labels as 'sharps' with a permanent marker and place in your black cart.",
+    votes: 0,
+    image:
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/householditems-cookware-160px.jpg",
+  },
+  {
+    category: "How to dispose of leftover scrap fabric, yarn and thread",
+    keywords: ["scrap fabric", "yarn", "thread"],
+    instruction: {
+      heading1: "​How to dispose of leftover scrap fabric, yarn and thread",
+      body1: {
+        condition:
+          "Put small pieces of fabric, yarn and thread in your black cart as garbage.",
+        bin: "Garbage",
+      },
+    },
+    moreInfo: "",
+    votes: 0,
+    image:
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/yarn-160px.jpg",
+  },
+  {
+    category: "Metal - Scrap metal and unusable metal items",
+    keywords: [
+      "scrap metal",
+      "unusable metal items",
+      "generator",
+      "car parts",
+      "hot water tank",
+      "water heater",
+      "water boiler",
+      "furnace",
+      "snowblower",
+      "garburator",
+      "air compressor",
+      "aluminum siding",
+      "chain link fence",
+      "barbed wire",
+      "chicken wire",
+      "metal wire fencing",
+      "aluminum ladder",
+      "slides",
+      "swing sets",
+      "playgrounds",
+    ],
+    instruction: {
+      heading1: "​Private recycling",
+      body1: {
+        condition:
+          "Take scrap metal to a metal recycler. See Alberta's Recycling Hotline. Some private companies may buy scrap metal, charge a fee or accept items for free. Recon Metal, Calgary Metal, Federal Metals, Blackfoot Metals.",
+        bin: "metal recycler",
+      },
+      heading2: "City landfill recycling",
+      body2: {
+        condition:
+          "You can also take scrap metal to a City landfill for recycling. Landfill charges will apply.",
+        bin: "Garbage",
+      },
+    },
+    moreInfo:
+      "Remove oil and gas from generators before recycling. All fluids must be drained from enginer and transmission before recycling car parts. Chain link fence must be in rolls.",
+    votes: 0,
+    image:
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/metal-disc-brakes-160px.jpg",
+  },
+  {
+    category: "Lottery scratch tickets",
+    keywords: ["scratch ticket"],
+    instruction: {
+      heading1: "​Lottery scratch tickets",
+      body1: {
+        condition:
+          "Put lotto scratch 'n win tickets into your black cart as garbage.",
+        bin: "Garbage",
+      },
+    },
+    moreInfo: "",
+    votes: 0,
+  },
+  {
+    category: "Hand tools",
+    keywords: ["screwdriver", "hammer", "chisel", "trowel", "wrench"],
+    instruction: {
+      heading1: "​Usable tools",
+      body1: {
+        condition:
+          "Reuse or don​ate usable hand tools such as hammers, chisels, trowels, screwdrivers, and wrenches. Post on an online bartering website like Kijiji. Some private companies may accept resuable building materials. Check the Alberta Recycling Hotline for options.",
+        bin: "Donate",
+      },
+      heading2: "Unusable tools",
+      body2: {
+        condition:
+          "Put hand tools that are no longer usable into your black cart as garbage. Double bag and tied closed before disposing.​​​​​",
+        bin: "Garbage",
+      },
+    },
+    moreInfo: "",
+    votes: 0,
+    image:
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/hammer-160px.jpg",
+  },
+  {
+    category: "Digital cameras and camcorders",
+    keywords: [
+      "security camera",
+      "digital camera",
+      "camcorder",
+      "DLSR camera",
+      "dash camera",
+      "back-up camera",
+      "doorbell camera",
+    ],
+    instruction: {
+      heading1: "​Usable digital cameras",
+      body1: {
+        condition:
+          "Donate working digital cameras and camcorders to participating charities. See Alberta's Recycling Hotline for options.",
+        bin: "Donate",
+      },
+      heading2: "Unusable digital cameras",
+      body2: {
+        condition:
+          "Take old and broken cameras to an electronics recycling drop-off.​​​​​",
+        bin: "Recycling drop-off",
+      },
+      moreInfo:
+        "If you take electronics to a landfill and bring other garbage in your load, landfill charges will apply. Some restrictions apply. For full details, see Electronics Recycling program. Clear all personal information from electronics prior to dropping off (e.g. remove camera memory cards etc.) Do NOT put electronics in your blue cart as these items can damage equipment at the recycling facility. London Drugs locations in Calgary will also accept cameras for recycling.",
+      votes: 0,
+      image:
+        "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/digital-camera-160px.jpg",
+    },
+  },
+  {
+    category: "Nuts, seeds, and shells",
+    keywords: [
+      "seeds",
+      "nuts",
+      "peanuts",
+      "peanut shells",
+      "wanuts",
+      "pecans",
+      "cashews",
+      "brazil nuts",
+      "almonds",
+      "tree nuts",
+      "pistachios",
+      "pistachio shells",
+      "pumpkin seeds",
+      "sunflower seeds",
+      "popcorn",
+      "popcorn kernels",
+    ],
+    instruction: {
+      heading1: "​Nuts, seeds, and shells",
+      body1: {
+        condition:
+          "Put all nuts, seeds and shells into your green cart for composting.",
+        bin: "Compost",
+      },
+    },
+    moreInfo: "",
+    votes: 0,
+    image:
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/nut-shells-160px.jpg",
+  },
+  {
+    category: "CPUs, all-in-one computers and servers",
+    keywords: ["server", "CPUs", "CPU", "all-in-one computer"],
+    instruction: {
+      heading1: "​CPUs, all-in-one computers and servers",
+      body1: {
+        condition:
+          "Take old and broken CPUs (central processing units), all-in-one computers and servers to an electronics recycling drop-off.",
+        bin: "Recycling drop-off",
+      },
+    },
+    moreInfo:
+      "Some restrictions apply. For full details, see Electronics Recycling program. If you take electronics to a landfill and bring other garbage in your load, landfill charges will apply. Clear all personal information from electronics prior to dropping off (e.g. wipe your hard drives, clear SIM cards etc.) Do NOT put electronics in your blue cart as these items can damage the equipment at the recycling facility.",
+    votes: 0,
+  },
+  {
+    category: "Shampoo and conditioner bottles",
+    keywords: ["shampoo bottle", "conditioner bottle"],
+    instruction: {
+      heading1: "​Shampoo and conditioner bottles",
+      body1: {
+        condition:
+          "Recycle clean plastic shampoo bottles and conditioner bottles with the recycling symbol 1-7 on it in your blue cart or at a community recycling depot.",
+        bin: "Recycling",
+      },
+    },
+    moreInfo:
+      "Rinse out containers before recycling. Remove any hand pumps and put in the garbage.",
+    votes: 0,
+    image:
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/shampoo-bottle-160px.jpg",
+  },
+  {
+    category: "Pencils, crayons and markers",
+    keywords: ["sharpie pen", "pencil", "crayon", "marker"],
+    instruction: {
+      heading1: "​Usable pencils and crayons",
+      body1: {
+        condition:
+          "Pencils (regular and mechanical), crayons, coloring pencils and pencil crayons that are still usable can be donated to charities or given to friends and family for reuse.",
+        bin: "Donate",
+      },
+      heading2: "Broken and unusable pencils and crayons",
+      body2: {
+        condition:
+          "Put pencils that are broken or too short to use as well as dried up/empty markers in the black cart as garbage.",
+        bin: "Garbage",
+      },
+    },
+    moreInfo: "",
+    votes: 0,
+  },
+  {
+    category: "Aerosols - hairspray and personal care",
+    keywords: [
+      "shaving cream - aerosol",
+      "hairspray - aerosol",
+      "mousse - aerosol",
+      "sunscreen - aerosol",
+      "deodorant - aerosol",
+      "bug repellent - aerosol",
+      "air freshener - aerosol",
+    ],
+    instruction: {
+      heading1: "Aerosols - hairspray and personal care​",
+      body1: {
+        condition:
+          "Safely dispose aerosol cans (including expired cans) for free at a household hazardous waste drop-off location such as a designated fire hall or city landfill throw 'n' go area.",
+        bin: "hazardous waste",
+      },
+    },
+    moreInfo: "",
+    votes: 0,
+    image:
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/aerosol-spray-160px.jpg",
+  },
+  {
+    category: "Shaving razors and razor blades",
+    keywords: ["shaving razor", "razor blade"],
+    instruction: {
+      heading1: "​Shaving razors and razor blades",
+      body1: {
+        condition:
+          "Put properly packaged razors and razor blades (including plastic and metal handles) in your black cart as garbage. This is for the safety of your collector and landfill staff.",
+        bin: "Garbage",
+      },
+    },
+    moreInfo:
+      'Package unusable or broken razors safely by putting the pieces into a puncture-resistant, non-breakable, sealed container (e.g. plastic bleach bottle, laundry detergent bottle, plastic pail with lid). Or wrap the razor pieces in two layers of paper, put in a bag and tie closed. Label as "sharps" with a permanent marker and place in your black cart as garbage.',
+    votes: 0,
+    image:
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/shaving-razor-160px.jpg",
+  },
+  {
+    category: "",
+    keywords: [""],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition: "",
+        bin: "",
+      },
+    },
+    moreInfo: "",
+    votes: 0,
+    image: "",
+  },
+  {
+    category: "",
+    keywords: [""],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition: "",
+        bin: "",
+      },
+    },
+    moreInfo: "",
+    votes: 0,
+    image: "",
+  },
+  {
+    category: "",
+    keywords: [""],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition: "",
+        bin: "",
+      },
+    },
+    moreInfo: "",
+    votes: 0,
+    image: "",
   },
   {
     category: "",
