@@ -228,7 +228,11 @@ const disposeData = [
   },
   {
     category: "Plastic takeout food containers",
-    keywords: ["salad container", "sandwich wedge container"],
+    keywords: [
+      "salad container",
+      "sandwich wedge container",
+      "takeout containers - plastic",
+    ],
     instruction: {
       heading1: "Plastic takeout food containers​",
       body1: {
@@ -484,6 +488,9 @@ const disposeData = [
       "paper sandwich bag",
       "cookie bag",
       "paper sandwich bags",
+      "Starbucks bag - paper",
+      "paper starbucks bag",
+      "takeout cookie/sandwich bag - paper",
     ],
     instruction: {
       heading1: "​Food-soiled paper bags",
@@ -1772,6 +1779,7 @@ const disposeData = [
       "portable stove",
       "panini press",
       "popcorn maker",
+      "steamer - food",
     ],
     instruction: {
       heading1: "​Appliances in good condition",
@@ -1800,7 +1808,7 @@ const disposeData = [
   },
   {
     category: "Fountain pop and soft drink cups",
-    keywords: ["slurpee cup"],
+    keywords: ["slurpee cup", "takeout cup - soft drink"],
     instruction: {
       heading1: "​Fountain pop and soft drink cups",
       body1: {
@@ -2111,7 +2119,7 @@ const disposeData = [
   },
   {
     category: "Soup, chili and stews",
-    keywords: ["soup"],
+    keywords: ["soup", "chili", "stew"],
     instruction: {
       heading1: "​Soup, chili and stews",
       body1: {
@@ -2410,32 +2418,1130 @@ const disposeData = [
     ],
   },
   {
-    category: "",
-    keywords: [""],
+    category: "Food pouches, tubes and squeeze pouches",
+    keywords: [
+      "squeeze pouch",
+      "baby food pouch",
+      "applesauce pouch",
+      "breast milk storage bag",
+      "yogurt tube",
+      "miso paste bag",
+      "dish soap refill bag",
+      "barbecue sauce and other sauce bags",
+      "tomato paste tube",
+      "anchovy tube",
+      "frosting tube",
+      "icing bag",
+    ],
     instruction: {
-      heading1: "​",
+      heading1: "​Food pouches, tubes and squeeze pouches",
       body1: {
-        condition: "",
-        bin: "",
+        condition:
+          "Put food pouches, food tubes and squeeze pouches into the black cart as garbage.",
+        bin: "Garbage",
       },
     },
-    moreInfo: [""],
+    moreInfo: [
+      "Why can't this item be recycled? These pouches and tubes are often made of layers of non-stretchy plastics and/or foils that are not easily separated for recycling. Some of these items may also be too small for sorting and include other components that cannot be recycled.",
+    ],
     votes: 0,
-    image: [""],
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/baby-food-pouch-160px.jpg",
+    ],
   },
   {
-    category: "",
+    category: "Stainless steel water bottles and travel mugs",
+    keywords: [
+      "stainless steel mug",
+      "stainless steel water bottle",
+      "stainless steel travel mug",
+    ],
+    instruction: {
+      heading1: "​Stainless steel water bottles and travel mugs",
+      body1: {
+        condition:
+          "​Take household metal items to a private metal recycler through the Alberta Recycling Hotline or The Yellow Pages under Metal Recycling. Some private companies may buy scrap metal, charge a fee or accept items for free. Or Take household metal items to any City landfill Throw 'n' Go for metal recycling. Landfill rates will apply.",
+        bin: "metal recycler",
+      },
+    },
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/metal-water-bottle-160px.jpg",
+    ],
+  },
+  {
+    category: "Home gym equipment",
+    keywords: ["stair climber"],
+    instruction: {
+      heading1: "Usable exercise equipment​",
+      body1: {
+        condition:
+          "Usable exercise equipment can be donated to various charities. Refer to Alberta's Recycling Hotline for options.",
+        bin: "Donate",
+      },
+      heading2: "Broken or unusable exercise equipment",
+      body2: {
+        condition:
+          "Treadmills, ellipticals, spin bikes, weight lifting equiment and other exercise equipment can be taken to a City landfill for scrap metal recycling or disposal. Landfill charges will apply.",
+        bin: "Landfill",
+      },
+    },
+    votes: 0,
+    image: [
+      "https://contents.mediadecathlon.com/p1876548/k$f9f1652a3eb40406a0546ae28a9b0337/t900c-treadmill.jpg?&f=800x800",
+    ],
+  },
+  {
+    category: "Vacuum cleaners and floor cleaning appliances",
+    keywords: [
+      "steam mop",
+      "vacuum cleaner",
+      "robot vacuum",
+      "Roomba",
+      "cordless vacuum",
+      "carpet cleaner",
+      "floor scrubber",
+      "floor polisher",
+      "wet-hard floor cleaner",
+      "robotic pool cleaner",
+      "steam mop",
+    ],
+    instruction: {
+      heading1: "​Vacuum cleaners and floor cleaning appliances",
+      body1: {
+        condition:
+          "Take old and broken vacuums, floor and surface cleaners to an electronics recycling drop-off. This is for cleaning appliances that have a power cord or runs on a battery/charger.",
+        bin: "Recycling drop-off",
+      },
+    },
+    moreInfo: [
+      "Remove any vacuum dust from the cleaner before bringing it to a drop-off location.",
+      "If you take electronics to a landfill and bring other garbage in your load, landfill charges will apply.",
+      "Some restrictions apply. For full details, see Electronics Recycling program.",
+      "Do NOT put electronics in your blue cart as these items can damage the equipment at the recycling facility.",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/uep/wrs/what-goes-where/appliances-vacuum-cleaners/_jcr_content/root/maincontentpar/responsivegrid/grid/column-0-r0/grid_layout810/column-1-r0/image.img.jpeg/1612282801808/householditems-vacuum.jpeg",
+    ],
+  },
+  {
+    category: "Garment care appliances",
+    keywords: [
+      "steamer - garment and clothing",
+      "clothing steamer",
+      "garment steamer",
+      "pant press",
+      "clothing iron",
+      "boot dryer",
+      "glove dryer",
+      "clothes shaver",
+    ],
+    instruction: {
+      heading1: "​Garment care appliances",
+      body1: {
+        condition:
+          "Take old and broken garment care appliances to an electronics recycling drop-off. Items must have a power cord or run on a battery/charger.",
+        bin: "Recycling drop-off",
+      },
+    },
+    moreInfo: [
+      "If you take electronics to a landfill and bring other garbage in your load, landfill charges will apply.",
+      "Some restrictions apply. For full details, see Electronics Recycling program.",
+      "Do NOT put electronics in your blue cart as these items can damage the equipment at the recycling facility.",
+    ],
+    votes: 0,
+    image: ["https://m.media-amazon.com/images/I/71cSp62H+mL._AC_SL1500_.jpg"],
+  },
+  {
+    category: "Cereal and grains",
+    keywords: [
+      "steel cut oats",
+      "cereal",
+      "grain",
+      "breakfast cereal",
+      "oatmeal",
+      "porridge",
+      "quick oats",
+      "chia seeds",
+      "hemp hearts",
+      "granola",
+      "granola bars and protein bars",
+      "breakfast bars",
+    ],
+    instruction: {
+      heading1: "Cereal and grains​",
+      body1: {
+        condition:
+          "Put leftover cereals and grains in your green cart for composting.",
+        bin: "Compost",
+      },
+    },
+    moreInfo: [
+      "Drain any milk or liquid down the sink before composting food.",
+      "Use newspaper, flyers and used paper towels to soak up any excess liquid.",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/oatmeal-160px.jpg",
+    ],
+  },
+  {
+    category: "Stickers and labels",
+    keywords: ["sticker", "stickers", "label"],
+    instruction: {
+      heading1: "​Stickers and labels",
+      body1: {
+        condition:
+          "Put sticker, labels and the backing sheets they come on in your black cart as garbage.",
+        bin: "Garbage",
+      },
+    },
+    votes: 0,
+  },
+  {
+    category: "Paper - Letters, greeting cards, envelopes and sticky notes",
+    keywords: [
+      "sticky notes and post-it notes",
+      "stick note",
+      "post-it note",
+      "letter",
+      "greeting card",
+      "envelope",
+      "sticky note",
+    ],
+    instruction: {
+      heading1: "Paper - Letters, greeting cards, envelopes and sticky notes​",
+      body1: {
+        condition:
+          "Recycle letters, greeting cards, sticky notes and envelopes in your blue bin or at a community recycling depot.",
+        bin: "Recycling",
+      },
+    },
+    moreInfo: [
+      "Remove the plastic window from the envelope and put in the garbage.",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/paper-office-stationery.jpg",
+    ],
+  },
+  {
+    category: "Plastic cutlery",
+    keywords: [
+      "stir stick - plastic",
+      "plastic fork",
+      "plastic spoon",
+      "plastic knife",
+      "plastic straw",
+      "chopsticks",
+    ],
+    instruction: {
+      heading1: "Plastic cutlery​",
+      body1: {
+        condition: "Put plastic cutlery in the black cart as garbage.",
+        bin: "Garbage",
+      },
+    },
+    moreInfo: [
+      "Why can't this be recycled? Plastic cutlery is too small to be sorted properly at the recycling facility. They end up mixed in with the other materials and contaminating the recyclables.",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/plastic-cutlery-160px.jpg",
+    ],
+  },
+  {
+    category: "Toothpicks and other disposable wooden utensils",
+    keywords: [
+      "stir stick - wood",
+      "toothpick",
+      "popsicle stick",
+      "barbecue skewer",
+      "bamboo cutlery",
+      "bamboo plate",
+      "wood plate",
+      "barbecue cedar plank",
+    ],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition:
+          "Put wooden food sticks and utensils in your green cart for composting including:",
+        bin: "Compost",
+      },
+    },
+    moreInfo: [
+      "Please note: Only disposable/one-time use wood sticks and utensils are acceptable.",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/popsicle-stick-160px.jpg",
+    ],
+  },
+  {
+    category: "Rocks",
+    keywords: ["stones"],
+    instruction: {
+      heading1: "Small quantities of rocks​",
+      body1: {
+        condition:
+          "Put small quantities of rocks in your black cart as garbage. Carts have a 60 kg weight limit. If you can easily roll the cart, it should be ok. No boulders or large rocks. Rocks must be the size of your hand or smaller to go in your black cart.",
+        bin: "Garbage",
+      },
+      heading2: "Large quantities of rocks",
+      body2: {
+        condition:
+          "Take large quantities and/or large-sized rocks and stones to a City landfill. Landfill charges will apply.",
+        bin: "Landfill",
+      },
+    },
+    votes: 0,
+  },
+  {
+    category: "Floor lamps and large household items",
+    keywords: [
+      "storage bin",
+      "trunk",
+      "suitcase",
+      "luggage",
+      "dog kennel",
+      "cat tree",
+      "cat kennel",
+      "floor lamp",
+      "patio furniture",
+      "patio chair",
+      "patio umbrella",
+      "patio table",
+      "large picture frame",
+      "stroller",
+      "ironing board",
+      "painting",
+      "sculpture",
+      "trophy",
+      "whiteboard",
+      "bulletin board",
+    ],
+    instruction: {
+      heading1: "Useable household goods​",
+      body1: {
+        condition:
+          "Reuse useable household goods, give to family and friends or donate to participating charities.",
+        bin: "Donate",
+      },
+      heading2: "Broken and unusable household goods",
+      body2: {
+        condition:
+          "Put broken or unusable housewares in your black cart as garbage.",
+        bin: "Garbage",
+      },
+    },
+    moreInfo: [
+      "Break down items so they fit inside your black cart.",
+      "Pieces must be less than 1.25 m (four feet) in length.",
+      "Do not overpack or jam items as they will not empty out of the bin on collection day.",
+      "Make sure the cart lid can close.",
+      "If the items are too large for the black cart, take them to a City landfill Throw n Go for disposal (charges apply).",
+    ],
+    votes: 0,
+    image: [
+      "https://cdn-images.article.com/products/SKU13680/2890x1500/image50230.jpg",
+    ],
+  },
+  {
+    category: "Where do I take large appliances (stove, dishwasher)?",
+    keywords: ["stove", "oven", "washer", "dryer", "dishwasher"],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition:
+          "Take clean appliances to a City landfill for recycling. Landfill charges will apply.",
+        bin: "Landfill",
+      },
+    },
+    moreInfo: [
+      "Some private companies may accept or buy appliances. Refer to Alberta's Recycling Hotline for opportunities.",
+    ],
+    votes: 0,
+    image: [
+      "https://homedepot.scene7.com/is/image/homedepotcanada/p_1001551503.jpg?wid=1000&hei=1000&op_sharpen=1",
+    ],
+  },
+  {
+    category: "Plastic - Clamshell containers",
+    keywords: [
+      "strawberry plastic container",
+      "raspberry plastic container",
+      "blueberry plastic container",
+    ],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition:
+          "Recycle clean plastic clamshell containers marked with a recycling symbol 1-7 in your blue cart or at a community recycling depot.",
+        bin: "Recycling",
+      },
+    },
+    moreInfo: [
+      "Clamshells are often used for salad kits, sandwich trays, and berry containers for strawberries, blueberries, raspberries etc.",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/blue_cart/clamshell-tray-610px.jpg",
+    ],
+  },
+  {
+    category: "Paper straw",
+    keywords: ["straws - paper"],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition: "Put paper straws in your green cart for composting.",
+        bin: "Compost",
+      },
+    },
+    moreInfo: [
+      "If the straw has a glossy shine on the inside or outside, it must be labelled as “compostable” in order to go in the green bin. This ensures that the straw does not contain any plastic and is ok to compost. If the paper straw is not labelled as compostable, put in the black cart as garbage.",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/paper-straw-160px.jpg",
+    ],
+  },
+  {
+    category: "Street sweepings",
     keywords: [""],
     instruction: {
       heading1: "​",
       body1: {
-        condition: "",
+        condition:
+          "Put street sweepings such as gravel, dust, rocks and other debris into your black cart as garbage.",
+        bin: "Garbage",
+      },
+    },
+    moreInfo: [
+      "Gravel, dust, rocks and other debris must be double bagged and tied closed. Make sure it is under the 20kg (45 pound) weight limit – if you can easily lift it with one hand, it’s okay.",
+      "For your collector’s safety, place all bagged debris inside your black cart for removal.",
+      "Do not leave debris loose in your black cart. This will help keep the air free of dust and keep collection trucks clean as well.",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/gravel-rocks-305px.jpg",
+    ],
+  },
+  {
+    category: "Synthetic string and twine",
+    keywords: [
+      "string - plastic/synthetic",
+      "plastic string",
+      "synthetic string",
+    ],
+    instruction: {
+      heading1: "Reusable spolts of string and twine​",
+      body1: {
+        condition: "Reuse spools of string and twine if possible.",
+        bin: "reuse",
+      },
+      heading2: "Unusable spools of string and twine",
+      body2: {
+        condition:
+          "Put unusable synthetic and plastic string and twine in your black cart as garbage.",
+        bin: "Garbage",
+      },
+    },
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/synthetic-twine-160px.jpg",
+    ],
+  },
+  {
+    category: "String and twine - natural fibre",
+    keywords: ["string and twine - natural fibre (jute, sisal, cotton, hemp)"],
+    instruction: {
+      heading1: "Usable​",
+      body1: {
+        condition: "Reuse spools of string and twine.",
+        bin: "reuse",
+      },
+      heading2: "Unusable",
+      body2: {
+        condition:
+          "Put natural fibre string and twine into your green cart for composting. This includes cotton, jute, sisal and hemp types of string and twine.",
+        bin: "Compost",
+      },
+    },
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/natural-twine-160px.jpg",
+    ],
+  },
+  {
+    category: "Lawnmowers and trimmers",
+    keywords: [
+      "string trimmer",
+      "lawnmower",
+      "hedge trimmer",
+      "weed wacker",
+      "edger",
+    ],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition:
+          "Take scrap metal to a private metal recycler through the Alberta Recycling Hotline or The Yellow Pages under Metal Recycling. Some private companies may buy scrap metal, charge a fee or accept items for free. Or take scrap metal to any City landfill Throw 'n' Go for recycling. Landfill charges will apply.",
+        bin: "metal recycler",
+      },
+    },
+    moreInfo: ["Drain all oils and fuels before bringing in for disposal."],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/lawnmower-160px.jpg",
+    ],
+  },
+  {
+    category: "Toys",
+    keywords: ["stuffed animal"],
+    instruction: {
+      heading1: "Usable toys​",
+      body1: {
+        condition:
+          "Donate useable toys to participating charities. See Alberta's Recycling Hotline for options.",
+        bin: "Donate",
+      },
+      heading2: "Unusable toys",
+      body2: {
+        condition:
+          "Put unusable toys (including plastic toys) in your black cart as garbage.​​​",
+        bin: "Garbage",
+      },
+    },
+    moreInfo: [
+      "If you have Mattel brand toys such as Barbie, Matchbox or Mega, you can participate in their toy takeback pilot program. These toys can be sent back to the company free of charge for reuse and recycling. More information can be found at the Mattel Playback website.",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/toyssportsequipment-toys-160px.jpg",
+    ],
+  },
+  {
+    category:
+      "Where do I put foam packaging (polystyrene, styrofoam, EPE, EPS)?",
+    keywords: [
+      "styrofoam",
+      "foam coffee cup",
+      "foam plate",
+      "foam takeout container",
+      "foam meat tray",
+      "shipping packing materials",
+    ],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition: "Put all types of foam in your black cart as garbage.",
+        bin: "Garbage",
+      },
+    },
+    moreInfo: [
+      "Put foam into a garbage bag to keep it from blowing away during collection/disposal.",
+      "Why can't polystyrene foam be recycled or composted? Foam products are too light for the sorting machines to sort during the recycling process and ends up contaminating the other recyclables. They also contain plastic which doesn't break down during composting and will contaminate the finished compost.",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/polystyrene-styrofoam-150px.jpg",
+    ],
+  },
+  {
+    category: "Flour, sugar and baking ingredients",
+    keywords: [
+      "sugar",
+      "flour",
+      "baking soda",
+      "baking powder",
+      "evaporated milk",
+      "milk powder",
+      "pancake mix",
+      "waffle mix",
+      "cake mix",
+      "yeast",
+    ],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition:
+          "Put old, used or spoiled baking ingredients into your green cart for composting.",
+        bin: "Compost",
+      },
+    },
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/flour-160px.jpg",
+    ],
+  },
+  {
+    category: "Flour and sugar bags",
+    keywords: ["sugar bag - paper", "flour bag", "sugar bag"],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition:
+          "Put empty paper flour bags and sugar bags into your blue cart for recycling. All paper layers can be recycled.​​",
+        bin: "Recycling",
+      },
+    },
+    moreInfo: [
+      "Shake out any leftover flour/sugar into your green cart first.",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/flour-bag-160px.jpg",
+    ],
+  },
+  {
+    category: "Lotion tube",
+    keywords: [
+      "sunscreen bottle - tube",
+      "sunscreen tube",
+      "body lotion tube",
+      "ointment tube",
+      "hand lotion tube",
+    ],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition:
+          "Put all types of lotion tubes into your black cart as garbage. This includes sunscreen, body lotion, ointment and hand lotion tubes.",
+        bin: "Garbage",
+      },
+    },
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/lotion-tube-160px.jpg",
+    ],
+  },
+  {
+    category: "Body lotion bottle",
+    keywords: [
+      "sunscreen bottle - plastic",
+      "face lotion bottle",
+      "hand lotion bottle",
+    ],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition:
+          "Recycle empty and clean lotion bottles, moisturizer bottles and other skincare bottles with the recycling symbol 1-7 in your blue cart or at a community recycling depot",
+        bin: "Recycling",
+      },
+    },
+    moreInfo: [
+      "Remove any hand pumps/eye droppers and put in your black cart as garbage.",
+      "Clean bottles by removing lid and leave bottle below showerhead for a few days – as you shower, the water will naturally drain out the last bits of product.",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/body-lotion-160px.jpg",
+    ],
+  },
+  {
+    category: "Leftover lotion, creams and ointments",
+    keywords: ["sunscreen - expired, leftover"],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition:
+          "Put leftover lotion, creams, ointments and essential oils into the black cart as garbage.",
+        bin: "Garbage",
+      },
+    },
+    moreInfo: [
+      "If the material is in a tube, put both the lotion and tube in the garbage.",
+      "If the material is in a bottle, empty the leftover lotion into the garbage. Rinse out and recycle the bottle.",
+      "Dispose of leftover essential oils in the container it came in and put in the garbage.",
+    ],
+    votes: 0,
+  },
+  {
+    category: "Vitamin and supplement bottles",
+    keywords: ["supplements bottle - plastic", "vitamins bottle"],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition:
+          "Recycle empty vitamin bottles and supplement bottles with the recycling symbol 1-7 in your blue cart or at a community recycling depot.",
+        bin: "Recycling",
+      },
+    },
+    moreInfo: [
+      "Remove caps and child-proof lids and put in the garbage.",
+      "Remove cotton ball insulation and gel packets  and put in the garbage.",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/vitamin-supplement-bottles-160px.jpg",
+    ],
+  },
+  {
+    category: "Disposable cleaning pads and dusters",
+    keywords: [
+      "Swiffer cleaning pads and dusters",
+      "Swiffer cloth refills",
+      "WetJet pad",
+      "wet mopping cloths",
+    ],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition:
+          "Put disposable cleaning pads and dusters into your black cart as garbage.",
+        bin: "Garbage",
+      },
+    },
+    moreInfo: [
+      "This includes items like Swiffer cloth refills, WetJet pads, wet mopping cloths, and dry cloths.",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/swiffer-160px.jpg",
+    ],
+  },
+  {
+    category: "Water toys",
+    keywords: [
+      "swim belt",
+      "inflatable raft",
+      "inflatable tube",
+      "inflatable float",
+      "pool noodle",
+      "water wings",
+      "floatation device",
+    ],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition: "Put broken water toys into your black cart as garbage.",
+        bin: "Garbage",
+      },
+    },
+    votes: 0,
+    image: ["https://m.media-amazon.com/images/I/81chyc5v57L._AC_SL1500_.jpg"],
+  },
+  {
+    category: "Needles and syringes",
+    keywords: ["syringe", "needle"],
+    instruction: {
+      heading1:
+        "Household needles - Dispose of it safely at participating pharmacies​",
+      body1: {
+        condition:
+          "Many pharmacies provide safe disposal for needles, syringes, diabetic lancets and other sharps. Contact your pharmacy to see if they participate in sharps disposal. Needles must be properly packaged to prevent injuries. Many pharmacies offer sharps containers at their locations.",
+        bin: "pharmacy",
+      },
+      heading2: "Household needles - Dispose of it safely in black cart",
+      body2: {
+        condition:
+          "Put properly packaged needles can be placed in your black cart. This is for the safety of your collector and landfill staff.",
         bin: "",
       },
     },
-    moreInfo: [""],
+    moreInfo: [
+      'Needles must go into a puncture-resistant, non- breakable, sealed container (e.g. plastic bleach bottle, laundry detergent container, plastic pail with lid). Label the bottle as "sharps" with a permanent marker then put in your black cart.',
+      "Do not use cardboard boxes as they can rip/break open. Never put needles in your blue cart or community recycling depot as they can't be recycled.",
+    ],
     votes: 0,
-    image: [""],
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/medical-needlessyringes-160px.jpg",
+    ],
+  },
+  {
+    category: "Tablets and iPads",
+    keywords: [
+      "tablet",
+      "iPad",
+      "iPad mini",
+      "Samsung Galaxy tablet",
+      "other Android tablets",
+    ],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition:
+          "Take old and broken tablets and tablet charging cords and cables to an electronics recycling drop-off.",
+        bin: "Recycling drop-off",
+      },
+    },
+    moreInfo: [
+      "Some restrictions apply. For full details, see Electronics Recycling program.",
+      "If you take electronics to a landfill and bring other garbage in your load, landfill charges will apply.",
+      "Clear all personal information from electronics prior to dropping off (e.g. wipe hard drives, clear SIM cards etc.)",
+      "Do NOT put electronics in your blue cart as these items can damage the equipment at the recycling facility.",
+      "For other options, please visit Alberta Recycling Management Authority for locations.",
+    ],
+    votes: 0,
+    image: [
+      "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-ipad-wifi-space-gray-2020?wid=1144&hei=1144&fmt=jpeg&qlt=80&.v=1626464534000",
+    ],
+  },
+  {
+    category: "Jam, peanut butter and spreads",
+    keywords: [
+      "tahini",
+      "jam",
+      "peanut butter",
+      "nut butter",
+      "nutella",
+      "chutney",
+      "marmalade",
+      "maple syrup",
+    ],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition:
+          "Put all jams and peanut butters in your green cart for composting.",
+        bin: "Compost",
+      },
+    },
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/jams-160px.jpg",
+    ],
+  },
+  {
+    category: "Fast food bag",
+    keywords: ["takeout bag - paper", "paper lunch bag", "brown paper bag"],
+    instruction: {
+      heading1: "​Food-soiled paper bags",
+      body1: {
+        condition:
+          "Reuse food-soiled paper bags in your kitchen compost pail. Put in your green cart for composting (sauce-covered or lots of food chunks).",
+        bin: "Compost",
+      },
+      heading2: "Clean paper bags",
+      body2: {
+        condition:
+          "​Recycle clean paper bags (some grease is ok) in your blue bin or at a community recycling depot.",
+        bin: "Recycling",
+      },
+    },
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/fast-food-paper-bag-160px.jpg",
+    ],
+  },
+  {
+    category: "Paper takeout bag - plastic window",
+    keywords: ["takeout bag - paper with plastic window"],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition:
+          "Recycle clean paper takeout bags in your blue cart or at a community recycling depot.",
+        bin: "Recycling",
+      },
+    },
+    moreInfo: [
+      "This includes takeout boxes and dessert bags used at coffee shops and restaurants as well as bakery bags used at grocery stores.",
+      "Put all food scraps in the green cart for composting.",
+      "Remove the plastic window and put in the garbage.",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/paper-bag-window-169px.jpg",
+    ],
+  },
+  {
+    category: "Takeout food containers and cups – paper and compostable paper",
+    keywords: [
+      "takeout container - paper and compostable paper",
+      "paper coffee cup",
+    ],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition:
+          "Put food-soiled takeout containers and cups made of paper in your green cart.",
+        bin: "Compost",
+      },
+    },
+    moreInfo: [
+      "This includes regular paper and compostable paper takeout boxes and coffee cups.",
+      "If the container has a glossy shine to it, it must be labelled as “compostable” in order to go in the green bin. This ensures that the container does not contain any plastic and is ok to compost. If the paper container is not labelled as compostable, rinse and empty out to put in your blue cart for recycling instead.",
+      "If you live in an apartment, condo, townhouse or other multi-family complex, check with your compost collection company to see if they accept compostable paper containers.",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/uep/wrs/what-goes-where/compostable-takeout-containers/_jcr_content/root/maincontentpar/responsivegrid/grid/column-0-r0/grid_layout6383/column-1-r0/image.img.jpeg/1630009205894/paper-takeout-containers.jpeg",
+    ],
+  },
+  {
+    category: "Burger box",
+    keywords: ["takeout containers - burger box"],
+    instruction: {
+      heading1: "​Food-soiled burger boxes",
+      body1: {
+        condition:
+          "Put dirty burger boxes in your green cart for composting (sauce-covered or lots of food chunks).",
+        bin: "Compost",
+      },
+      heading2: "Clean burger boxes",
+      body2: {
+        condition:
+          "Recycle clean burger boxes (some grease is ok) in your blue bin or at a community recycling depot.",
+        bin: "Recycling",
+      },
+    },
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/burger-box-160px.jpg",
+    ],
+  },
+  {
+    category: "Chinese food takeout box – cardboard",
+    keywords: [
+      "takeout containers - Chinese food - cardboard",
+      "paper Chinese food box",
+    ],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition:
+          "Recycle paper or cardboard Chinese food take out boxes in your blue bin or at a community recycling depot.",
+        bin: "Recycling",
+      },
+    },
+    moreInfo: [
+      "Remove the metal handle and put in the black cart as garbage.",
+      "Rinse out the container before recycling.",
+      "Why can't this be composted? Takeout food boxes have a plastic lining to prevent the container from becoming soggy. To ensure we are creating the highest quality compost possible, leave this item out of your green cart.",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/asian-take-out-box-160px.jpg",
+    ],
+  },
+  {
+    category: "Compostable takeout containers and cups - plastic",
+    keywords: [
+      "takeout containers - compostable plastic",
+      "compostable plastic container",
+      "compostable plastic cutlery",
+    ],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition:
+          "Put plastic containers, cutlery and cups labelled “compostable” in the black cart as garbage.",
+        bin: "Garbage",
+      },
+    },
+    moreInfo: [
+      "Why can't this be composted? Though marked \"compostable\", this cutlery won't break down quickly enough for The City's composting process and will contaminate the finished compost.",
+      "Why can't this be recycled? We do not accept compostable plastic containers in the blue cart as they are mixed with other additives that are not recyclable. When combined with other regular plastic recyclables, these compostable plastics will reduce the quality of the new materials that can be produced.",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/compostable-plastic-cup-160px.jpg",
+    ],
+  },
+  {
+    category: "Foil takeout containers",
+    keywords: ["takeout containers- foil", "aluminum foil takeout box"],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition:
+          "Recycle aluminum foil takeout boxes in your blue bin or at a community recycling depot.",
+        bin: "",
+      },
+    },
+    moreInfo: [
+      "Crumble the foil container into a ball before recycling.",
+      "Put the paper/foil lid into the black cart as garbage.",
+    ],
+    votes: 0,
+    image: ["https://m.media-amazon.com/images/I/81GLxSGZJjL._AC_SL1500_.jpg"],
+  },
+  {
+    category: "French fry boxes",
+    keywords: ["takeout containers - fries box"],
+    instruction: {
+      heading1: "Food-soiled french fry boxes​",
+      body1: {
+        condition:
+          "Put dirty fries boxes into your green cart for composting (sauce-coverered or lots of food chunks).",
+        bin: "Compost",
+      },
+      heading2: "Clean french fry boxes",
+      body2: {
+        condition:
+          "​Recycle paper french fry boxes (some grease is ok) in your blue bin or at a community recyling depot.",
+        bin: "Recycling",
+      },
+    },
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/french-fry-box-160px.jpg",
+    ],
+  },
+  {
+    category: "Takeout food boxes – lined paper",
+    keywords: ["takeout containers - lined paper"],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition:
+          "Recycle paper/cardboard food containers and take out boxes in your blue bin or at a community recycling depot.",
+        bin: "Recycling",
+      },
+    },
+    moreInfo: [
+      "Put leftover food in your green cart for composting.",
+      "If the container has a glossy shine to it, it probably has a plastic lining. Rinse out any food residue before recycling the takeout box.",
+      'If you have a contained labelled as "compostable", see Compostable Takeout Containers.',
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/takeout-box-160px.jpg",
+    ],
+  },
+  {
+    category: "Fast food bucket",
+    keywords: ["takeout containers - paper bucket", "KFC bucket"],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition: "Recycle paper fast food buckets and paper lids",
+        bin: "Recycling",
+      },
+    },
+    moreInfo: [
+      "Put all food scraps into the green cart for composting.",
+      "Some grease on cardboard is ok.",
+      "Why can't this be composted?",
+      "Fast food buckets have a plastic lining to prevent the container from becoming soggy. To ensure we are creating the highest quality compost possible, leave this item out of your green cart.",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/fast-food-bucket-160px.jpg",
+    ],
+  },
+  {
+    category: "Paper food tray",
+    keywords: ["takeout containers - paper tray"],
+    instruction: {
+      heading1: "Food-soiled food tray​",
+      body1: {
+        condition:
+          "Put dirty paper food trays in your green cart for composting (sauce-covered or lots of food chunks).",
+        bin: "Compost",
+      },
+    },
+    heading2: "Clean food tray",
+    body2: {
+      condition: "​Recycle clean paper food trays (some grease is ok).",
+      bin: "Recycling",
+    },
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/paper-food-tray-160px.jpg",
+    ],
+  },
+  {
+    category: "Plastic - Party food trays",
+    keywords: ["takeout containers - plastic party trays"],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition:
+          "Recycle clean plastic party trays and food trays marked with recycling symbol 1-7.",
+        bin: "Recycling",
+      },
+    },
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/plastic-party-tray-160px.jpg",
+    ],
+  },
+  {
+    category: "Takeout drink trays",
+    keywords: ["takeout drink tray - paper"],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition:
+          "Recycle paper takeout drink trays, cup holders and drink carriers.",
+        bin: "Recycling",
+      },
+    },
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/takeout-drink-tray-160px.jpg",
+    ],
+  },
+  {
+    category: "Paper frozen yogurt cup",
+    keywords: ["takeout frozen yogurt cup - paper"],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition: "Recycle paper froyo cups and ice cream cups.",
+        bin: "Recycling",
+      },
+    },
+    moreInfo: [
+      "Remove the lid and straw and put in the black cart as garbage.",
+      "Rinse out the cup before recycling.",
+      "If you have a compostable container, see Compostable Takeout Containers.",
+      "Why can't this be composted? Paper cups have a plastic lining to prevent the container from becoming soggy. To ensure we are creating the highest quality compost possible, leave this item out of your green cart.",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/frozen-yogurt-cup-160px.jpg",
+    ],
+  },
+  {
+    category: "Hamburger and hot dog foil wrappers",
+    keywords: [
+      "takeout wrapper - foil/paper",
+      "hamburger foil wrapper",
+      "hot dog foil wrapper",
+    ],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition:
+          "Put food wrappers made of foil and paper in the black cart as garbage.",
+        bin: "Garbage",
+      },
+    },
+    moreInfo: [
+      "Why can't this be recycled? These wrappers are a multi-material made of a laminated mix of paper and foil. As the two materials cannot be separated, it is not recyclable.​​​​​​​",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/hamburger-foil-wrapper-160px.jpg",
+    ],
+  },
+  {
+    category: "French fry bags",
+    keywords: ["takeout fries bag - paper"],
+    instruction: {
+      heading1: "Food-soiled paper bag​",
+      body1: {
+        condition:
+          "Put dirty French fry bags in your green cart for composting (sauce-covered, lots of food chunks).",
+        bin: "Compost",
+      },
+    },
+    heading2: "Clean paper bags",
+    body2: {
+      condition: "​Recycle clean paper bags (some grease is ok).",
+      bin: "Recycling",
+    },
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/french-fry-bag.jpg",
+    ],
   },
   {
     category: "",
