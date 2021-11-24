@@ -8,6 +8,6 @@ Simple CRUD functionality app that guides users in proper waste disposal practic
 Client - React
 Server - Node
 
-Node version v16.3.0
+Node version v16.13.0
 
 This is from the example

@@ -115,6 +115,275 @@ const disposeData = [
     votes: 0,
   },
   {
+    category: "Paper condiment cups",
+    keywords: ["paper cups", "paper containers", "Ketchup cup - paper"],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition:
+          "Put paper condiment cups or ketchup cups in your green cart for composting.",
+        bin: "Compost",
+      },
+    },
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/paper-condiment-160px.jpg",
+    ],
+  },
+  {
+    category: "Single-use condiment packets",
+    keywords: [
+      "Ketchup packet",
+      "mini ketchup packet",
+      "mustard packet",
+      "relish packet",
+      "soy sauce packet",
+      "vinegar packet",
+    ],
+    instruction: {
+      heading1: "Single-use condiment packets​",
+      body1: {
+        condition:
+          "Put ketchup packets and other single-serving condiment packages into your black cart as garbage.",
+        bin: "Garbage",
+      },
+    },
+    moreInfo: [
+      "Common condiment packets include mustard, relish, soy sauce, vinegar and more.",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/condiment-packets-160px.jpg",
+    ],
+  },
+  {
+    category: "Plastic - Single-serve coffee pods",
+    keywords: [
+      "coffee pods",
+      "nespresso pods",
+      "nescafe pods",
+      "cappuccino pods",
+      "Keurig K-cups",
+    ],
+    instruction: {
+      heading1: "​Plastic, Aluminium and other single-serve coffee pods",
+      body1: {
+        condition:
+          "Put plastic, aluminum and other single-serve coffee pods in your black cart as garbage.",
+        bin: "Garbage",
+      },
+      heading2: "​Coffee grounds",
+      body2: {
+        condition:
+          "Coffee grounds inside the pod can be put in your green cart for composting.",
+        bin: "Compost",
+      },
+    },
+    moreInfo: [
+      "Coffee pods and discs are too small and light for to be sorted properly at the recycling facility.",
+      "Some coffee pod manufacturers may have their own recycling solutions such as Nespresso. Check the manufacturer's website for details.",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/plastics-coffee-pods-160px.jpg",
+    ],
+  },
+  {
+    category: "Compostable coffee pods",
+    keywords: ["Keurig K-cups - compostable", "coffee pods - compostable"],
+    instruction: {
+      heading1: "​Compostable coffee pods",
+      body1: {
+        condition:
+          "Put compostable coffee pods into your black cart as garbage.",
+        bin: "Garbage",
+      },
+    },
+    moreInfo: [
+      "Though marked 'compostable', these coffee pods don't break down quickly enough for The City's composting process and may contain synthetic, plastic or other non-compostable materials. To ensure we're creating the highest quality compost possible, please leave these items out of your green cart.​​",
+    ],
+    votes: 0,
+  },
+  {
+    category: "Keys",
+    keywords: ["keys", "key chains", "key rings", "key locks", "door keys"],
+    instruction: {
+      heading1: "Old and Used Keys​",
+      body1: {
+        condition: "Put old and used keys into the black cart as garbage.",
+        bin: "Garbage",
+      },
+    },
+    moreInfo: ["Some private metal recyclers may accept keys."],
+    votes: 0,
+  },
+  {
+    category: "Kitchen and bathroom countertops",
+    keywords: [
+      "marble tops",
+      "granite tops",
+      "countertops",
+      "kitchen countertops",
+      "bathroom countertops",
+    ],
+    instruction: {
+      heading1: "Small quantities of countertops​",
+      body1: {
+        condition:
+          "Put broken or used pieces of kitchen countertops and bathroom countertops into your black cart as garbage. This includes laminate, granite, wood and all types of common countertop materials. Size restrictions - Pieces must be less than: 15 cm (six inches) in diameter, 1.25 m (four feet) in length. Make sure the lid of the cart can close.",
+        bin: "Garbage",
+      },
+      heading2: "​Large quantities of countertops",
+      body2: {
+        condition:
+          "Take used or broken countertops from a renovation or demolition to a City landfill.",
+        bin: "Landfill",
+      },
+    },
+    moreInfo: [
+      "Some private companies may accept reusable building materials such as countertops.",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/granite-160px.jpg",
+    ],
+  },
+  {
+    category: "Cat litter and pet waste",
+    keywords: [
+      "Cat litter",
+      "Dog litter",
+      "Pet waste",
+      "Pet litter",
+      "Cat food leftovers",
+      "Dog food leftovers",
+      "Pet food leftovers",
+    ],
+    instruction: {
+      heading1: "​Pet waste - domestic",
+      body1: {
+        condition:
+          "Put pet waste and kitty litter (all varieties) in your green cart for composting.",
+        bin: "Compost",
+      },
+      heading2: "​Pet waste - commercial amounts",
+      body2: {
+        condition:
+          "If you are a business looking to dispose of pet waste and cat litter, check your local business waste disposal service options for a landfill",
+        bin: "Landfill",
+      },
+    },
+    moreInfo: [
+      "Pet waste must be put in a certified compostable bag or paper bag for dust control in order to protect your collector. Place the tied up/rolled up bag in your green cart for composting.",
+      "If you live in a multi-family complex, check with your compost collection company to see if they accept pet waste.",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/kittylitter-160px.jpg",
+    ],
+  },
+  {
+    category: "Facial tissue and toilet paper",
+    keywords: [
+      "Tissue",
+      "Toilet paper",
+      "Toilet tissue",
+      "Facial tissue",
+      "Paper napkins",
+      "Paper towels",
+      "Kleenex",
+    ],
+    instruction: {
+      heading1: "Facial tissue and toilet paper​",
+      body1: {
+        condition:
+          "Put used or clean facial tissues (such as Kleenex or Scotties tissue) and toilet paper in your green cart for composting. Most bodily fluids (saliva, tears, mucus etc.) are acceptable.",
+        bin: "Compost",
+      },
+    },
+    moreInfo: [
+      "Put tissues with blood in your black cart as garbage.",
+      "Put tissues soiled with makeup, cleaning products or other chemicals in your black cart as garbage.",
+      "Do not flush facial tissues down the toilet as it is harmful to your home's pipes and the environment.",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/used-tissue-160px.jpg",
+    ],
+  },
+  {
+    category: "Cardboard – Tissue boxes",
+    keywords: ["Kleenex box", "Cardboard box", "Empty tissue box"],
+    instruction: {
+      heading1: "​Empty tissue boxes",
+      body1: {
+        condition:
+          "Recycle empty tissue boxes (e.g. Kleenex boxes) in your blue cart of at a community recycling depot",
+        bin: "Recycling",
+      },
+    },
+    moreInfo: [
+      "Remove the plastic window from the box and bundle with other plastic bags for recycling.",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/cardboard-tissueboxes-160px.jpg",
+    ],
+  },
+  {
+    category: "Juice pouches and drink pouches (foil/plastic)",
+    keywords: [
+      "Juice box",
+      "Juice pouch",
+      "Drink pouch",
+      "Kool-Aid pouch",
+      "foil pouch",
+    ],
+    instruction: {
+      heading1: "​Ready-to-serve drink pouches",
+      body1: {
+        condition:
+          "Recycle ready-to-serve drink pouches such as Kool-Aid, Minute Maid, Capri Sun etc. in your blue cart or at a community recycling depot. You will be eligible for a refund on any applicable deposit paid at the time of purchase",
+        bin: "Recycling",
+      },
+    },
+    moreInfo: [
+      "Make sure to remove any straws before recycling. This does not include pouches that have a built-in plastic spout.",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/drink-pouch-160px.jpg",
+    ],
+  },
+  {
+    category: "",
+    keywords: [""],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition: "",
+        bin: "",
+      },
+    },
+    moreInfo: [""],
+    votes: 0,
+    image: [""],
+  },
+  {
+    category: "",
+    keywords: [""],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition: "",
+        bin: "",
+      },
+    },
+    moreInfo: [""],
+    votes: 0,
+    image: [""],
+  },
+  {
     category: "Sponges and cleaners",
     keywords: [
       "S.O.S. soap pad",
@@ -1470,6 +1739,7 @@ const disposeData = [
       "noodles",
       "dehydrated/powdered side dishes",
       "instant mashed potatoes",
+      "kraft dinner"
     ],
     instruction: {
       heading1: "​Pasta and rice",
@@ -3406,7 +3676,11 @@ const disposeData = [
   },
   {
     category: "Fast food bucket",
-    keywords: ["takeout containers - paper bucket", "KFC bucket"],
+    keywords: [
+      "takeout containers - paper bucket",
+      "KFC bucket",
+      "KFC Chicken bucket",
+    ],
     instruction: {
       heading1: "​",
       body1: {
