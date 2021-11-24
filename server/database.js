@@ -355,34 +355,34 @@ const disposeData = [
       "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/drink-pouch-160px.jpg",
     ],
   },
-  {
-    category: "",
-    keywords: [""],
-    instruction: {
-      heading1: "​",
-      body1: {
-        condition: "",
-        bin: "",
-      },
-    },
-    moreInfo: [""],
-    votes: 0,
-    image: [""],
-  },
-  {
-    category: "",
-    keywords: [""],
-    instruction: {
-      heading1: "​",
-      body1: {
-        condition: "",
-        bin: "",
-      },
-    },
-    moreInfo: [""],
-    votes: 0,
-    image: [""],
-  },
+  // {
+  //   category: "",
+  //   keywords: [""],
+  //   instruction: {
+  //     heading1: "​",
+  //     body1: {
+  //       condition: "",
+  //       bin: "",
+  //     },
+  //   },
+  //   moreInfo: [""],
+  //   votes: 0,
+  //   image: [""],
+  // },
+  // {
+  //   category: "",
+  //   keywords: [""],
+  //   instruction: {
+  //     heading1: "​",
+  //     body1: {
+  //       condition: "",
+  //       bin: "",
+  //     },
+  //   },
+  //   moreInfo: [""],
+  //   votes: 0,
+  //   image: [""],
+  // },
   {
     category: "Sponges and cleaners",
     keywords: [
