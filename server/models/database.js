@@ -1739,7 +1739,7 @@ const disposeData = [
       "noodles",
       "dehydrated/powdered side dishes",
       "instant mashed potatoes",
-      "kraft dinner"
+      "kraft dinner",
     ],
     instruction: {
       heading1: "​Pasta and rice",
@@ -1777,7 +1777,7 @@ const disposeData = [
       heading1: "Silica gel packets​",
       body1: {
         condition: "Put silica gel packets in the black cart as garbage.",
-        bin: "",
+        bin: "Garbage",
       },
     },
     moreInfo: [
@@ -3621,7 +3621,7 @@ const disposeData = [
       body1: {
         condition:
           "Recycle aluminum foil takeout boxes in your blue bin or at a community recycling depot.",
-        bin: "",
+        bin: "Recycling",
       },
     },
     moreInfo: [
@@ -3817,20 +3817,20 @@ const disposeData = [
       "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/french-fry-bag.jpg",
     ],
   },
-  {
-    category: "",
-    keywords: [""],
-    instruction: {
-      heading1: "​",
-      body1: {
-        condition: "",
-        bin: "",
-      },
-    },
-    moreInfo: [""],
-    votes: 0,
-    image: [""],
-  },
+  // {
+  //   category: "",
+  //   keywords: [""],
+  //   instruction: {
+  //     heading1: "​",
+  //     body1: {
+  //       condition: "",
+  //       bin: "",
+  //     },
+  //   },
+  //   moreInfo: [""],
+  //   votes: 0,
+  //   image: [""],
+  // },
 ];
 
 // heading2: "",
@@ -3839,3 +3839,5 @@ const disposeData = [
 //           "",
 //         bin: "",
 //       },
+
+export default disposeData;

@@ -10,7 +10,7 @@ const SearchForm = ({ onSearch }) => {
       alert("Please enter something into the search bar");
       return;
     }
-    await onSearch({ text });
+    await onSearch(text);
     setText("");
   };
 

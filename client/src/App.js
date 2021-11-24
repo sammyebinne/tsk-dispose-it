@@ -5,35 +5,23 @@ import Info from "./components/Info";
 import { useState } from "react";
 
 function App() {
-  const [wasteTypes, setWasteTypes] = useState([
-    {
-      category: "pop can",
-      bin: "blue",
-    },
-    {
-      category: "banana peel",
-      bin: "green",
-    },
-    {
-      category: "aluminum foil",
-      bin: "black",
-    },
-  ]);
-  const [currentCategory, setCurrentCategory] = useState("");
+  // const [wasteTypes, setWasteTypes] = useState(async () => {
+  //   let response = await fetch("/api/loadItems");
+  //   response = await response.json();
+  //   setWasteTypes(response);
+  // });
+  const [currentCategory, setCurrentCategory] = useState(null);
   // search for something to dispose of
-  const search = (query) => {
-    // replace with fetch request once back end is hooked up
-    let searchResult = wasteTypes.find((wasteType) => {
-      console.log(wasteType.category);
-      return wasteType.category === query.text;
-    });
-    console.log(searchResult);
+  const search = async (query) => {
+    setCurrentCategory(null);
+    let response = await fetch(`/api/findItem?searchInput=${query}`);
+    let searchResult = await response.json();
+
     if (searchResult) {
       setCurrentCategory(searchResult);
-      console.log(currentCategory);
     } else {
-      setCurrentCategory("");
       alert("nothing found");
+      setCurrentCategory(null);
     }
   };
   return (
