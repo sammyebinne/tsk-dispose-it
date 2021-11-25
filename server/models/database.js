@@ -1573,6 +1573,7 @@ const disposeData = [
       "scarf",
       "suitcase",
       "duffel bag",
+      "wool items",
     ],
     instruction: {
       heading1: "How do I donate usable clothing and shoes?",
@@ -2102,7 +2103,13 @@ const disposeData = [
   },
   {
     category: "Fitbits and other wearables",
-    keywords: ["smartwatch"],
+    keywords: [
+      "smartwatch",
+      "Fitbits",
+      "fitness trackers",
+      "Apple watch",
+      "wearables",
+    ],
     instruction: {
       heading1: "​Usable wearables",
       body1: {
@@ -2268,7 +2275,19 @@ const disposeData = [
   },
   {
     category: "Where do I take sofas, chairs, tables and other funiture?",
-    keywords: ["sofa", "chair", "table", "furniture"],
+    keywords: [
+      "sofa",
+      "chair",
+      "table",
+      "furniture",
+      "wicker basket",
+      "couch",
+      "bookshelf",
+      "bed",
+      "chair",
+      "stool",
+      "wicker furniture",
+    ],
     instruction: {
       heading1: "​Furniture in good condition",
       body1: {
@@ -2744,7 +2763,15 @@ const disposeData = [
   },
   {
     category: "Home gym equipment",
-    keywords: ["stair climber"],
+    keywords: [
+      "stair climber",
+      "weight lifting equipment",
+      "treadmill",
+      "elliptical",
+      "spin bike",
+      "exercise equipment",
+      "workout bench",
+    ],
     instruction: {
       heading1: "Usable exercise equipment​",
       body1: {
@@ -3783,6 +3810,7 @@ const disposeData = [
       "takeout wrapper - foil/paper",
       "hamburger foil wrapper",
       "hot dog foil wrapper",
+      "wrapper - foil",
     ],
     instruction: {
       heading1: "​",
@@ -4624,7 +4652,13 @@ const disposeData = [
   },
   {
     category: "Lighting fixtures",
-    keywords: ["track lighting"],
+    keywords: [
+      "track lighting",
+      "light fixtures",
+      "ceiling lights",
+      "wall lights",
+      "wall sconces",
+    ],
     instruction: {
       heading1: "​Small quantities of light fixtures",
       body1: {
@@ -5544,6 +5578,505 @@ const disposeData = [
     votes: 0,
     image: [
       "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/pill-bottle-160px.jpg",
+    ],
+  },
+  {
+    category: "Watches",
+    keywords: ["watch"],
+    instruction: {
+      heading1: "Usable watches​",
+      body1: {
+        condition:
+          "Digital watches and analog watches in good working order can be given to family and friends or donated to participating charities that accept accessories. See Alberta's Recycling Hotline for options.",
+        bin: "Donate",
+      },
+      heading2: "Unusable watches",
+      body2: {
+        condition:
+          "Put watches that cannot be repaired in the black cart as garbage.",
+        bin: "Garbage",
+      },
+    },
+    moreInfo: [
+      "Replacing the battery or repairing the watch strap can make the item usable again.",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/watch-160px.jpg",
+    ],
+  },
+  {
+    category: "Reusable water bottles and baby bottles",
+    keywords: [
+      "water bottle - plastic, reusable",
+      "reusable water bottle",
+      "baby bottle",
+    ],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition:
+          "Recycle reusable plastic water bottles and baby bottles marked with recycling symbol 1-7.",
+        bin: "Recycling",
+      },
+    },
+    moreInfo: [
+      "Remove lids, straws and nipples and put them in your black cart as garbage.",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/water-bottle-160px.jpg",
+    ],
+  },
+  {
+    category: "Appliances - Refrigerators, freezers and water coolers",
+    keywords: ["water cooler", "refrigerator", "freezer"],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition:
+          "Take empty refrigerators, freezers and water coolers to a City landfill for recycling. There will be a refrigerant removal surcharge (even if the refrigerant has been removed) and weight charges.",
+        bin: "Landfill",
+      },
+    },
+    moreInfo: [
+      "Some private companies may accept or buy appliances. Refer to Alberta's Recycling Hotline or contact these local metal recyclers: Recon Metal, Calgary Metal, Federal Metal, Blackfoot Metals.",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/appliances-refrigerators-160px.jpg",
+    ],
+  },
+  {
+    category: "Water filters and refrigerator filters",
+    keywords: ["water filter", "refrigerator filter"],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition:
+          "Put water filters, refrigerator filters and similar purifiers in your black cart as garbage.",
+        bin: "Garbage",
+      },
+    },
+    moreInfo: [
+      "Some manufacturers may accept their water filters for recycling. Contact the manufacturer of your filter to find out how to recycle their product. Common water filter brands include Greenway, Brondell, EveryDrop, Frigidaire and more.",
+      "For Brita filter recycling, see options here.",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/water-filter-160px.jpg",
+    ],
+  },
+  {
+    category: "Water Softener",
+    keywords: ["water softener, equipment and bags", "water softener"],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition:
+          "Take water softener equipment to a City landfill for disposal. Landfill charges will apply.",
+        bin: "Landfill",
+      },
+    },
+    moreInfo: [
+      "Put water softener salt and bags in your black cart as garbage.",
+    ],
+    votes: 0,
+    image: ["https://cdn.rona.ca/images/11965020_L.jpg"],
+  },
+  {
+    category: "Wax and coated paper",
+    keywords: [
+      "wax paper",
+      "coated paper",
+      "coated paper products",
+      "butcher paper",
+    ],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition: "Put coated paper products in your black cart as garbage.",
+        bin: "Garbage",
+      },
+    },
+    moreInfo: [
+      "Coated paper includes wax paper and butchers' meat wrap paper.",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/paper-butchers-paper.jpg",
+    ],
+  },
+  {
+    category: "Waxed cups",
+    keywords: ["waxed cups"],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition: "Put waxed cups in your black cart as garbage.",
+        bin: "Garbage",
+      },
+    },
+    moreInfo: [
+      "Tip: Scratch your fingernail along the inside of the cup – if it is a waxed cup, you will see a noticeable layer of wax under your fingernail.",
+    ],
+    votes: 0,
+    image: ["https://www.schoolnursesupplyinc.com/assets/images/22058.jpg"],
+  },
+  {
+    category: "Weeds - common",
+    keywords: [
+      "weeds - common",
+      "dandelions",
+      "quack grass",
+      "broadleaf plantains",
+      "clover",
+      "chickweed",
+      "pigweed",
+      "Lamb's quarters",
+    ],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition: "Put common weeds in your green cart for composting",
+        bin: "Compost",
+      },
+    },
+    moreInfo: [
+      "If you have prohibited, noxious or invasive weeds, do NOT put in green cart.",
+      "Why can weed seeds be composted? The high temperatures maintained in The City’s indoor composting process ensures weed seeds from common species will decompose and are not present in the finished compost.",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/yardwaste-otheryardwaste-160px.jpg",
+    ],
+  },
+  {
+    category: "Weeds - noxious and invasive",
+    keywords: [
+      "weeds - noxious",
+      "invasive weeds",
+      "blueweed",
+      "Canada thistle",
+      "common tansy",
+      "diffuse knapweed",
+      "leafy spurge",
+      "nodding thistle",
+      "purple loosestrife",
+      "scentless chamomile",
+      "spotted knapweed",
+      "toadflax",
+      "creeping bellflower",
+    ],
+    instruction: {
+      heading1: "​Small quantities",
+      body1: {
+        condition:
+          "Put small quantities of bagged noxious and invasive weeds directly into the black cart as garbage. The bagged noxious and invasive weeds must fit inside of the black cart. Make sure the lid can be pulled over. Bags of yard waste set beside the cart will not be collected.",
+        bin: "Garbage",
+      },
+      heading2: "Large quantities of noxious and invasive weeds",
+      body2: {
+        condition:
+          "Take large quantities of noxious and invasive weeds to a City landfill for disposal. Landfill charges will apply.",
+        bin: "Landfill",
+      },
+    },
+    moreInfo: [
+      "Noxious and invasive weeds must be bagged and tied closed to prevent seeds from spreading",
+      "Your load must only contain noxious and invasive weeds as this material must be disposed of in a separate section at the landfill.",
+      "Why can’t noxious and invasive weeds be composted? These invasive species can aggressively spread during transportation and processing at the composting facility. By taking these troublesome species to the landfill we maintain high compost quality and reduce the spread of noxious and invasive weeds in our community.",
+    ],
+    votes: 0,
+    image: [
+      "https://cdn.shopify.com/s/files/1/0319/9841/0892/products/chrysanthemumvulgare_1165x.jpg?v=1616685751",
+    ],
+  },
+  {
+    category: "Windshield wiper fluid container",
+    keywords: ["windshield fluid container"],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition:
+          "Recycle empty windshield wiper fluid jugs with the recycling symbol 1-7.",
+        bin: "Recycling",
+      },
+    },
+    moreInfo: ["Rinse out the container before recycling."],
+    votes: 0,
+    image: [
+      "https://canadiantire.scene7.com/is/image/CanadianTire/0294105_1?defaultImage=image_na_EN&fmt=jpg&fit=constrain,1&wid=573&hei=499",
+    ],
+  },
+  {
+    category: "Windshield glass",
+    keywords: ["windshield glass"],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition:
+          "Put properly packaged windshield glass in your black cart as garbage or take it to a city landfill for disposal. Landfill charges will apply.",
+        bin: "Garbage",
+      },
+    },
+    moreInfo: [
+      "Package glass shards safely by putting the pieces into a puncture-resistant, non-breakable, sealed container (e.g. plastic tub, plastic pail, laundry detergent container etc.)",
+      "Or wrap the glass in two layers of paper and place in a tied bag.",
+      "Label as 'sharps' with a permanent marker and place in your black cart.",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/glass-160px.jpg",
+    ],
+  },
+  {
+    category: "Corks",
+    keywords: ["wine corks"],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition: "Put natural wine corks in your green cart for composting.",
+        bin: "Compost",
+      },
+    },
+    moreInfo: [
+      "Natural wine corks break apart, synthetic corks do not.",
+      "Put synthetic corks in your black cart.",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/wine-corks-160px.jpg",
+    ],
+  },
+  {
+    category: "Electrical cords, plugs and wires",
+    keywords: [
+      "wire - electrical",
+      "electrical cords",
+      "electrical plugs",
+      "electrical wires",
+      "extension cords",
+      "power bars",
+      "network cables",
+      "ethernet cables",
+      "coaxial cables",
+      "phone cords",
+    ],
+    instruction: {
+      heading1: "​Small quantities of electrical cords",
+      body1: {
+        condition:
+          "Put broken and used electrical cords and wires in your black cart as garbage.",
+        bin: "Garbage",
+      },
+      heading2: "Large quantities of electrical cords",
+      body2: {
+        condition:
+          "Take old electrical cords to a City landfill for scrap metal recycling. Landfill charges will apply.",
+        bin: "Landfill",
+      },
+    },
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/extension-cord-160px.jpg",
+    ],
+  },
+  {
+    category: "Wood",
+    keywords: ["wood", "timber"],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition:
+          "See these entries for specific information: creosote-treated wood, pallets, pressure treated wood, plywood, particle board, OSB, MDF, and untreated wood.",
+        bin: "N/A",
+      },
+    },
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/construction-demolition-waste-wood-305px.jpg",
+    ],
+  },
+  {
+    category: "Wood – Creosote-treated",
+    keywords: ["wood - creosote treated", "railway ties"],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition:
+          "Take creosote-treated wood and railway ties to Shepard Landfill.",
+        bin: "Landfill",
+      },
+    },
+    moreInfo: [
+      "Please note: a permit is required.",
+      "To obtain a permit, complete an online service request or contact 311. The Industrial Waste rate will be charged.",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/wood-creosote-treatedwood-160px.jpg",
+    ],
+  },
+  {
+    category: "Wood - plywood, particle board/OSB and MDF",
+    keywords: [
+      "plywood",
+      "particle board",
+      "OSB wood",
+      "MDF wood",
+      "oriented strand board",
+      "wood panelling",
+      "hardboard",
+      "wood - OSB",
+      "wood - MDF",
+    ],
+    instruction: {
+      heading1: "Small quantities of manufactured wood​",
+      body1: {
+        condition:
+          "Put manufactured wood in your black cart as garbage. Manufactured wood pieces must fit inside the black cart.",
+        bin: "Garbage",
+      },
+      heading2: "Large sizes or quantities of manufactured wood",
+      body2: {
+        condition:
+          "Take large pieces or amounts of manufactured wood to a City landfill. Landfill charges will apply.",
+        bin: "Landfill",
+      },
+    },
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/particle-plywood-160px.jpg",
+    ],
+  },
+  {
+    category: "Wood – Pressure treated",
+    keywords: ["wood - painted", "wood - stained"],
+    instruction: {
+      heading1: "Small quantities of treated wood​",
+      body1: {
+        condition: "Put treated wood in your black cart as garbage.",
+        bin: "Garbage",
+      },
+      heading2: "Larger sizes or quantities of treated wood",
+      body2: {
+        condition:
+          "Take larger pieces or amounts of treated wood to a City landfill. Landfill charges will apply.",
+        bin: "Landfill",
+      },
+    },
+    moreInfo: [
+      "Wood that's been stained, chemically treated, pressure treated, painted and/or has nails, screws or other hardware attached is considered treated wood.",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/wood-treatedwood-160px.jpg",
+    ],
+  },
+  {
+    category: "Wood - Pallets",
+    keywords: ["wood - pallets", "pallets", "pallet"],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition:
+          "Take wooden pallets to any City landfill for recycling. Landfill charges will apply.",
+        bin: "Landfill",
+      },
+    },
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/wood-pallet-160px.jpg",
+    ],
+  },
+  {
+    category: "Wrappers - granola and snack bars",
+    keywords: [
+      "wrapper - granola bar",
+      "wrapper - snack bar",
+      "chocolate bar wrapper",
+      "energy bar wrapper",
+      "protein bar wrapper",
+      "candy bar wrapper",
+    ],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition: "Put all food bar wrappers in your black cart as garbage.",
+        bin: "Garbage",
+      },
+    },
+    moreInfo: [
+      "This includes wrappers for granola bars, chocolate bars, candy bars, energy bars, protein bars, fruit packs, and other snack bars.",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/granola-bar-wrapper-160px.jpg",
+    ],
+  },
+  {
+    category: "Mandarin orange wrappers",
+    keywords: ["wrapper - mandarin orange"],
+    instruction: {
+      heading1: "​Food-soiled wrapper",
+      body1: {
+        condition:
+          "Put food-soiled mandarin orange wrappers in your green cart for composting (used for orange peel, seeds, wet from fruit etc.)",
+        bin: "Compost",
+      },
+      heading2: "Clean wrapper",
+      body2: {
+        condition: "Recycle clean mandarin orange wrappers.",
+        bin: "Recycling",
+      },
+    },
+    moreInfo: [
+      "Mandarin oranges often come covered in a white or green tissue wrapper.",
+    ],
+    votes: 0,
+    image: [
+      "http://www.squirrellyminds.com/images/112813-orange-wrapper-advent-tree-title.jpg",
+    ],
+  },
+  {
+    category: "Gift wrap (foil)",
+    keywords: ["wrapping paper (foil)", "foil gift wrap"],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition: "Put foil wrapping paper in your black cart as garbage.",
+        bin: "Garbage",
+      },
+    },
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/paper-foilgiftwrap-160px.jpg",
+    ],
+  },
+  {
+    category: "Wreaths, boughs and garlands",
+    keywords: ["wreath", "boughs", "garlands"],
+    instruction: {
+      heading1: "​Real Christmas wreaths",
+      body1: {
+        condition:
+          "Put real Christmas wreaths, garlands and boughs in your green cart for composting.",
+        bin: "Compost",
+      },
+      heading2: "Artificial Christmas wreaths",
+      body2: {
+        condition:
+          "Reuse artificial Christmas wreaths, boughs and garlands, give to friends and family or donate to a participating charity. Put broken wreaths in the black cart as garbage.",
+        bin: "Donate",
+      },
+    },
+    moreInfo: [
+      "Remove all ribbons, wires, staples, non-wooden frames and other accessories and put in the garbage.",
+    ],
+    votes: 0,
+    image: [
+      "https://www.flowersincalgary.com/uploads/thumbnails/Christmas%20Wreath%20Calgary.jpg.37adc8ee.jpg",
     ],
   },
   // {
