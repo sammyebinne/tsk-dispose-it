@@ -7,9 +7,6 @@ router.get("/loadItems", async (req, res) => {
   res.send(items);
 });
 
-router.get("/findItem", async (req, res) => {
-  let searchResult = await findItem(req.query.searchInput);
-  res.send(searchResult);
-});
+router.get("/findItem", findItem);
 
 export default router;

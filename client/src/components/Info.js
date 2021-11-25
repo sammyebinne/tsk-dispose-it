@@ -17,6 +17,8 @@ const Info = ({ wasteType }) => {
         return "https://static.wixstatic.com/media/71d77b_9d68049079fd4e47aa017081162aa687~mv2.jpg/v1/fill/w_296,h_212,al_c,q_80,usm_0.66_1.00_0.01/electronic-waste-recycling-001.webp";
       case "Donate":
         return "https://rmhccnaz.org/wp-content/uploads/Donate-Icon-01.png";
+      case "Landfill":
+        return "https://static.thenounproject.com/png/576941-200.png";
       default:
         return "https://static.thenounproject.com/png/33699-200.png";
     }
@@ -35,6 +37,7 @@ const Info = ({ wasteType }) => {
   }
   let moreInfo = wasteType.moreInfo;
   let moreInfoList;
+  console.log();
   if (moreInfo) {
     moreInfoList = moreInfo.map((item) => {
       return <li>{item}</li>;
@@ -44,12 +47,12 @@ const Info = ({ wasteType }) => {
   return (
     <div>
       <h2>{category}</h2>
-      <h3>{heading1}</h3>
+      {heading1 !== category && <h3>{heading1}</h3>}
       <p>{condition1}</p>
       <img src={getIcon(1)} />
       <img src={image} />
       <h3>{heading2 && heading2}</h3>
-      {body2 && <p>condition2</p>}
+      {body2 && <p>{condition2}</p>}
       {body2 && <img src={getIcon(2)} />}
       {moreInfo && <h4>More info:</h4>}
       {moreInfo && moreInfoList}
