@@ -4,7 +4,7 @@ const disposeGuideSchema = new mongoose.Schema({
   category: { type: String, required: true },
   keywords: { type: Array, required: true },
   instruction: {
-    heading1: { type: String, required: true },
+    heading1: { type: String, required: false },
     body1: {
       condition: { type: String, required: true },
       bin: { type: String, required: true },

@@ -5223,7 +5223,7 @@ const disposeData = [
       body1: {
         condition:
           "Put small quantities of vinyl gutters, eavestroughs and plastic downspouts in your black cart as garbage. Make sure the lid of your cart can close.",
-        bin: "",
+        bin: "Garbage",
       },
       heading2: "Larger sizes or quantities of vinyl gutters",
       body2: {
@@ -5278,7 +5278,7 @@ const disposeData = [
       body1: {
         condition:
           "Put small quantities of exterior siding into your black cart as garbage. This includes vinyl siding, corrugated panels, corner posts, corner mouldings, vinyl trim and veneer siding. Make sure the lid of the cart can close.",
-        bin: "",
+        bin: "Garbage",
       },
       heading2: "Large quantities of exterior siding",
       body2: {
