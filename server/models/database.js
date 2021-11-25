@@ -2841,6 +2841,7 @@ const disposeData = [
       "granola",
       "granola bars and protein bars",
       "breakfast bars",
+      "cheerios",
     ],
     instruction: {
       heading1: "Cereal and grains​",
@@ -4856,7 +4857,13 @@ const disposeData = [
   },
   {
     category: "Recreational vehicles, utility trailers and campers",
-    keywords: ["utility trailer", "recreational vehicle", "camper", "RV"],
+    keywords: [
+      "utility trailer",
+      "recreational vehicle",
+      "camper",
+      "RV",
+      "vehicle",
+    ],
     instruction: {
       heading1: "Private recycling/disposal​",
       body1: {
@@ -4876,6 +4883,668 @@ const disposeData = [
     ],
     votes: 0,
     image: ["https://m.media-amazon.com/images/I/712LUmiieIL._AC_SL1500_.jpg"],
+  },
+  {
+    category: "Vacuum cleaner bags and vacuum cleaner dirt",
+    keywords: ["vacuum bags", "vacuum cleaner bags", "vacuum cleaner dirt"],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition:
+          "Put cleaner bags and vacuum dirt, debris and lint in your black cart as garbage.",
+        bin: "Garbage",
+      },
+    },
+    moreInfo: [
+      "Dust and powders must be double bagged and tied closed for dust control before putting in your black cart as garbage.",
+      "Why can't vacuum cleaner dirt be composted? Vacuum cleaner dirt is not compostable in the green cart because it can include non-compostable material that will not breakdown during the composting process and will contaminate the finished compost.",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/vacuum-dust-160px.jpg",
+    ],
+  },
+  {
+    category: "Dust and powders",
+    keywords: ["vacuum dust", "dust", "powder"],
+    instruction: {
+      heading1: "",
+      body1: {
+        condition: "​Put dust and powders in your black cart as garbage.",
+        bin: "Garbage",
+      },
+    },
+    moreInfo: [
+      "Dust and powders must be double bagged and tied closed for dust control before putting in your black cart as garbage.",
+      "This includes any dusty material such as vacuum dust and other small particles.",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/vacuum-dust-160px.jpg",
+    ],
+  },
+  {
+    category: "Plastic vacuum seal bags and packaging",
+    keywords: ["vacuum seal bags and packaging"],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition:
+          "Recycle empty and clean plastic vacuum seal bags and packaging.",
+        bin: "Recycling",
+      },
+    },
+    moreInfo: [
+      "Bundle vacuum seal bags and packaging with your other plastic bags, tie close and put in your blue cart.",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/vacuum-seal-packaging-160px.jpg",
+    ],
+  },
+  {
+    category: "Plumbing and pipes",
+    keywords: [
+      "valves - plumbing",
+      "plumbing parts",
+      "PVC pipes",
+      "metal pipes",
+      "valves and fittings",
+    ],
+    instruction: {
+      heading1: "​Small quantities of plumbing parts",
+      body1: {
+        condition:
+          "Put small quantities of PVC pipes, metal pipes, valves and fittings in your black cart as garbage. Pieces must be less than 15 cm in diameter and less than 1.25 meters in length. Make sure the lid of the cart can close.",
+        bin: "Garbage",
+      },
+      heading2: "Large quantities of plumbing parts",
+      body2: {
+        condition:
+          "Some private metal recyclers may buy scrap metal, charge a fee or accept items for free. Find a list of locations at Alberta's Recycling Hotline or The Yellow Pages under Metal Recycling. Take large quantities of plumbing parts from a renovation or demolition to a City landfill. Landfill charges will apply.",
+        bin: "metal recycler",
+      },
+    },
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/pipes-160px.jpg",
+    ],
+  },
+  {
+    category: "Small bathroom appliances",
+    keywords: [
+      "vanity mirror with lighting",
+      "electric razor",
+      "electric toothbrush",
+      "curling iron",
+      "crimper",
+      "hot roller",
+      "curler set",
+      "flat iron",
+      "hair straightener",
+      "hair dryer",
+      "beard trimmer",
+      "electric hair clippers",
+      "oral irrigator",
+      "electric massager",
+      "automatic soap dispenser",
+    ],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition:
+          "Take old and broken small bathroom appliances to an electronics recycling drop-off.",
+        bin: "Recycling drop-off",
+      },
+    },
+    moreInfo: [
+      "If you take electronics to a landfill and bring other garbage in your load, landfill charges will apply.",
+      "Some restrictions apply. For full details, see Electronics Recycling program.",
+      "Do NOT put electronics in your blue cart as these items can damage the equipment at the recycling facility.",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/uep/wrs/what-goes-where/electric-toothbrush-razor/_jcr_content/root/maincontentpar/responsivegrid/grid/column-0-r0/grid_layout7151/column-1-r0/image.img.jpeg/1612281720395/householditems-hair-drier.jpeg",
+    ],
+  },
+  {
+    category: "E-cigarettes, vapes and vape cartridges",
+    keywords: ["vape pen", "vape cartridge", "e-cigarette"],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition:
+          "Put old and used e-cigarettes, vape pens, vape cartridges, and e-liquid containers in your black cart as garbage.",
+        bin: "Garbage",
+      },
+    },
+    moreInfo: [
+      "Remove any batteries from vape pens and e-cigarettes before putting in the garbage. See battery disposal info here.",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/uep/wrs/what-goes-where/e-cigarettes-vape-pens-cartridges/_jcr_content/root/bottomcontentpar/responsivegrid/grid_layout_1667710273/column-525c84d9-08fb-444c-a0d7-b5dd5bc734750/image.img.jpeg/1617743209215/e-cigarettes.jpeg",
+    ],
+  },
+  {
+    category: "Personal hygiene items",
+    keywords: [
+      "vaseline",
+      "wet wipes",
+      "disinfecting wipes",
+      "wet naps",
+      "flushable wipes",
+      "disposable wipes",
+      "band-aids",
+      "personal wipes",
+      "cosmetic wipes",
+      "dental floss",
+      "cotton balls",
+      "Q-tips",
+      "cotton swabs",
+      "cosmetics and makeup",
+      "petroleum jelly",
+      "condoms",
+    ],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition:
+          "Put personal hygiene products in your black cart as garbage.",
+        bin: "Garbage",
+      },
+    },
+    moreInfo: [
+      "Never flush personal hygiene items down the toilet, sink or drain as they can be harmful to the environment and may cause damage to the pipes in your home.",
+      "Why can't it be composted? Many hygiene products are often used for make-up removal, cleaning and other chemicals that do not belong in the green cart. Hygiene products may also be made of a mix of organic and synthetic fibres, plastic or manufactured products that will not breakdown during the composting process.",
+      "To ensure we're creating the highest quality compost possible, leave these items out of your green cart.",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/cotton-balls-160px.jpg",
+    ],
+  },
+  {
+    category: "Plastic petroleum jelly container",
+    keywords: ["vaseline container", "petroleum jelly container"],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition:
+          "Recycle empty petroleum jelly containers with the recycling symbol 1-7.",
+        bin: "Recycling",
+      },
+    },
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/vaseline-container-160px.jpg",
+    ],
+  },
+  {
+    category: "VCR and DVD players",
+    keywords: [
+      "VCR player",
+      "DVD player",
+      "disc players",
+      "Blu-ray player",
+      "cable boxes",
+      "digital video recorder",
+      "PVR",
+      "DVR",
+    ],
+    instruction: {
+      heading1: "Usable VCRs and DVD players​",
+      body1: {
+        condition: "Donate working VCRs and DVD players to local charities.",
+        bin: "Donate",
+      },
+      heading2: "Old and broken VCRs and DVD players",
+      body2: {
+        condition:
+          "Take old and broken VCRs and DVD players to an electronics recycling drop-off.",
+        bin: "Recycling drop-off",
+      },
+    },
+    moreInfo: [
+      "If you take electronics to a landfill and bring other garbage in your load, landfill charges will apply.",
+      "Some restrictions apply. For full details, see Electronics Recycling program.",
+      "Do NOT put electronics in your blue cart as these items can damage equipment at the recycling facility.",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/electronics-vcrsdvdplayers-160px.jpg",
+    ],
+  },
+  {
+    category: "Plastic mesh food bags",
+    keywords: ["vegetable mesh bag", "mesh food bag"],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition: "Put plastic mesh food bags in your black cart as garbage.",
+        bin: "Garbage",
+      },
+    },
+    moreInfo: [
+      "These mesh bags are commonly used to hold grocery produce like onions, avocados, and oranges.",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/mesh-bag-160px.jpg",
+    ],
+  },
+  {
+    category: "Butter and lard",
+    keywords: ["vegetable shortening", "butter", "lard", "margarine"],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition:
+          "Put all types of butter and lard into your green cart for composting.",
+        bin: "Compost",
+      },
+    },
+    moreInfo: [
+      "Solidify the butter and lard to make it easier to put in your kitchen pail.",
+      "Use newspaper or used paper towels to soak up any melted butter and oils.",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/butter-160px.jpg",
+    ],
+  },
+  {
+    category: "Video tapes and cassette tapes",
+    keywords: ["video tapes"],
+    instruction: {
+      heading1: "​Usable video and cassette tapes",
+      body1: {
+        condition:
+          "Donate working video (VHS and Beta) and cassette tapes to participating charities. Refer to Alberta's Recycling Hotline for options.",
+        bin: "Donate",
+      },
+      heading2: "Unusable video and cassette tapes",
+      body2: {
+        condition:
+          "Put old and broken video and cassette tapes in your black cart as garbage.",
+        bin: "Garbage",
+      },
+    },
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/electronics-videotapes-160px.jpg",
+    ],
+  },
+  {
+    category: "Vinyl gutters and downspouts",
+    keywords: [
+      "vinyl downspout",
+      "vinyl gutter",
+      "vinyl eavestrough",
+      "plastic downspout",
+      "plastic eavestrough",
+    ],
+    instruction: {
+      heading1: "Small quantities of vinyl gutters",
+      body1: {
+        condition:
+          "Put small quantities of vinyl gutters, eavestroughs and plastic downspouts in your black cart as garbage. Make sure the lid of your cart can close.",
+        bin: "",
+      },
+      heading2: "Larger sizes or quantities of vinyl gutters",
+      body2: {
+        condition:
+          "Take larger pieces or amounts of vinyl gutters to a City landfill. Landfill charges will apply.",
+        bin: "Landfill",
+      },
+    },
+    votes: 0,
+    image: [
+      "https://images.thdstatic.com/productImages/7c4413d7-57d9-4f71-b73a-3933d084c66b/svn/amerimax-home-products-gutter-fittings-m0506-c3_600.jpg",
+    ],
+  },
+  {
+    category: "Vinyl records",
+    keywords: ["vinyl records"],
+    instruction: {
+      heading1: "​Usable vinyl records",
+      body1: {
+        condition:
+          "Reuse or donate vinyl records to friends and family, post on online bartering websites like Kijiji or donate to charity.",
+        bin: "Donate",
+      },
+      heading2: "Unusable or broken vinyl records",
+      body2: {
+        condition:
+          "Put broken or unusable vinyl records into your black cart as garbage.",
+        bin: "Garbage",
+      },
+    },
+    moreInfo: [
+      "Put paper/cardboard vinyl record covers into your blue cart for recycling.​​​​​​​",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/vinyl-record-160px.jpg",
+    ],
+  },
+  {
+    category: "Vinyl siding",
+    keywords: [
+      "vinyl siding",
+      "exterior siding",
+      "corrugated panels",
+      "corner posts",
+      "corner mouldings",
+      "vinyl trim",
+      "veneer siding",
+    ],
+    instruction: {
+      heading1: "Small quantities of exterior siding​",
+      body1: {
+        condition:
+          "Put small quantities of exterior siding into your black cart as garbage. This includes vinyl siding, corrugated panels, corner posts, corner mouldings, vinyl trim and veneer siding. Make sure the lid of the cart can close.",
+        bin: "",
+      },
+      heading2: "Large quantities of exterior siding",
+      body2: {
+        condition:
+          "Take large quantities of vinyl siding to a City landfill. Landfill charges will apply.",
+        bin: "Landfill",
+      },
+    },
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/vinyl-siding-160px.jpg",
+    ],
+  },
+  {
+    category: "Prescription drugs and other medicine",
+    keywords: [
+      "vitamins",
+      "pills",
+      "drugs",
+      "cough syrup",
+      "prescription medication",
+    ],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition:
+          "Most pharmacies accept unused portions of drugs, pills, cough syrup, vitamins, over-the-counter and prescription medication for safe disposal.",
+        bin: "pharmacy",
+      },
+    },
+    moreInfo: [
+      "Contact your local pharmacy in advance to ensure that they will accept drugs and medication",
+      "Visit the Alberta Pharmacists' Association for a full list of participating pharmacies.",
+      "Do not dispose of medicine in the garbage, compost or down the sink or toilet as it can be harmful to the environment.",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/medical-medicationsdrugs-160px.jpg",
+    ],
+  },
+  {
+    category: "Yard waste - Grass clippings",
+    keywords: ["grass clippings"],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition:
+          "Leave grass clippings on your lawn after you mow; or put grass clippings in your green cart for composting.",
+        bin: "Compost",
+      },
+    },
+    moreInfo: [
+      "Put grass clippings in loose in cart or use a paper yard waste bag to prevent clippings sticking to the cart.",
+      "Put excess grass clippings in paper yard waste bags.",
+      "Bags have a 20 kg weight limit. Make sure bags are rolled up and can be easily lifted.",
+      "Set bags at least 0.5m (two feet) to the side of your green cart. Do not lean bags against the cart or on top of the cart lid.",
+      "During the busy yard season, we will collect material inside green carts, but may limit the number of extra paper bags we pick up to make sure everyone gets service.",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/yardwaste-grassclippings-160px.jpg",
+    ],
+  },
+  {
+    category: "Yard waste - Leaves",
+    keywords: ["leaves"],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition: "Put leaves in your green cart for composting.",
+        bin: "Compost",
+      },
+    },
+    moreInfo: [
+      "Fill your green cart first.",
+      "If your green cart is full, put the leaves in a paper yard waste bag.",
+      "Bags have a 20 kg weight limit. Make sure bags are rolled up and can be easily lifted.",
+      "Set bags at least 30 cm (one foot) to the side of your green cart. Do not lean them on the cart or place them on the cart lid.",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/leaves-pinecones-160px.jpg",
+    ],
+  },
+  {
+    category: "Peel-off lids and food seals",
+    keywords: [
+      "yogurt container seal",
+      "food seals",
+      "peel-off lids",
+      "single-serving pudding cup seal",
+      "plastic film cover on a microwave dinner",
+      "peanut butter container seal",
+      "fruit cup seal",
+      "applesauce cup seal",
+      "hummus and other dips container seal",
+      "baby food jar seal",
+    ],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition:
+          "​Put peel-off lids and food seals into your black cart as garbage.",
+        bin: "Garbage",
+      },
+    },
+    moreInfo: [
+      "Why can't this be recycled? Sometimes these food seals may be made of multiple materials like foil and plastic that cannot be separated for recycling. Other food seals may be a non-stretchy plastic film that also cannot be recycled.",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/food-seal-160px.jpg",
+    ],
+  },
+  {
+    category: "Single-serving snack cups",
+    keywords: ["yogurt cup", "pudding cup", "snack cup"],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition:
+          "Recycle single-serve snack cups (such as yogurt cups and pudding cups) with the recycling symbol 1-7.",
+        bin: "Recycling",
+      },
+    },
+    moreInfo: ["Remove food seals/peel-off lids and put in the garbage."],
+    votes: 0,
+    image: ["https://m.media-amazon.com/images/I/71DWQtyiQVL._AC_SL1500_.jpg"],
+  },
+  {
+    category: "Cheese and dairy products",
+    keywords: [
+      "yogurt",
+      "cheese",
+      "blue cheese",
+      "shredded cheese",
+      "cottage cheese",
+      "sour cream",
+      "cream cheese",
+      "butter",
+      "dairy products",
+      "cheese products",
+    ],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition:
+          "Put cheese and dairy products in your green cart for composting.",
+        bin: "Compost",
+      },
+    },
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/dairy-and-cheese-160px.jpg",
+    ],
+  },
+  {
+    category: "Plastic storage bags",
+    keywords: ["zipper storage bag"],
+    instruction: {
+      heading1: "​Usable storage bags",
+      body1: {
+        condition:
+          "Reuse empty storage bags, give to family and friends, post on online bartering websites like Kijiji or donate to charity.",
+        bin: "Donate",
+      },
+      heading2: "Broken storage bags",
+      body2: {
+        condition:
+          "Put old and broken storage bags into your black cart as garbage.",
+        bin: "Garbage",
+      },
+    },
+    moreInfo: [
+      "Plastic storage bags are often used for garments, bed sheets, duvet covers, cosmetics, accessories and other textiles. They usually have a zipper enclosure and may be clear or colored/patterned.",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/storage-bag-160px.jpg",
+    ],
+  },
+  {
+    category: "Battery - Non-rechargeable",
+    keywords: [
+      "alkaline batteries",
+      "non-rechargeable batteries",
+      "lithium primary batteries",
+      "single-use household batteries",
+    ],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition:
+          "Take non-rechargeable batteries to a participating retailer for recycling, free of charge.",
+        bin: "recycling retailer",
+      },
+    },
+    moreInfo: [
+      "Retailer locations include Best Buy, Home Depot, Ikea, Lowes, MEC, Staples, The Source, RONA, Apple Store, London Drugs, Princess Auto, ListenUP! Canada, UBreakifix.",
+      "This includes lithium primary batteries and alkaline/single-use household batteries. These batteries are commonly found in watches, car remotes, TV remote controls, and calculators.",
+      "For safety precautions, tape over the ends (positive and negative terminals) of each individual lithium battery. This also applies to button style batteries. Separate your taped lithium batteries by putting inside a Ziploc bag and sealing shut.",
+      "Taping off the ends of your batteries will ensure that they cannot touch each other to prevent a fire from occurring.",
+      "Why can’t batteries go into the carts? Batteries need to be separated and taken to a different location for safe handling. If they end up in any of the bins, the batteries can get crushed leading to fires at the recycling facility, composting facility and landfill sites.",
+      "For a full list of options, visit the Call2Recycle battery recycling website.",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/batteries-160px.jpg",
+    ],
+  },
+  {
+    category: "Chemicals - Automotive",
+    keywords: [
+      "engine oil",
+      "chain oil",
+      "motor oil",
+      "antifreeze",
+      "brake fluid",
+      "power steering fluid",
+      "transmission fluid",
+      "container with hazard symbol on it",
+    ],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition:
+          "Safely dispose automotive chemicals for free at a household hazardous waste drop-off location such as a designated fire hall or a city landfill Throw 'n' Go area.",
+        bin: "hazardous waste",
+      },
+    },
+    moreInfo: [
+      "Use original containers where possible, or use a sealed, spill-proof container and make sure it is clearly labelled.",
+      "We accept up to 20 litres of household chemicals per week.",
+      "Never flush chemicals down your toilet, sink or drain as they harm the environment and may damage the pipes in your home.",
+      "If you are a business with automotive chemicals to dispose of, visit the Alberta Recycling Management Authority for drop-off locations or see our Business Waste resources.",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/householdhazardouswaste-vehicle-160px.jpg",
+    ],
+  },
+  {
+    category: "Battery - Rechargeable",
+    keywords: [
+      "lithium-ion batteries",
+      "rechargeable batteries",
+      "nickel cadmium batteries",
+      "small sealed lead acid batteries",
+      "nickel zinc batteries",
+      "nickel metal hydride batteries",
+      "lithium polymer batteries",
+    ],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition:
+          "Take rechargeable batteries to a participating retailer for recycling, free of charge.",
+        bin: "recycling retailer",
+      },
+    },
+    moreInfo: [
+      "Retailer locations include Best Buy, Home Depot, Ikea, Lowes, MEC, Staples, The Source, RONA, Apple Store, London Drugs, Princess Auto, ListenUP! Canada, UBreakifix.",
+      "Rechargeable batteries are commonly found in cellphones, digital cameras, laptop computers, cordless power tools and other household appliances.",
+      "For safety precautions, tape over the ends (positive and negative terminals) of each individual lithium battery. This also applies to button style batteries. Separate your taped lithium batteries by putting inside a Ziploc bag and sealing shut.",
+      "Taping off the ends of your batteries will ensure that they cannot touch each other to prevent a fire from occurring.",
+      "Why can’t batteries go into the carts? Batteries need to be separated and taken to a different location for safe handling. If they end up in any of the bins, the batteries can get crushed by equipment leading to fires at the recycling facility, composting facility and landfill sites.",
+      "Find a list of locations on the Call2Recycle battery recycling website.",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/batteries-rechargeable-160px.jpg",
+    ],
+  },
+  {
+    category: "Pill and medicine bottles - plastic",
+    keywords: [
+      "prescription pill bottle",
+      "medicine bottle",
+      "pill bottle",
+      "blood glucose test strips",
+      "pill vials",
+      "cough syrup bottles",
+    ],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition: "Recycle empty and clean plastic prescription bottles:",
+        bin: "Recycling",
+      },
+    },
+    moreInfo: [
+      "This also includes blood glucose test strip bottles, pill vials, cough syrup bottles, and medicine bottles.",
+      "For leftover drugs, pills and medicine see our prescription drugs page.",
+      "Remove caps and put in the garbage.",
+      "Remove cotton ball insulation and gel packets and put in the garbage.",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/pill-bottle-160px.jpg",
+    ],
   },
   // {
   //   category: "",
