@@ -52,7 +52,7 @@ const Info = ({ wasteType }) => {
       <img src={getIcon(1)} />
       <img src={image} />
       <h3>{heading2 && heading2}</h3>
-      {body2 && <p>condition2</p>}
+      {body2 && <p>{condition2}</p>}
       {body2 && <img src={getIcon(2)} />}
       {moreInfo && <h4>More info:</h4>}
       {moreInfo && moreInfoList}
