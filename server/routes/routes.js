@@ -1,12 +1,13 @@
 import express from "express";
 const router = express.Router();
-import { listItems, findItem } from "../models/disposeGuide.js";
+import {
+  createItem,
+  listItems,
+  findItem,
+  loadItems,
+} from "../controllers/controller.js";
 
-router.get("/loadItems", async (req, res) => {
-  let items = await listItems();
-  res.send(items);
-});
-
+router.get("/loadItems", loadItems);
 router.get("/findItem", findItem);
 
 export default router;

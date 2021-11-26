@@ -20,32 +20,4 @@ const disposeGuideSchema = new mongoose.Schema({
   votes: { type: Number, required: false },
 });
 
-const DisposeGuide = mongoose.model("DisposeGuide", disposeGuideSchema);
-
-async function createItem(itemData) {
-  let newItem = new DisposeGuide(itemData);
-  let createdItem = await newItem.save();
-  console.log(`created new item with id: ${createdItem.id}`);
-  return createdItem.id;
-}
-
-async function listItems() {
-  return DisposeGuide.find({});
-}
-
-async function findItem(query) {
-  console.log(query);
-  let searchResult = await DisposeGuide.findOne({ category: query });
-
-  if (searchResult) {
-    console.log(`Found ${query} in categories`);
-    return searchResult;
-  }
-  searchResult = await DisposeGuide.findOne({ keywords: query });
-  if (searchResult) {
-    console.log(`Found ${query} in keywords`);
-  }
-  return searchResult;
-}
-
-export { createItem, listItems, findItem };
+export default mongoose.model("DisposeGuide", disposeGuideSchema);
