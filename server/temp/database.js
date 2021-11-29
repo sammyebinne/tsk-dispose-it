@@ -355,34 +355,451 @@ const disposeData = [
       "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/drink-pouch-160px.jpg",
     ],
   },
-  // {
-  //   category: "",
-  //   keywords: [""],
-  //   instruction: {
-  //     heading1: "​",
-  //     body1: {
-  //       condition: "",
-  //       bin: "",
-  //     },
-  //   },
-  //   moreInfo: [""],
-  //   votes: 0,
-  //   image: [""],
-  // },
-  // {
-  //   category: "",
-  //   keywords: [""],
-  //   instruction: {
-  //     heading1: "​",
-  //     body1: {
-  //       condition: "",
-  //       bin: "",
-  //     },
-  //   },
-  //   moreInfo: [""],
-  //   votes: 0,
-  //   image: [""],
-  // },
+  {
+    category: "Paper labels on containers",
+    keywords: ["paper label", "label - paper"],
+    instruction: {
+      heading1: "Paper labels​",
+      body1: {
+        condition:
+          "Recycle paper container labels in your blue cart or at a community recycling depot.",
+        bin: "Recycling",
+      },
+    },
+    moreInfo: [
+      "Remove paper labels from plastic containers, glass jars and food cans where possible. Recycle each item separately in your blue cart.",
+      "Paper labels/stickers that are not easily removed are ok to leave on container.",
+      "Put stickers into the black cart as garbage.",
+      "By removing labels, this helps to make the containers cleaner and more ready for being recycled into a new product. The paper labels are then also recycled into new paper products.",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/paper-label-160px.jpg",
+    ],
+  },
+  {
+    category: "Plastic labels on containers",
+    keywords: ["plastic label", "label - plastic", "label"],
+    instruction: {
+      heading1: "Plastic labels​",
+      body1: {
+        condition:
+          "Put plastic container labels into the black cart as garbage.",
+        bin: "Garbage",
+      },
+    },
+    moreInfo: [
+      "Cut off plastic labels from plastic containers, glass jars and food cans and put the label in the garbage.",
+      "Plastic labels are made of a rigid, non-stretchy type of plastic that is not acceptable for recycling. To prevent contaminating the other recyclables, make sure to remove these labels from your containers before recycling the containers.",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/plastic-label-160px.jpg",
+    ],
+  },
+  {
+    category: "Where do I take paint and paint cans?",
+    keywords: [
+      "paint cans",
+      "paint",
+      "lacquer",
+      "stains",
+      "varnishes",
+      "paint thinners",
+      "thinners",
+      "wood preservatives",
+      "paint strippers and solvents",
+      "alkyd",
+      "latex",
+      "oil-based paints",
+    ],
+    instruction: {
+      heading1: "​Household harzadous paints and paint can wastes",
+      body1: {
+        condition:
+          "Safely dispose paint and paint cans at a household hazardous waste drop-off location for free at a designated fire hall close to you or a city landfill",
+        bin: "Landfill",
+      },
+      heading2:
+        "​Commercial quantities of harzadous waste - paint and paint cans",
+      body2: {
+        condition:
+          "If you are a commercial painting business, see your city's guide on disposing Commercial Paint to safely dispose of your leftover volumes of commercial paint.",
+        bin: "Commercial disposal",
+      },
+    },
+    moreInfo: [
+      "Liquid paint must be sealed in the original can or another spill-proof container with the contents clearly labelled.",
+      "We accept all paint cans including dried out paint and empty cans.",
+      "We accept up to 20 litres of household chemicals per week.",
+      "Never flush chemicals down your toilet, sink or drain as they harm the environment and may damage the pipes in your home.",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/householdhazardouswaste-paint-160px.jpg",
+    ],
+  },
+  {
+    category: "Hardwood and laminate flooring",
+    keywords: [
+      "laminate flooring",
+      "hardwood flooring",
+      "hardwood",
+      "floors - wooden",
+    ],
+    instruction: {
+      heading1: "​Small quantities of flooring",
+      body1: {
+        condition:
+          "Put small quantities of hardwood flooring and laminate flooring into your black cart as garbage. Pieces must be less than 15cm (6 inches) in diameter and 1.25m (4 feet) in length. ",
+        bin: "Garbage",
+      },
+      heading2: "​Large quantities of flooring",
+      body2: {
+        condition:
+          "Some private companies may accept reusable building materials - check the Alberta Recycling Hotline for options. Take large quantities of flooring from a renovation or demolition to a City landfill. Landfill charges will apply.",
+        bin: "Landfill",
+      },
+    },
+    moreInfo: ["Make sure the lid of your cart can close."],
+    votes: 0,
+    image: [""],
+  },
+  {
+    category: "Floor lamps large household items",
+    keywords: [
+      "floor lamp",
+      "Suitcases and luggage",
+      "Dog kennels and cat trees",
+      "Patio furniture (chairs, table, umbrella)",
+      "Patio umbrella",
+      "Large picture frames",
+      "Storage bins and trunks (Rubbermaid bins)",
+      "Strollers",
+      "Ironing board",
+      "Paintings and sculptures",
+      "Trophies",
+      "Whiteboards and bulletin boards]",
+    ],
+    instruction: {
+      heading1: "Useable household goods​",
+      body1: {
+        condition:
+          "Reuse useable household goods, give to family and friends or donate to participating charities such as: Calgary Drop In Centre, Women in Need Society, Other donation options",
+        bin: "Donate",
+      },
+      heading2: "Broken and unusable household goods​",
+      body2: {
+        condition:
+          "Put broken or unusable housewares in your black cart as garbage. If the items are too large for the black cart, take them to a City landfill Throw n Go for disposal (charges apply).",
+        bin: "Garbage",
+      },
+    },
+    moreInfo: [
+      "Break down items so they fit inside your black cart.",
+      "Pieces must be less than 1.25 m (four feet) in length.",
+      "Do not overpack or jam items as they will not empty out of the bin on collection day.",
+      "Make sure the cart lid can close.",
+    ],
+    votes: 0,
+    image: [""],
+  },
+  {
+    category: "Landscape and gardening fabric",
+    keywords: ["landscape fabric", "gardening fabric"],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition:
+          "Put landscape and gardening fabric in the black cart as garbage.",
+        bin: "Garbage",
+      },
+    },
+    moreInfo: [""],
+    votes: 0,
+    image: [""],
+  },
+  {
+    category: "Laptops and electronic notebooks",
+    keywords: [""],
+    instruction: {
+      heading1: "​Useable laptops",
+      body1: {
+        condition:
+          "Donate working computers other computer accessories to local charities: Calgary Drop In Centre, Women in Need Society, Other donation options",
+        bin: "Donate",
+      },
+      heading2: "​Unusable laptops",
+      body2: {
+        condition:
+          "Take old and broken laptops, electronic notebooks, laptop batteries and charging cords to an electronics recycling drop-off.",
+        bin: "Recycling drop-off",
+      },
+    },
+    moreInfo: [
+      "Some restrictions apply.",
+      "If you take electronics to a landfill and bring other garbage in your load landfill charges will apply.",
+      "Clear all personal information from electronics prior to dropping off (e.g. wipe hard drives, clear SIM cards etc.)",
+      "Do NOT put electronics in your blue cart as these items can damage the equipment at the recycling facility.",
+    ],
+    votes: 0,
+    image: [""],
+  },
+  {
+    category: "Rubber and plastic gloves",
+    keywords: [
+      "rubber gloves",
+      "plastic gloves",
+      "latex gloves",
+      "nitrile gloves",
+      "dishwashing gloves",
+    ],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition:
+          "Put disposable gloves in your black cart as garbage.​​​​​​​​",
+        bin: "Garbage",
+      },
+    },
+    moreInfo: [""],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/rubber-gloves-160px.jpg",
+    ],
+  },
+  {
+    category: "LED light bulbs",
+    keywords: ["light bulbs", "bulbs"],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition: "Put LED light bulbs in your black cart as garbage.",
+        bin: "Garbage",
+      },
+    },
+    moreInfo: [""],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/led-lightbulb-160px.jpg",
+    ],
+  },
+  {
+    category: "Beans and lentils",
+    keywords: [
+      "beans",
+      "kidney beans",
+      "lentils",
+      "pulses",
+      "navy beans",
+      "barley",
+      "black eyed peas",
+      "chick peas",
+      "split peas",
+    ],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition:
+          "Put all dried, cooked or uncooked beans and lentils into your green cart for composting.",
+        bin: "Compost",
+      },
+    },
+    moreInfo: [""],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/beans-160px.jpg",
+    ],
+  },
+  {
+    category: "Chocolate and candy",
+    keywords: ["licorice", "chocolate", "candy", "lollipop", "marshmallow"],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition:
+          "Put leftover chocolate and candy into your green cart for composting.",
+        bin: "Compost",
+      },
+    },
+    moreInfo: [
+      "Remove all wrappers and packaging before composting.",
+      "Put chewing gum into your black cart as garbage.",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/candy-160px.jpg",
+    ],
+  },
+  {
+    category: "Metal - Lids",
+    keywords: [
+      "lids - metal",
+      "jam jar lids",
+      "pickle jar lids",
+      "tuna can lids",
+      "metal container lid",
+    ],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition:
+          "Recycle jam jar lids, pickle jar lids, tuna can lids and other metal container lids: in your blue cart or at a community recycling depot",
+        bin: "Recycling",
+      },
+    },
+    moreInfo: [
+      "Size restrictions: Metal lids must be larger than 5 cm (approx. two inches) in diameter.",
+      "Tip: if the lid is about the size of the palm of your hand, it's ok to recycle.",
+      "Where possible, place cut out metal lids inside the empty tin can and squeeze the top closed.",
+      "Recycle metal lid separately from glass/plastic containers.",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/metal-lids.jpg",
+    ],
+  },
+  {
+    category: "Bottle caps and milk jug lids",
+    keywords: [
+      "beer caps",
+      "pop lids",
+      "milk caps",
+      "wine caps",
+      "aluminium caps",
+      "bottle lids",
+      "beverage lids",
+      "cannabis drink lid covers",
+    ],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition:
+          "Put small metal lids and small plastic lids in your black cart as garbage.",
+        bin: "Garbage",
+      },
+    },
+    moreInfo: [
+      "Tip: If the lid is smaller than the palm of your hand, it belongs in the garbage.",
+      "Why can't this be recycled? Even if they are made from a recyclable material, caps are too small and light to be sorted properly by the sorting machines at the recycling facility and end up contaminating other recyclables. If you take your beverage containers directly back to a bottle depot, it is ok to leave lids and caps on in that case.",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/metal-bottle-caps.jpg",
+    ],
+  },
+  {
+    category: "",
+    keywords: [""],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition: "",
+        bin: "",
+      },
+    },
+    moreInfo: [""],
+    votes: 0,
+    image: [""],
+  },
+  {
+    category: "",
+    keywords: [""],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition: "",
+        bin: "",
+      },
+    },
+    moreInfo: [""],
+    votes: 0,
+    image: [""],
+  },
+  {
+    category: "",
+    keywords: [""],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition: "",
+        bin: "",
+      },
+    },
+    moreInfo: [""],
+    votes: 0,
+    image: [""],
+  },
+  {
+    category: "",
+    keywords: [""],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition: "",
+        bin: "",
+      },
+    },
+    moreInfo: [""],
+    votes: 0,
+    image: [""],
+  },
+  {
+    category: "",
+    keywords: [""],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition: "",
+        bin: "",
+      },
+    },
+    moreInfo: [""],
+    votes: 0,
+    image: [""],
+  },
+  {
+    category: "",
+    keywords: [""],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition: "",
+        bin: "",
+      },
+    },
+    moreInfo: [""],
+    votes: 0,
+    image: [""],
+  },
+  {
+    category: "",
+    keywords: [""],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition: "",
+        bin: "",
+      },
+    },
+    moreInfo: [""],
+    votes: 0,
+    image: [""],
+  },
+  {
+    category: "",
+    keywords: [""],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition: "",
+        bin: "",
+      },
+    },
+    moreInfo: [""],
+    votes: 0,
+    image: [""],
+  },
   {
     category: "Sponges and cleaners",
     keywords: [
@@ -616,7 +1033,7 @@ const disposeData = [
   },
   {
     category: "Salad kit containers",
-    keywords: ["salad kit container"],
+    keywords: ["salad kit container", "lettuce container"],
     instruction: {
       heading1: "​Salad kit containers",
       body1: {
@@ -1574,6 +1991,7 @@ const disposeData = [
       "suitcase",
       "duffel bag",
       "wool items",
+      "leather",
     ],
     instruction: {
       heading1: "How do I donate usable clothing and shoes?",
@@ -1672,7 +2090,12 @@ const disposeData = [
   },
   {
     category: "Stand up flexible pouch",
-    keywords: ["shredded cheese bag", "stand up pouch"],
+    keywords: [
+      "shredded cheese bag",
+      "stand up pouch",
+      "laundry detergent bag",
+      "laundry detergent pouch",
+    ],
     instruction: {
       heading1: "​Stand up flexible pouch",
       body1: {
@@ -2906,7 +3329,7 @@ const disposeData = [
       "sticky notes and post-it notes",
       "stick note",
       "post-it note",
-      "letter",
+      "letters",
       "greeting card",
       "envelope",
       "sticky note",
@@ -3345,7 +3768,12 @@ const disposeData = [
   },
   {
     category: "Leftover lotion, creams and ointments",
-    keywords: ["sunscreen - expired, leftover"],
+    keywords: [
+      "sunscreen - expired, leftover",
+      "leftover cream",
+      "leftover ointment",
+      "leftover lotion",
+    ],
     instruction: {
       heading1: "​",
       body1: {
@@ -4002,6 +4430,7 @@ const disposeData = [
       "Crystal Light powder packet",
       "powdered beverage mix packet",
       "nutritional powder packet",
+      "latte packet",
     ],
     instruction: {
       heading1: "​",
