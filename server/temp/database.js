@@ -689,117 +689,201 @@ const disposeData = [
     ],
   },
   {
-    category: "",
-    keywords: [""],
+    category: "Plastic - Large container lids",
+    keywords: [
+      "yoghurt tub lid",
+      "margarine container lids",
+      "cottage cheese container lids",
+    ],
     instruction: {
       heading1: "​",
       body1: {
-        condition: "",
-        bin: "",
+        condition:
+          "Recycle large plastic container lids: in your blue cart or at a community recycling depot",
+        bin: "Recycling",
       },
     },
-    moreInfo: [""],
+    moreInfo: [
+      "Size restrictions: Plastic lids must be larger than 7.5 cm (approx. three inches) in diameter.",
+      "Tip: if the lid is about the size of the palm of your hand, it's ok to recycle.",
+    ],
+    votes: 0,
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/plastic-lids-160px.jpg",
+    ],
+  },
+  {
+    category: "Light ballasts",
+    keywords: ["light ballast"],
+    instruction: {
+      heading1: "Small quantities of light ballasts​",
+      body1: {
+        condition:
+          "Take up to five light ballasts to any City landfill. Landfill charges will apply.",
+        bin: "Landfill",
+      },
+      heading2: "​Large quantities of light ballasts",
+      body2: {
+        condition:
+          "If you need to dispose of more than five light ballasts, contact 311 to generate a service request.",
+        bin: "Commercial disposal",
+      },
+    },
+    moreInfo: [
+      "If you are a business with light ballasts to dispose of, please Google 'Business Waste resources for options'.",
+    ],
     votes: 0,
     image: [""],
   },
   {
-    category: "",
-    keywords: [""],
+    category: "Light bulbs – Compact fluorescent",
+    keywords: ["CFL bulbs", "compact flourescent bulbs"],
     instruction: {
       heading1: "​",
       body1: {
-        condition: "",
-        bin: "",
+        condition:
+          "Safely dispose compact fluorescent light (CFL) bulbs for free at a household hazardous waste drop-off location: Designated fire hall or at the City landfill Throw 'n' Go area - if you bring with other garbage, landfill charges will apply.",
+        bin: "Landfill",
       },
     },
-    moreInfo: [""],
+    moreInfo: [
+      "Wrap each CFL bulb in paper, place in a bag and tie it closed for drop off",
+      "If you are a business with CFL bulbs to dispose of, please Google 'Business Waste resources' for options.",
+    ],
     votes: 0,
-    image: [""],
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/glass-lightbulbsfluorescent-160px.jpg",
+    ],
   },
   {
-    category: "",
-    keywords: [""],
+    category: "Light bulbs - Incandescent and halogen",
+    keywords: [
+      "halogen light bulb",
+      "incandescent light bulb",
+      "household light bulb",
+    ],
     instruction: {
       heading1: "​",
       body1: {
-        condition: "",
-        bin: "",
+        condition:
+          "Reuse working incandescent light bulbs (traditional household bulbs) or halogen light bulbs by giving to family/friends or posting on an online website like Kijiji. Put old and broken incandescent light bulbs or halogen light bulbs in your black cart as garbage.",
+        bin: "Garbage",
       },
     },
-    moreInfo: [""],
+    moreInfo: [
+      "Package items safely by putting the pieces into a puncture-resistant, non-breakable container (e.g. plastic tub, plastic pail, laundry detergent container, etc.)",
+      "Or wrap in two layers of paper and place in a tied bag.",
+      "Label as 'sharps' with a permanent marker and put in your black cart.",
+      "You can also take properly packaged light bulbs to a City landfill. Landfill charges will apply.​​​",
+    ],
     votes: 0,
-    image: [""],
+    image: [
+      "https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/glass-lightbulbsincandescent-160px.jpg",
+    ],
   },
-  {
-    category: "",
-    keywords: [""],
-    instruction: {
-      heading1: "​",
-      body1: {
-        condition: "",
-        bin: "",
-      },
-    },
-    moreInfo: [""],
-    votes: 0,
-    image: [""],
-  },
-  {
-    category: "",
-    keywords: [""],
-    instruction: {
-      heading1: "​",
-      body1: {
-        condition: "",
-        bin: "",
-      },
-    },
-    moreInfo: [""],
-    votes: 0,
-    image: [""],
-  },
-  {
-    category: "",
-    keywords: [""],
-    instruction: {
-      heading1: "​",
-      body1: {
-        condition: "",
-        bin: "",
-      },
-    },
-    moreInfo: [""],
-    votes: 0,
-    image: [""],
-  },
-  {
-    category: "",
-    keywords: [""],
-    instruction: {
-      heading1: "​",
-      body1: {
-        condition: "",
-        bin: "",
-      },
-    },
-    moreInfo: [""],
-    votes: 0,
-    image: [""],
-  },
-  {
-    category: "",
-    keywords: [""],
-    instruction: {
-      heading1: "​",
-      body1: {
-        condition: "",
-        bin: "",
-      },
-    },
-    moreInfo: [""],
-    votes: 0,
-    image: [""],
-  },
+  // {
+  //   category: "Light bulbs - Fluorescent tubes",
+  //   keywords: [""],
+  //   instruction: {
+  //     heading1: "​",
+  //     body1: {
+  //       condition: "",
+  //       bin: "",
+  //     },
+  //     heading2: "​",
+  //     body2: {
+  //       condition: "",
+  //       bin: "",
+  //     },
+  //   },
+  //   moreInfo: [""],
+  //   votes: 0,
+  //   image: [""],
+  // },
+  // {
+  //   category: "",
+  //   keywords: [""],
+  //   instruction: {
+  //     heading1: "​",
+  //     body1: {
+  //       condition: "",
+  //       bin: "",
+  //     },
+  //   },
+  //   moreInfo: [""],
+  //   votes: 0,
+  //   image: [""],
+  // },
+  // {
+  //   category: "",
+  //   keywords: [""],
+  //   instruction: {
+  //     heading1: "​",
+  //     body1: {
+  //       condition: "",
+  //       bin: "",
+  //     },
+  //   },
+  //   moreInfo: [""],
+  //   votes: 0,
+  //   image: [""],
+  // },
+  // {
+  //   category: "",
+  //   keywords: [""],
+  //   instruction: {
+  //     heading1: "​",
+  //     body1: {
+  //       condition: "",
+  //       bin: "",
+  //     },
+  //   },
+  //   moreInfo: [""],
+  //   votes: 0,
+  //   image: [""],
+  // },
+  // {
+  //   category: "",
+  //   keywords: [""],
+  //   instruction: {
+  //     heading1: "​",
+  //     body1: {
+  //       condition: "",
+  //       bin: "",
+  //     },
+  //   },
+  //   moreInfo: [""],
+  //   votes: 0,
+  //   image: [""],
+  // },
+  // {
+  //   category: "",
+  //   keywords: [""],
+  //   instruction: {
+  //     heading1: "​",
+  //     body1: {
+  //       condition: "",
+  //       bin: "",
+  //     },
+  //   },
+  //   moreInfo: [""],
+  //   votes: 0,
+  //   image: [""],
+  // },
+  // {
+  //   category: "",
+  //   keywords: [""],
+  //   instruction: {
+  //     heading1: "​",
+  //     body1: {
+  //       condition: "",
+  //       bin: "",
+  //     },
+  //   },
+  //   moreInfo: [""],
+  //   votes: 0,
+  //   image: [""],
+  // },
   {
     category: "Sponges and cleaners",
     keywords: [

@@ -1,4 +1,4 @@
-import "./App.css";
+import "./index.css";
 import Header from "./components/Header";
 import SearchForm from "./components/SearchForm";
 import Info from "./components/Info";
@@ -14,10 +14,11 @@ function App() {
   // search for something to dispose of
   const search = async (query) => {
     setCurrentCategory(null);
-    let response = await fetch(`/api/findItem?searchInput=${query}`);
+    let response = await fetch(`/findItem/${query}`);
     let searchResult = await response.json();
-
+    
     if (searchResult) {
+      console.log(searchResult);
       setCurrentCategory(searchResult);
     } else {
       alert("nothing found");

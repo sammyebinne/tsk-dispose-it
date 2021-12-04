@@ -1,4 +1,4 @@
-import mongoose from "./db.js";
+import mongoose from "mongoose";
 
 const disposeGuideSchema = new mongoose.Schema({
   category: { type: String, required: true },
