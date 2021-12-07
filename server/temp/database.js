@@ -2266,7 +2266,7 @@ const disposeData = [
   },
   {
     category: "Chalk",
-    keywords: ["sidewalk chalk"],
+    keywords: ["sidewalk chalk", "chalk"],
     instruction: {
       heading1: "​Chalk",
       body1: {
@@ -3122,6 +3122,8 @@ const disposeData = [
       "digital mixer",
       "splitter box",
       "webcam",
+      "amp",
+      "amplifier",
     ],
     instruction: {
       heading1: "​Speakers and digital audio equipment",
@@ -4005,6 +4007,7 @@ const disposeData = [
       "chutney",
       "marmalade",
       "maple syrup",
+      "almond butter",
     ],
     instruction: {
       heading1: "​",
@@ -4363,7 +4366,7 @@ const disposeData = [
   },
   {
     category: "Compressed gas tanks and cylinders",
-    keywords: ["tank, compressed - gas", "compressed gas tank"],
+    keywords: ["tank, compressed - gas", "compressed gas tank", "air tank - welding"],
     instruction: {
       heading1: "​",
       body1: {
@@ -6592,20 +6595,898 @@ const disposeData = [
       "https://www.flowersincalgary.com/uploads/thumbnails/Christmas%20Wreath%20Calgary.jpg.37adc8ee.jpg",
     ],
   },
-  // {
-  //   category: "",
-  //   keywords: [""],
-  //   instruction: {
-  //     heading1: "​",
-  //     body1: {
-  //       condition: "",
-  //       bin: "",
-  //     },
-  //   },
-  //   moreInfo: [""],
-  //   votes: 0,
-  //   image: [""],
-  // },
+  {
+    category: "Air purifiers and fans",
+    keywords: ["electric fan", "destop fan", "window fan", "portable fan", "fan", "air purifier", "ionizer", "plugged air freshners"],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition: "Take old and broken air purifiers and cooling fans to an electronics recycling drop-off. Items must have a power cord/plug or run on a battery/charger.",
+        bin: "Landfill",
+      },
+    },
+    moreInfo: [""],
+    votes: 0,
+    image: [""],
+  },
+  {
+    category: "Air freshener refils and cartridges",
+    keywords: ["scented oil refils", "car freshener scents", "plug-in refills", "aromatherapy refills", "essential oil bottles", "diffuser stick","potpourri"],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition: "Put all types of air freshener refills and cartridges into your black cart as garbage.",
+        bin: "Garbage",
+      },
+    },
+    moreInfo: [""],
+    votes: 0,
+    image: [""],
+  },
+  {
+    category: "Aluminum siding and gutters",
+    keywords: ["metal gutters", "eavestroughs", "downsprouts", "aluminum gutter",],
+    instruction: {
+      heading1: "Small quantities​",
+      body1: {
+        condition: "Put quantities of less than 15cm (Diameter) or 1.25m (length) of aluminum siding, metal gutters, eavestroughs and downspouts into your black cart as garbage.",
+        bin: "Garbage",
+      },
+      heading2: "Larger sizes or quantities ",
+      body2: {
+        condition:
+          "Large quantities of aluminium siding can also be brought to a City landlfill for scrap metal recycling.",
+        bin: "Landfill",
+      },
+    },
+    moreInfo: [""],
+    votes: 0,
+    image: ["https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/metal-gutter-160px.jpg"],
+  },
+  {
+    category: "Poinsettas and holiday plants",
+    keywords: ["poinsetta", "amaryllis", "holiday plant"],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition: "Remove all plastic/foil wrapper and put in the garbage.",
+        bin: "Garbage",
+      },
+    },
+    moreInfo: ["Plastic pots with recycling symbol 1-7 can be recycled in blue cart."],
+    votes: 0,
+    image: [""],
+  },
+  {
+    category: "Ammunition and explosives",
+    keywords: ["ammo", "bullet", "explosive"],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition: "​Contact the Calgary Police Service at (403) 266-1234 for safe disposal of ammunition, explosives and flares.​​​",
+        bin: "",
+      },
+    },
+    moreInfo: [""],
+    votes: 0,
+    image: [""],
+  },
+  {
+    category: "Animal and pet bedding",
+    keywords: ["animal bedding", "pet bedding", "cage bedding"],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition: "Place the tied up/rolled up bag in your green cart for composting.",
+        bin: "Compost",
+      },
+    },
+    moreInfo: ["Compostable bedding and cage lining materials include: Cedar, corn, paper, pine, bambooo, Coco husk, plantation soil, sand, Timothy and Alfalfa hay, Flyers and newspaper"],
+    votes: 0,
+    image: ["https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/animal-bedding-160px.jpg"],
+  },
+  {
+    category: "Disposing of animals",
+    keywords: ["roadkill", "dead animal", "animal corpse", "pet remains"],
+    instruction: {
+      heading1: "Small animal​",
+      body1: {
+        condition: "Put small animal carcasses (e.g. birds, mice, fish, rabbits) in your green cart for composting.",
+        bin: "Compost",
+      },
+      heading2: "Large animal​",
+      body2: {
+        condition: "Take large carcasses or parts (e.g. deer, moose, elk, sheep) to a City landfill for disposal. Tell scale-house staff what you have. They will give you directions to the designated disposal area.",
+        bin: "Landfill",
+      },
+    },
+    moreInfo: [""],
+    votes: 0,
+    image: [""],
+  },
+  {
+    category: "Electronics - Home phones",
+    keywords: ["home phone", "landline", "house phone"],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition: "Take old and broken telephones to an electronics recycling drop-off.",
+        bin: "Recycling drop-off",
+      },
+    },
+    moreInfo: [""],
+    votes: 0,
+    image: ["https://www.calgary.ca/uep/wrs/what-goes-where/electronics-home-phones/_jcr_content/root/maincontentpar/responsivegrid/grid/column-0-r0/grid_layout2861/column-1-r0/image.img.jpeg/1612214614321/electronics-telephone-160px.jpeg"],
+  },
+  {
+    category: "Soap - all types",
+    keywords: ["soap"],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition: "Put leftover bars of soap into your black cart as garbage. Drain leftover liquid soap, hand soap and dishwashing liquid down your sink.",
+        bin: "Garbage",
+      },
+    },
+    moreInfo: [""],
+    votes: 0,
+    image: [""],
+  },
+  {
+    category: "Deodorant",
+    keywords: ["stick deodorant"],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition: "Put all types of deodorant into your black cart as garbage. This includes roll-on, liquid and solid deodorants.",
+        bin: "Garbage",
+      },
+    },
+    moreInfo: ["Deodorant containers are a 'multi-material' made of multiple types of plastic parts that are not recyclable."],
+    votes: 0,
+    image: ["https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/deodorant-160px.jpg"],
+  },
+  {
+    category: "Chemicals - Hobby, arts and crafts",
+    keywords: ["artist paint", 'art paint', "model glue", "photo developing fluids"],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition: "Safely dispose hazardous hobby and craft supplies for free at a household hazardous waste drop-off site:",
+        bin: "Landfill",
+      },
+    },
+    moreInfo: ["Use original containers where possible, or use a sealed, spill-proof container and make sure it is clearly labelled. You can bring up to 20 litres of household chemicals per week. Never flush chemicals down your toilet, sink or drain as they harm the environment and/or the pipes in your home."],
+    votes: 0,
+    image: ["https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/householdhazardouswaste-hobbyartscrafts-160px.jpg"],
+  },
+  {
+    category: "Asbestos",
+    keywords: ["asbestos"],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition: "You can take asbestos to the Shepard Landfill for safe disposal.",
+        bin: "Landfill",
+      },
+    },
+    moreInfo: ["The asbestos must be specially packaged before it can be accepted."],
+    votes: 0,
+    image: ["https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/constructionwaste-asbestos-160px.jpg"],
+  },
+  {
+    category: "Asphalt",
+    keywords: ["asphalt", "asphalt shingles"],
+    instruction: {
+      heading1: "Small quantities of asphalt​",
+      body1: {
+        condition: "Put small quantities of less than 60 kg of asphalt in your black cart as garbage.",
+        bin: "Garbage",
+      },
+      heading2: "Large quantities of asphalt​",
+      body2: {
+        condition: "Take large quantities of asphalt to a City landfill. ",
+        bin: "Landfill",
+      },
+    },
+    moreInfo: [""],
+    votes: 0,
+    image: ["https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/constructionwaste-asphalt-160px.jpg"],
+  },
+  {
+    category: "Cars and trucks",
+    keywords: [""],
+    instruction: {
+      heading1: "​",
+      body1: {
+        condition: "Some private companies and charities may buy used or end-of-life vehicles, charge a fee or accept items for free. Check with the company to see what type of vehicles they accept.",
+        bin: "Donate",
+      },
+    },
+    moreInfo: [""],
+    votes: 0,
+    image: [""],
+  },
+  {
+  category: "Avocadoes",
+  keywords: ["avocado", "avocadoes"],
+  instruction: {
+    heading1: "​",
+    body1: {
+      condition: "Put avocadoes, skins and pits into your green cart for composting.​​​​",
+      bin: "Compost",
+    },
+  },
+  moreInfo: [""],
+  votes: 0,
+  image: ["https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/avocado-pit-160px.jpg"],
+},
+{
+  category: "Car seats",
+  keywords: ["car seat"],
+  instruction: {
+    heading1: "​",
+    body1: {
+      condition: "Take cart seats to a City landfill for disposal.",
+      bin: "Landfill",
+    },
+  },
+  moreInfo: [""],
+  votes: 0,
+  image: [""],
+},
+{
+  category: "Cooking oil, fats, and grease",
+  keywords: ["cooking oil","fats","grease", "bacon fat"],
+  instruction: {
+    heading1: "​",
+    body1: {
+      condition: "Put up to two litres of cooking oil, fats, sauces, drippings and grease in your green cart for composting.",
+      bin: "Compost",
+    },
+  },
+  moreInfo: ["Solidify fats and grease by letting it cool at room temperature or in fridge. Mix oil with an absorbent material such as paper towel, sawdust or kitty litter."],
+  votes: 0,
+  image: ["https://www.calgary.ca/uep/wrs/what-goes-where/cooking-oil-or-grease/_jcr_content/root/maincontentpar/responsivegrid/grid/column-0-r0/grid_layout382/column-1-r0/image.img.jpeg/1620236673485/cooking-oil-and-grease.jpeg"],
+},
+{
+  category: "Balloons",
+  keywords: ["balloon"],
+  instruction: {
+    heading1: "​",
+    body1: {
+      condition: "Put new and used (deflated, ripped, popped) party balloons in your black cart as garbage.",
+      bin: "Garbage",
+    },
+  },
+  moreInfo: ["This includes latex balloons and mylar balloons."],
+  votes: 0,
+  image: ["https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/balloons-160px.jpg"],
+},
+{
+  category: "Lighters",
+  keywords: ["lighter", "barbeque lighter"],
+  instruction: {
+    heading1: "​",
+    body1: {
+      condition: "Put empty lighters such as barbeque and cigarette lighters in your black cart as garbage.​​",
+      bin: "Garbage",
+    },
+  },
+  moreInfo: [""],
+  votes: 0,
+  image: ["https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/lighter-160px.jpg"],
+},
+{
+  category: "Weight scales",
+  keywords: ["weight scale"],
+  instruction: {
+    heading1: "​",
+    body1: {
+      condition: "Take old and broken digital and electronic weight scales to an electronics recycling drop-off.",
+      bin: "Recyling drop-off",
+    },
+  },
+  moreInfo: [""],
+  votes: 0,
+  image: [""],
+},
+{
+  category: "Chemicals - Bear spray and pepper spray",
+  keywords: ["bear spray", "pepper spray"],
+  instruction: {
+    heading1: "​",
+    body1: {
+      condition: "Safely dispose of bear spray and pepper spray for free at a household hazardous waste drop-off",
+      bin: "Landfill",
+    },
+  },
+  moreInfo: ["You can bring up to 20 litres of household chemicals per week."],
+  votes: 0,
+  image: ["https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/bear-spray-160px.jpg"],
+},
+{
+  category: "Plastic – Bedding plant pots",
+  keywords: [""],
+  instruction: {
+    heading1: "​",
+    body1: {
+      condition: "Recycle bedding plant containers marked with a recycling symbol 1-7",
+      bin: "Recycling",
+    },
+  },
+  moreInfo: [""],
+  votes: 0,
+  image: ["https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/plastic-bedding-plant-pots.jpg"],
+},
+{
+  category: "Bicycles",
+  keywords: ["bike", "bicycle"],
+  instruction: {
+    heading1: "Usable bikes​",
+    body1: {
+      condition: "Donate usable bikes to participating charities.",
+      bin: "Donate",
+    },
+    heading2: "Unusable bikes​",
+    body2: {
+      condition: "Break down and put unusable bicycles or parts in your black cart as garbage.",
+      bin: "Garbage",
+    },
+  },
+  moreInfo: [""],
+  votes: 0,
+  image: ["https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/toyssportsequipment-bicycle-160px.jpg"],
+},
+{
+  category: "Helmets - all types",
+  keywords: ["helmet"],
+  instruction: {
+    heading1: "​",
+    body1: {
+      condition: "Put used and broken helmets in your black cart as garbage.",
+      bin: "Garbage",
+    },
+  },
+  moreInfo: [""],
+  votes: 0,
+  image: ["https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/helmet-160px.jpg"],
+},
+{
+  category: "Binders",
+  keywords: ["Binder"],
+  instruction: {
+    heading1: "​Usable binders",
+    body1: {
+      condition: "Donate usable binders to participating charities.",
+      bin: "Donate",
+    },
+    heading2: "​Unusable binders",
+    body2: {
+      condition: "Remove any paper sheets, folders and dividers and put in your blue cart for recycling.",
+      bin: "Recylcling",
+    },
+  },
+  moreInfo: [""],
+  votes: 0,
+  image: ["https://www.calgary.ca/uep/wrs/what-goes-where/binders/_jcr_content/root/maincontentpar/responsivegrid/grid/column-0-r0/grid_layout/column-1f7002f7-fc92-49c3-ac08-05b295293dc20/image.img.jpeg/1636480655475/green-binder.jpeg"],
+},
+{
+  category: "Bio-Medical waste",
+  keywords: ["bio-medical waste", "medical waste"],
+  instruction: {
+    heading1: "​",
+    body1: {
+      condition: "Refer to Alberta's Recycling Hotline for private companies to dispose of medical waste safely. ",
+      bin: "",
+    },
+  },
+  moreInfo: [""],
+  votes: 0,
+  image: ["https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/medical-biomedicalwaste-160px.jpg"],
+},
+{
+  category: "Biodegradable products",
+  keywords: ["oxo-gradable", "biodegradable", "cleaning wipes"],
+  instruction: {
+    heading1: "​",
+    body1: {
+      condition: "Put products labelled as 'biodegradable' or 'oxo-gradable' in your black cart as garbage.",
+      bin: "Garbage",
+    },
+  },
+  moreInfo: ["Products include bags, plastic cutlery and take out containers."],
+  votes: 0,
+  image: [""],
+},
+{
+  category: "Blister packaging",
+  keywords: ["blister packaging", "blister packet"],
+  instruction: {
+    heading1: "​",
+    body1: {
+      condition: "Put plastic blister packaging into your black cart as garbage.",
+      bin: "Garbage",
+    },
+  },
+  moreInfo: [""],
+  votes: 0,
+  image: ["https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/blister-packaging-160px.jpg"],
+},
+{
+  category: "Body wash bottle",
+  keywords: ["body wash bottle", "bubble bath bottle"],
+  instruction: {
+    heading1: "​",
+    body1: {
+      condition: "Recycle empty and clean body wash bottles and bubble bath bottles with the recycling 1-7:",
+      bin: "Recycling",
+    },
+  },
+  moreInfo: ["Remove any hand pumps and put in the black cart as garbage."],
+  votes: 0,
+  image: ["https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/body-wash-bottle-160px.jpg"],
+},
+{
+  category: "Meat, poultry, pork and bones",
+  keywords: ["meat", "beef", "pultry", "pork", "bones", "processed meat", "jerky", "sausage", "bacon"],
+  instruction: {
+    heading1: "​",
+    body1: {
+      condition: "Put all raw and cooked meat into your green cart for composting.",
+      bin: "Compost",
+    },
+  },
+  moreInfo: [""],
+  votes: 0,
+  image: ["https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/chicken-bones-160px.jpg"],
+},
+{
+  category: "Ribbons and bows",
+  keywords: ["ribbon", "bow"],
+  instruction: {
+    heading1: "Unusable ribbons and bows​",
+    body1: {
+      condition: "Put unusable ribbons and bows in your black cart as garbage.​",
+      bin: "Garbage",
+    },
+  },
+  moreInfo: [""],
+  votes: 0,
+  image: ["https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/householditems-ribbons-bows.jpg"],
+},
+{
+  category: "Dryer lint and dryer sheets",
+  keywords: ["dryer lint", "dryer sheets"],
+  instruction: {
+    heading1: "​",
+    body1: {
+      condition: "Put dryer lint and dryer sheets in your black cart as garbage.",
+      bin: "Garbage",
+    },
+  },
+  moreInfo: [""],
+  votes: 0,
+  image: ["https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/dryer-lint-160px.jpg"],
+},
+{
+  category: "Mattress, box spring or futon",
+  keywords: ["mattress", "box spring", "futon", "bed"],
+  instruction: {
+    heading1: "​",
+    body1: {
+      condition: "Donate or drop-off a mattress at a charity. Some organizations accept mattresses in good condition for donation. ",
+      bin: "Donate",
+    },
+  },
+  moreInfo: [""],
+  votes: 0,
+  image: ["https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/householditems-mattress.jpg"],
+},
+{
+  category: "Brick and masonry block",
+  keywords: ["brick", "masonry block"],
+  instruction: {
+    heading1: "​Small quantities of bricks and masonry blocks",
+    body1: {
+      condition: "Put small quantities of less than 60 kg of bricks and masonry blocks into your black cart as garbage.",
+      bin: "Garbage",
+    },
+    heading2: "Large quantities of bricks and masonry blocks​",
+    body2: {
+      condition: "Take large quantities of brick and masonry blocks to a City landfill. ",
+      bin: "Landfill",
+    },
+  },
+  moreInfo: [""],
+  votes: 0,
+  image: ["https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/constructionwaste-bricksmasonry-160px.jpg"],
+},
+{
+  category: "Butter wrapper",
+  keywords: ["butter wrapper"],
+  instruction: {
+    heading1: "​",
+    body1: {
+      condition: "Put empty butter and margarine wrappers into your black cart as garbage.",
+      bin: "Garbage",
+    },
+  },
+  moreInfo: [""],
+  votes: 0,
+  image: ["https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/butter-wrapper-160px.jpg"],
+},
+{
+  category: "Cakes, muffins and pastries",
+  keywords: ["cake", "muffin", "pastry"],
+  instruction: {
+    heading1: "​",
+    body1: {
+      condition: "Put leftover cakes, muffins and pastries into your green cart for composting.",
+      bin: "Compost",
+    },
+  },
+  moreInfo: [""],
+  votes: 0,
+  image: [""],
+},
+{
+  category: "Cabinets and drawers",
+  keywords: [""],
+  instruction: {
+    heading1: "Small quantities of cabinets​",
+    body1: {
+      condition: "Put broken or used pieces smaller than 15cm (diameter) and 1.25m (length) of cabinets and drawers into your black cart as garbage.",
+      bin: "Garbage",
+    },
+    heading2: "Large quantities of cabinets​",
+    body2: {
+      condition: "Take used or broken cabinets and drawers from a renovation or demolition to a City landfill.",
+      bin: "Landfill",
+    },
+  },
+  moreInfo: ["Some private companies such as Habitat for Humanity Restore may accept reusable building materials such as cabinets and drawers."],
+  votes: 0,
+  image: ["https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/cabinet-160px.jpg"],
+},
+{
+  category: "Film cameras",
+  keywords: ["film camera", "polaroid camera"],
+  instruction: {
+    heading1: "​",
+    body1: {
+      condition: "You can put old and broken film cameras, Polaroid film cameras and other instant film cameras in your black cart as garbage.",
+      bin: "Garbage",
+    },
+  },
+  moreInfo: [""],
+  votes: 0,
+  image: ["https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/film-camera-160px.jpg"],
+},
+{
+  category: "Propane tanks and canisters",
+  keywords: ["propane tank", "propane canister"],
+  instruction: {
+    heading1: "​",
+    body1: {
+      condition: "Safely dispose of propane tanks such as standard barbecue tanks, small camping canisters and butane canisters for free at a household hazardous waste drop-off",
+      bin: "Landfill",
+    },
+  },
+  moreInfo: [""],
+  votes: 0,
+  image: ["https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/gastanks-propane-160px.jpg"],
+},
+{
+  category: "Cardboard",
+  keywords: ["box", "cereal box", "egg carton", "pizza box","tissue box","toilet paper roll", "paper towel roll" ],
+  instruction: {
+    heading1: "​",
+    body1: {
+      condition: "Put cardboard into your blue cart or community recycling depot for recycling.",
+      bin: "Recycling",
+    },
+  },
+  moreInfo: [""],
+  votes: 0,
+  image: ["https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/cardboard-box-160px.jpg"],
+},
+{
+  category: "Carpets",
+  keywords: ["carpet"],
+  instruction: {
+    heading1: "Small quantities of carpet​",
+    body1: {
+      condition: "Put small quantities (less than 1.25m in length) of carpet and carpet underlay into your black cart as garbage.",
+      bin: "Garbage",
+    },
+    heading2: "Large quantities of carpet​",
+    body2: {
+      condition: "ake large sizes or amounts of carpet to a City landfill.",
+      bin: "Landfill",
+    },
+  },
+  moreInfo: [""],
+  votes: 0,
+  image: ["https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/householditems-carpet-160px.jpg"],
+},
+{
+  category: "Chapstick",
+  keywords: [""],
+  instruction: {
+    heading1: "​",
+    body1: {
+      condition: "Put chapstick tubes into your black as garbage.",
+      bin: "Garbage",
+    },
+  },
+  moreInfo: [""],
+  votes: 0,
+  image: ["https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/chapstick-160px.jpg"],
+},
+{
+  category: "Charcoal and coal products",
+  keywords: ["charcoal","coal"],
+  instruction: {
+    heading1: "​",
+    body1: {
+      condition: "put charcoal and coal products into your black cart as garbage.",
+      bin: "Garbage",
+    },
+  },
+  moreInfo: [""],
+  votes: 0,
+  image: ["https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/charcoal-160px.jpg"],
+},
+{
+  category: "Cigarette butts",
+  keywords: ["cigarette butts"],
+  instruction: {
+    heading1: "​",
+    body1: {
+      condition: "Put cigarette butts in your black cart as garbage.",
+      bin: "Garbage",
+    },
+  },
+  moreInfo: ["Make sure the cigarette is extinguished before throwing away."],
+  votes: 0,
+  image: ["https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/cigarette-butts-160px.jpg"],
+},
+{
+  category: "Concrete",
+  keywords: ["concrete"],
+  instruction: {
+    heading1: "Small quantities of concrete​",
+    body1: {
+      condition: "Put small quantities (less than 60 kg) of concrete in your black cart as garbage.",
+      bin: "Garbage",
+    },
+    heading1: "Large quantities of concrete​",
+    body1: {
+      condition: "Take large loads of concrete and cinder blocks to a City landfill. ",
+      bin: "Landfill",
+    },
+  },
+  moreInfo: [""],
+  votes: 0,
+  image: ["https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/constructionwaste-concrete-160px.jpg"],
+},
+{
+  category: "Contact lenses and cases",
+  keywords: ["contacts","contact lense", "contact case"],
+  instruction: {
+    heading1: "​",
+    body1: {
+      condition: "Put contact lenses, contact lens cases and disposable contact lens packaging in your black cart as garbage.",
+      bin: "Garbage",
+    },
+  },
+  moreInfo: ["Some optometrists and vision centres may offer their own recycling programs"],
+  votes: 0,
+  image: ["https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/contact-lens-case-160px.jpg"],
+},
+{
+  category: "Diapers",
+  keywords: ["diaper"],
+  instruction: {
+    heading1: "​",
+    body1: {
+      condition: "Put soiled diapers and diaper liners in your black cart as garbage",
+      bin: "Garbage",
+    },
+  },
+  moreInfo: ["Double bag and tie used diapers for disposal in your black cart."],
+  votes: 0,
+  image: ["https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/dirty-diaper-160px.jpg"],
+},
+{
+  category: "Gasoline or diesel fuel",
+  keywords: ["gaslone", "gas", "diesel"],
+  instruction: {
+    heading1: "​",
+    body1: {
+      condition: "Safely dispose gas and diesel for free at a household hazardous waste drop-off location",
+      bin: "Landfill",
+    },
+  },
+  moreInfo: ["You can bring up to 20 litres of household chemicals per week."],
+  votes: 0,
+  image: ["https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/gasolinedieselfuel-160px.jpg"],
+},
+{
+  category: "Doors and windows",
+  keywords: ["door", "window"],
+  instruction: {
+    heading1: "​",
+    body1: {
+      condition: "Take broken or used doors and windows from a renovation or demolition to a City landfill.",
+      bin: "Landfill",
+    },
+  },
+  moreInfo: ["Some private companies may accept reusable building materials such as doors and windows."],
+  votes: 0,
+  image: ["https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/window-160px.jpg"],
+},
+{
+  category: "Makeup and cosmetics",
+  keywords: ["eyeshadow palettes","lipstick and lip gloss","mascara tubes","eyeliner", "brow pencils","Makeup brushes"],
+  instruction: {
+    heading1: "​",
+    body1: {
+      condition: "Put old and used makeup cases, tubes and cosmetics containers into your black cart as garbage.",
+      bin: "Garbage",
+    },
+  },
+  moreInfo: [""],
+  votes: 0,
+  image: ["https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/makeup-cosmetics-160px.jpg"],
+},
+{
+  category: "Pet hair, fur and feathers",
+  keywords: ["pet hair", "fur", "feathers"],
+  instruction: {
+    heading1: "​",
+    body1: {
+      condition: "Put pet hair, fur and feathers in a certified compostable bag or paper bag. Place the tied up/rolled up bag in your green cart for composting.",
+      bin: "Compost",
+    },
+  },
+  moreInfo: [""],
+  votes: 0,
+  image: ["https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/pet-hair-160px.jpg"],
+},
+{
+  category: "Fireworks",
+  keywords: ["fireworks"],
+  instruction: {
+    heading1: "​",
+    body1: {
+      condition: "Contact the Calgary Police Service at (403) 266-1234 for safe disposal.​​",
+      bin: "",
+    },
+  },
+  moreInfo: ["O​​nly trained and certified professionals with a fireworks permit are allowed to ignite or fire fireworks within the city of Calgary."],
+  votes: 0,
+  image: ["https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/fireworksammunition-fireworks-160px.jpg"],
+},
+{
+  category: "Flowers",
+  keywords: ["flower"],
+  instruction: {
+    heading1: "​",
+    body1: {
+      condition: "Put flowers in your green cart for composting.",
+      bin: "Compost",
+    },
+  },
+  moreInfo: [""],
+  votes: 0,
+  image: ["https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/flowers-160px.jpg"],
+},
+{
+  category: "Fruit",
+  keywords: ["apples", "oranges", "mango", "banana", "blackberry", "grapefruit", "dragonfruit", "starfruit", "lemon", "limes", "blueberry", "pomegranate", "durian", "cherries", "plums", "raspberry", "strawberry", "juniper", "cranberry", "fruit", "fruit peel", "fruit core", "fruit seeds"],
+  instruction: {
+    heading1: "​",
+    body1: {
+      condition: "Put all types of fruit (raw or cooked) into your green cart for composting.",
+      bin: "Compost",
+    },
+  },
+  moreInfo: [""],
+  votes: 0,
+  image: ["https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/fruit-peels-160px.jpg"],
+},
+{
+  category: "Glow sticks",
+  keywords: ["glow stick"],
+  instruction: {
+    heading1: "​",
+    body1: {
+      condition: "Put glow sticks into your black cart as garbage.",
+      bin: "Garbage",
+    },
+  },
+  moreInfo: [""],
+  votes: 0,
+  image: ["https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/glow-sticks-160px.jpg"],
+},
+{
+  category: "Street sweepings",
+  keywords: ["gravel", "street sweeping", "dust", "rocks", "debris"],
+  instruction: {
+    heading1: "​",
+    body1: {
+      condition: "Put street sweepings such as gravel, dust, rocks and other debris into your black cart as garbage.",
+      bin: "Garbage",
+    },
+  },
+  moreInfo: ["Make sure it is under the 20kg"],
+  votes: 0,
+  image: ["https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/gravel-rocks-305px.jpg"],
+},
+{
+  category: "Chemicals – Health care",
+  keywords: ["hydrogen peroxide", "rubbing alcohol", "hazard symbol"],
+  instruction: {
+    heading1: "​",
+    body1: {
+      condition: "Safely dispose personal care chemicals for free at a household hazardous waste drop-off site",
+      bin: "Landfill",
+    },
+  },
+  moreInfo: ["You can bring up to 20 litres of household chemicals per week."],
+  votes: 0,
+  image: ["https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/hydrogen-peroxide-160px.jpg"],
+},
+{
+  category: "Chemicals - Gardening",
+  keywords: ["herbicide","fertilizer","insecticides","pesticides"],
+  instruction: {
+    heading1: "​",
+    body1: {
+      condition: "Safely dispose chemicals used to control weeds, pests and other outdoor nuisances, for free at a household hazardous waste drop-off site",
+      bin: "Landfill",
+    },
+  },
+  moreInfo: ["You can bring up to 20 litres of household chemicals per week."],
+  votes: 0,
+  image: ["https://www.calgary.ca/content/dam/www/uep/wrs/publishingimages/what-goes-where/items/householdhazardouswaste-gardening-160px.jpg"],
+},
+{
+  category: "Fibreglass insulation",
+  keywords: ["fibreglass", "insulation"],
+  instruction: {
+    heading1: "Small quantities of insulation​",
+    body1: {
+      condition: "Put small amounts of fibreglass insulation in your black cart as garbage.",
+      bin: "Garbage",
+    },
+    heading2: "Large quantities of insulation​",
+    body2: {
+      condition: "Take large loads of fibreglass insulation to a City landfill.",
+      bin: "Landfill",
+    },
+  },
+  moreInfo: [""],
+  votes: 0,
+  image: [""],
+},
+
+// {
+//     category: "",
+//     keywords: [""],
+//     instruction: {
+//       heading1: "​",
+//       body1: {
+//         condition: "",
+//         bin: "",
+//       },
+//     },
+//     moreInfo: [""],
+//     votes: 0,
+//     image: [""],
+//   },
 ];
 
 // heading2: "",
