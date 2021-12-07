@@ -36,11 +36,11 @@ const Info = ({ wasteType }) => {
     condition2 = wasteType.instruction.body2.condition;
   }
   let moreInfo = wasteType.moreInfo;
+  console.log("more info", moreInfo);
   let moreInfoList;
-  console.log();
   if (moreInfo) {
     moreInfoList = moreInfo.map((item) => {
-      return <li>{item}</li>;
+      return <li key={item.id}>{item}</li>;
     });
   }
 
@@ -52,10 +52,10 @@ const Info = ({ wasteType }) => {
       <img src={getIcon(1)} />
       <img src={image} />
       <h3>{heading2 && heading2}</h3>
-      {body2 && <p>{condition2}</p>}
+      {<p>{body2 && condition2}</p>}
       {body2 && <img src={getIcon(2)} />}
-      {moreInfo && <h4>More info:</h4>}
-      {moreInfo && moreInfoList}
+      {moreInfo[0] && <h4>More info:</h4>}
+      {moreInfo[0] && moreInfoList}
     </div>
   );
 };
