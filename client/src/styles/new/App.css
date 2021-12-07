@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  background-image: url("../../assets/images/background.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 90%;
+  background-color: #03010f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+}
+
+.app {
+  background: rgba(10, 10, 10, 0.582);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80vh;
+  width: 50vw;
+}
+
+.search-form {
+  margin-top: 20%;
+  position: relative;
+}
+
+.search-form input {
+  width: 100%;
+  height: 50px;
+  border-radius: 20px;
+  border: none;
+  padding: 0 4em;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  color: #080000;
+  background: rgba(245, 244, 244, 0.767);
+  outline: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.search-form input:focus {
+  background: rgba(68, 67, 67, 0.582);
+  color: #fff;
+}
+
+.search-form button {
+  background: none;
+  position: absolute;
+  right: -2%;
+  top: 20%;
+  outline: none;
+}
+/*# sourceMappingURL=App.css.map */

@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  background-image: url("../../assets/images/background.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 90%;
+  background-color: rgb(3, 1, 15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.app {
+  background: rgba(10, 10, 10, 0.582);
+  display: flex;
+  border-radius: 20px;
+  flex-direction: column;
+  align-items: center;
+  height: 80vh;
+  width: 50vw;
+}
+
+.search-form {
+    margin-top: 20%;
+    position: relative;
+
+    input {
+        width: 100%;
+        height: 50px;
+        border-radius: 20px;
+        border: none;
+        padding: 0 4em;
+        font-size: 20px;
+        font-family: "Poppins", sans-serif;
+        color: rgb(8, 0, 0);
+        background: rgba(245, 244, 244, 0.767);
+        outline: none;
+        transition: all 0.3s ease-in-out;
+        &:focus {
+            background: rgba(68, 67, 67, 0.582);
+            color: #fff;
+        }
+    }
+
+    button {
+        background: none;
+        position: absolute;
+        right: -2%;
+        top: 20%;
+        outline: none;
+
+
+    }
+    
+}
