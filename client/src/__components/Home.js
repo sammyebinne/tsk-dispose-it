@@ -13,7 +13,7 @@ function Home() {
   return (
     <main className="app">
       <SearchForm getData={getData} />
-      <ResultList results={data} />
+      <ResultList className="result-list" results={data} />
     </main>
   );
 }
