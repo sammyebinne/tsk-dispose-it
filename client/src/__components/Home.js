@@ -7,6 +7,7 @@ function Home() {
 
   const getData = (data) => {
     setData(data);
+    console.log(data);
   };
 
   return (
