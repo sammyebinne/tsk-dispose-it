@@ -5,6 +5,7 @@ import {
   listItems,
   findItem,
   loadItems,
+  updateEntry,
 } from "../controllers/controller.js";
 
 // Create a new item
@@ -18,5 +19,8 @@ router.get("/findItem/:query", findItem);
 
 // only use once to load all data into the database
 router.get("/loadItems", loadItems);
+
+// edit item in database
+router.post("/editItem", updateEntry);
 
 export default router;

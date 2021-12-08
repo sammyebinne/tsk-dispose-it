@@ -30,7 +30,9 @@ async function findItem(req, res) {
   }
 
   try {
-    const items = await DisposeGuide.find(query).populate("category").sort({votes: -1});
+    const items = await DisposeGuide.find(query)
+      .populate("category")
+      .sort({ votes: -1 });
     res.json(items);
   } catch (err) {
     res.status(404).json({ message: err.message });
@@ -50,4 +52,15 @@ async function loadItems(req, res) {
   }
 }
 
-export { createItem, listItems, findItem, loadItems };
+async function updateEntry(req, res) {
+  console.log(req.body);
+  let updatedEntry = await DisposeGuide.findOneAndUpdate(
+    {
+      category: req.body.category,
+    },
+    req.body
+  );
+  res.json(updatedEntry);
+}
+
+export { createItem, listItems, findItem, loadItems, updateEntry };
