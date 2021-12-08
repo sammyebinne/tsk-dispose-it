@@ -6,6 +6,8 @@ import {
   findItem,
   loadItems,
   updateEntry,
+  addEntry,
+  deleteEntry,
 } from "../controllers/controller.js";
 
 // Create a new item
@@ -22,5 +24,10 @@ router.get("/loadItems", loadItems);
 
 // edit item in database
 router.post("/editItem", updateEntry);
+
+// add item to database
+router.post("/addItem", addEntry);
+
+router.post("/deleteItem", deleteEntry);
 
 export default router;

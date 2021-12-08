@@ -1,59 +1,25 @@
 import { useState } from "react";
 
-const EditForm = ({ currentCategory, setIsEdit, search }) => {
-  const [category, setCategory] = useState(currentCategory.category);
-  const [keywords, setKeywords] = useState(currentCategory.keywords);
-  const [heading1, setHeading1] = useState(() => {
-    try {
-      return currentCategory.instruction.heading1;
-    } catch (error) {
-      return currentCategory.category;
-    }
-  });
-  const [condition1, setCondition1] = useState(
-    currentCategory.instruction.body1.condition
-  );
-  const [bin1, setBin1] = useState(currentCategory.instruction.body1.bin);
-  const [heading2, setHeading2] = useState(() => {
-    try {
-      return currentCategory.instruction.heading2;
-    } catch (error) {
-      return "";
-    }
-  });
-  const [condition2, setCondition2] = useState(() => {
-    try {
-      return currentCategory.instruction.body2.condition;
-    } catch (error) {
-      return "";
-    }
-  });
-  const [bin2, setBin2] = useState(() => {
-    try {
-      return currentCategory.instruction.body2.bin;
-    } catch (error) {
-      return "";
-    }
-  });
-  const [moreInfo, setMoreInfo] = useState(() => {
-    try {
-      return currentCategory.moreInfo;
-    } catch (error) {
-      return [];
-    }
-  });
-  const [image, setImage] = useState(() => {
-    try {
-      return currentCategory.image;
-    } catch (error) {
-      return [];
-    }
-  });
+const AddForm = ({ setIsAdd, search }) => {
+  const [category, setCategory] = useState("");
+  const [keywords, setKeywords] = useState([]);
+  const [heading1, setHeading1] = useState("");
+  const [condition1, setCondition1] = useState("");
+  const [bin1, setBin1] = useState("");
+  const [heading2, setHeading2] = useState("");
+  const [condition2, setCondition2] = useState("");
+  const [bin2, setBin2] = useState("");
+  const [moreInfo, setMoreInfo] = useState([]);
+  const [image, setImage] = useState([]);
 
-  const saveChanges = async (e) => {
+  const addItem = async (e) => {
     e.preventDefault();
-    setIsEdit(false);
-    let updatedEntry = await fetch("/editItem", {
+    // ensure certain conditions are met:
+    if (!category) {
+      return alert("Category required");
+    }
+    setIsAdd(false);
+    let addedEntry = await fetch("/addItem", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -73,22 +39,24 @@ const EditForm = ({ currentCategory, setIsEdit, search }) => {
         },
         moreInfo,
         image,
-        votes: currentCategory.votes,
+        votes: 0,
       }),
     });
-    updatedEntry = await updatedEntry.json();
-    console.log("updated entry:", updatedEntry);
+    addedEntry = await addedEntry.json();
+    console.log("added entry:", addedEntry);
     // this is a workaround for updating the page immediately to show changes.
-    search(updatedEntry.category);
+    search(addedEntry.category);
   };
   return (
-    <form onSubmit={saveChanges} className="form-control">
+    <form onSubmit={addItem} className="form-control">
       <label htmlFor="category">Category:</label>
       <input
         id="category"
         type="text"
         value={category}
         onChange={(e) => setCategory(e.target.value)}
+        required
+        placeholder="REQUIRED"
       />
       <br />
       <label htmlFor="keywords">
@@ -99,6 +67,8 @@ const EditForm = ({ currentCategory, setIsEdit, search }) => {
         type="text"
         value={keywords.join("; ")}
         onChange={(e) => setKeywords(e.target.value.split("; "))}
+        required
+        placeholder="REQUIRED"
       />
       <br />
       <label htmlFor="heading1">Heading 1:</label>
@@ -115,6 +85,8 @@ const EditForm = ({ currentCategory, setIsEdit, search }) => {
         type="text"
         value={condition1}
         onChange={(e) => setCondition1(e.target.value)}
+        required
+        placeholder="REQUIRED"
       />
       <br />
       <label htmlFor="bin1">Bin 1:</label>
@@ -123,6 +95,8 @@ const EditForm = ({ currentCategory, setIsEdit, search }) => {
         type="text"
         value={bin1}
         onChange={(e) => setBin1(e.target.value)}
+        required
+        placeholder="REQUIRED"
       />
       <br />
       <label htmlFor="heading2">Heading 2:</label>
@@ -172,4 +146,4 @@ const EditForm = ({ currentCategory, setIsEdit, search }) => {
   );
 };
 
-export default EditForm;
+export default AddForm;
