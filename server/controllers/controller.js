@@ -63,4 +63,35 @@ async function updateEntry(req, res) {
   res.json(updatedEntry);
 }
 
-export { createItem, listItems, findItem, loadItems, updateEntry };
+async function addEntry(req, res) {
+  try {
+    let addedEntry = new DisposeGuide(req.body);
+    await addedEntry.save();
+    console.log(`created new item with id: ${addedEntry.id}`);
+    res.json(addedEntry);
+  } catch (err) {
+    console.log(err.message);
+  }
+}
+
+async function deleteEntry(req, res) {
+  try {
+    let deletedEntry = await DisposeGuide.findOneAndDelete({
+      category: req.body.category,
+    });
+    console.log(`deleted item: ${deletedEntry}`);
+    res.json(deletedEntry);
+  } catch (err) {
+    console.log(err.message);
+  }
+}
+
+export {
+  createItem,
+  listItems,
+  findItem,
+  loadItems,
+  updateEntry,
+  addEntry,
+  deleteEntry,
+};

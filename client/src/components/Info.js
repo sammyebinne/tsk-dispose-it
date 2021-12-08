@@ -1,4 +1,4 @@
-const Info = ({ wasteType }) => {
+const Info = ({ wasteType, showMoreInfo, toggleShowMoreInfo }) => {
   const getIcon = (binNumber) => {
     let bin;
     if (binNumber === 1) {
@@ -47,15 +47,20 @@ const Info = ({ wasteType }) => {
   return (
     <div>
       <h2>{category}</h2>
-      {heading1 !== category && <h3>{heading1}</h3>}
+      {/* if heading1 is different from category, show it. Otherwise, hide it. */}
+      {heading1.slice(1) !== category && heading1 && <h3>{heading1}</h3>}
       <p>{condition1}</p>
       <img src={getIcon(1)} />
       <img src={image} />
       <h3>{heading2 && heading2}</h3>
       {<p>{body2 && condition2}</p>}
       {body2 && <img src={getIcon(2)} />}
-      {moreInfo[0] && <h4>More info:</h4>}
-      {moreInfo[0] && moreInfoList}
+      {moreInfo[0] && (
+        <h4 onClick={toggleShowMoreInfo} style={{ cursor: "pointer" }}>
+          More info: (click to show/hide)
+        </h4>
+      )}
+      {moreInfo[0] && showMoreInfo && moreInfoList}
     </div>
   );
 };

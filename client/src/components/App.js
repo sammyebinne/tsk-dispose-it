@@ -4,6 +4,7 @@ import Info from "./Info";
 import { useState } from "react";
 import "../styles/old/App.css";
 import EditForm from "./EditForm";
+import AddForm from "./AddForm";
 
 function App() {
   // const [wasteTypes, setWasteTypes] = useState(async () => {
@@ -14,6 +15,10 @@ function App() {
   const [currentCategory, setCurrentCategory] = useState(null);
   // is Edit button toggled?
   const [isEdit, setIsEdit] = useState(false);
+  // is Add button toggled?
+  const [isAdd, setIsAdd] = useState(false);
+  // show or hide more info
+  const [showMoreInfo, setShowMoreInfo] = useState(true);
   // search for something to dispose of
   const search = async (query) => {
     setCurrentCategory(null);
@@ -34,15 +39,39 @@ function App() {
     setIsEdit(!isEdit);
     console.log("isEdit", isEdit);
   };
+  const toggleAdd = () => {
+    setIsAdd((old) => {
+      let newIsAdd = !old;
+      console.log("isAdd", newIsAdd);
+      return newIsAdd;
+    });
+  };
+  const toggleShowMoreInfo = () => {
+    setShowMoreInfo((old) => {
+      let newShowMoreInfo = !old;
+      console.log("showMoreInfo", newShowMoreInfo);
+      return newShowMoreInfo;
+    });
+  };
+
   return (
     <div className="container">
       <Header
         currentCategory={currentCategory}
         toggleEdit={toggleEdit}
         isEdit={isEdit}
+        toggleAdd={toggleAdd}
+        isAdd={isAdd}
+        search={search}
       />
       <SearchForm onSearch={search} isEdit={isEdit} />
-      {currentCategory && !isEdit && <Info wasteType={currentCategory} />}
+      {currentCategory && !isEdit && !isAdd && (
+        <Info
+          wasteType={currentCategory}
+          showMoreInfo={showMoreInfo}
+          toggleShowMoreInfo={toggleShowMoreInfo}
+        />
+      )}
 
       {currentCategory && isEdit && (
         <EditForm
@@ -51,6 +80,8 @@ function App() {
           search={search}
         />
       )}
+
+      {isAdd && <AddForm setIsAdd={setIsAdd} search={search} />}
     </div>
   );
 }
