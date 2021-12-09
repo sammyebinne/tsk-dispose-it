@@ -1,21 +1,33 @@
 import { useState } from "react";
 
 const AddForm = ({ setIsAdd, search }) => {
-  const [category, setCategory] = useState("");
-  const [keywords, setKeywords] = useState([]);
-  const [heading1, setHeading1] = useState("");
-  const [condition1, setCondition1] = useState("");
-  const [bin1, setBin1] = useState("");
-  const [heading2, setHeading2] = useState("");
-  const [condition2, setCondition2] = useState("");
-  const [bin2, setBin2] = useState("");
-  const [moreInfo, setMoreInfo] = useState([]);
-  const [image, setImage] = useState([]);
+  const [formData, setFormData] = useState({
+    category: "",
+    keywords: [],
+    heading1: "",
+    condition1: "",
+    bin1: "",
+    heading2: "",
+    condition2: "",
+    bin2: "",
+    moreInfo: [],
+    image: [],
+    votes: 0,
+  });
+
+  const handleChange = (e) => {
+    const name = e.target.name;
+    let value = e.target.value;
+    if (name === "keywords" || name === "image" || name === "moreInfo") {
+      value = value.split("; ");
+    }
+    setFormData({ ...formData, [name]: value });
+  };
 
   const addItem = async (e) => {
     e.preventDefault();
     // ensure certain conditions are met:
-    if (!category) {
+    if (!formData.category) {
       return alert("Category required");
     }
     setIsAdd(false);
@@ -23,22 +35,22 @@ const AddForm = ({ setIsAdd, search }) => {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        category,
-        keywords,
+        category: formData.category,
+        keywords: formData.keywords,
         instruction: {
-          heading1,
+          heading1: formData.heading1,
           body1: {
-            condition: condition1,
-            bin: bin1,
+            condition: formData.condition1,
+            bin: formData.bin1,
           },
-          heading2,
+          heading2: formData.heading2,
           body2: {
-            condition: condition2,
-            bin: bin2,
+            condition: formData.condition2,
+            bin: formData.bin2,
           },
         },
-        moreInfo,
-        image,
+        moreInfo: formData.moreInfo,
+        image: formData.image,
         votes: 0,
       }),
     });
@@ -53,8 +65,9 @@ const AddForm = ({ setIsAdd, search }) => {
       <input
         id="category"
         type="text"
-        value={category}
-        onChange={(e) => setCategory(e.target.value)}
+        name="category"
+        value={formData.category}
+        onChange={handleChange}
         required
         placeholder="REQUIRED"
       />
@@ -65,8 +78,9 @@ const AddForm = ({ setIsAdd, search }) => {
       <input
         id="keywords"
         type="text"
-        value={keywords.join("; ")}
-        onChange={(e) => setKeywords(e.target.value.split("; "))}
+        name="keywords"
+        value={formData.keywords.join("; ")}
+        onChange={handleChange}
         required
         placeholder="REQUIRED"
       />
@@ -74,17 +88,19 @@ const AddForm = ({ setIsAdd, search }) => {
       <label htmlFor="heading1">Heading 1:</label>
       <input
         id="heading1"
+        name="heading1"
         type="text"
-        value={heading1}
-        onChange={(e) => setHeading1(e.target.value)}
+        value={formData.heading1}
+        onChange={handleChange}
       />
       <br />
       <label htmlFor="condition1">Condition 1:</label>
       <input
         id="condition1"
+        name="condition1"
         type="text"
-        value={condition1}
-        onChange={(e) => setCondition1(e.target.value)}
+        value={formData.condition1}
+        onChange={handleChange}
         required
         placeholder="REQUIRED"
       />
@@ -92,9 +108,10 @@ const AddForm = ({ setIsAdd, search }) => {
       <label htmlFor="bin1">Bin 1:</label>
       <input
         id="bin1"
+        name="bin1"
         type="text"
-        value={bin1}
-        onChange={(e) => setBin1(e.target.value)}
+        value={formData.bin1}
+        onChange={handleChange}
         required
         placeholder="REQUIRED"
       />
@@ -102,41 +119,46 @@ const AddForm = ({ setIsAdd, search }) => {
       <label htmlFor="heading2">Heading 2:</label>
       <input
         id="heading2"
+        name="heading2"
         type="text"
-        value={heading2}
-        onChange={(e) => setHeading2(e.target.value)}
+        value={formData.heading2}
+        onChange={handleChange}
       />
       <br />
       <label htmlFor="condition2">Condition 2:</label>
       <input
         id="condition2"
+        name="condition2"
         type="text"
-        value={condition2}
-        onChange={(e) => setCondition2(e.target.value)}
+        value={formData.condition2}
+        onChange={handleChange}
       />
       <br />
       <label htmlFor="bin2">Bin 2:</label>
       <input
         id="bin2"
+        name="bin2"
         type="text"
-        value={bin2}
-        onChange={(e) => setBin2(e.target.value)}
+        value={formData.bin2}
+        onChange={handleChange}
       />
       <br />
       <label htmlFor="moreInfo">More Info (separate by ; + space):</label>
       <input
         id="moreInfo"
+        name="moreInfo"
         type="text"
-        value={moreInfo.join("; ")}
-        onChange={(e) => setMoreInfo(e.target.value.split("; "))}
+        value={formData.moreInfo.join("; ")}
+        onChange={handleChange}
       />
       <br />
       <label htmlFor="image">Image(s) (separate by comma + space):</label>
       <input
         id="image"
+        name="image"
         type="text"
-        value={image.join(", ")}
-        onChange={(e) => setImage(e.target.value.split(", "))}
+        value={formData.image.join("; ")}
+        onChange={handleChange}
       />
       <br />
       <button type="submit" className="btn">
