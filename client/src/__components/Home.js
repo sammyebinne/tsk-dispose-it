@@ -11,7 +11,7 @@ function Home() {
   };
 
   return (
-    <main className="app">
+    <main className="container">
       <SearchForm getData={getData} />
       <ResultList className="result-list" results={data} />
     </main>

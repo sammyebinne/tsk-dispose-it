@@ -1,9 +1,12 @@
-function Navbar() {
+import Navbar from "@mui/material";
+
+
+function Nav() {
   return (
     <div>
-      <h1>Navbar</h1>
+      <Navbar />
     </div>
   );
 }
 
-export default Navbar;
+export default Nav;
