@@ -21,6 +21,21 @@ async function listItems(req, res) {
 }
 
 async function findItem(req, res) {
+  // this will return exact category matches only. Case insensitive.
+
+  // let query = req.params.query;
+  // console.log("query", query);
+  // let searchResult = await DisposeGuide.findOne({
+  //   category: { $regex: new RegExp("^" + query + "$", "i") },
+  // });
+  // if (!searchResult) {
+  //   return res.json(searchResult);
+  // }
+  // if (searchResult.category.toLowerCase() === query.toLowerCase()) {
+  //   return res.json(searchResult);
+  // }
+  // return res.json(null);
+
   let query = {};
   if (req.params.query) {
     query.$or = [

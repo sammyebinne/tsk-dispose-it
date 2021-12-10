@@ -94,11 +94,13 @@ const EditForm = ({ currentCategory, setIsEdit, search }) => {
       <label htmlFor="keywords">
         Keywords (separate by semicolon + space):
       </label>
-      <input
+      <textarea
         id="keywords"
         type="text"
         value={keywords.join("; ")}
         onChange={(e) => setKeywords(e.target.value.split("; "))}
+        style={{ height: 100, width: 400 }}
+        rows="5"
       />
       <br />
       <label htmlFor="heading1">Heading 1:</label>

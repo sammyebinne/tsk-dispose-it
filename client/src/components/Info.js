@@ -61,6 +61,8 @@ const Info = ({ wasteType, showMoreInfo, toggleShowMoreInfo }) => {
         </h4>
       )}
       {moreInfo[0] && showMoreInfo && moreInfoList}
+      {category && <h4>Keywords:</h4>}
+      {/* {category && <p>{wasteType.keywords.join("; ")}</p>} */}
     </div>
   );
 };
