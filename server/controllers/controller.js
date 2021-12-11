@@ -23,35 +23,35 @@ async function listItems(req, res) {
 async function findItem(req, res) {
   // this will return exact category matches only. Case insensitive.
 
-  // let query = req.params.query;
-  // console.log("query", query);
-  // let searchResult = await DisposeGuide.findOne({
-  //   category: { $regex: new RegExp("^" + query + "$", "i") },
-  // });
-  // if (!searchResult) {
-  //   return res.json(searchResult);
-  // }
-  // if (searchResult.category.toLowerCase() === query.toLowerCase()) {
-  //   return res.json(searchResult);
-  // }
-  // return res.json(null);
-
-  let query = {};
-  if (req.params.query) {
-    query.$or = [
-      { category: { $regex: req.params.query, $options: "i" } },
-      { keywords: { $regex: req.params.query, $options: "i" } },
-    ];
+  let query = req.params.query;
+  console.log("query", query);
+  let searchResult = await DisposeGuide.findOne({
+    category: { $regex: new RegExp("^" + query + "$", "i") },
+  });
+  if (!searchResult) {
+    return res.json(searchResult);
   }
-
-  try {
-    const items = await DisposeGuide.find(query)
-      .populate("category")
-      .sort({ votes: -1 });
-    res.json(items);
-  } catch (err) {
-    res.status(404).json({ message: err.message });
+  if (searchResult.category.toLowerCase() === query.toLowerCase()) {
+    return res.json(searchResult);
   }
+  return res.json(null);
+
+  // let query = {};
+  // if (req.params.query) {
+  //   query.$or = [
+  //     { category: { $regex: req.params.query, $options: "i" } },
+  //     { keywords: { $regex: req.params.query, $options: "i" } },
+  //   ];
+  // }
+
+  // try {
+  //   const items = await DisposeGuide.find(query)
+  //     .populate("category")
+  //     .sort({ votes: -1 });
+  //   res.json(items);
+  // } catch (err) {
+  //   res.status(404).json({ message: err.message });
+  // }
 }
 
 async function loadItems(req, res) {

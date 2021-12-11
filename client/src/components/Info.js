@@ -19,6 +19,22 @@ const Info = ({ wasteType, showMoreInfo, toggleShowMoreInfo }) => {
         return "https://rmhccnaz.org/wp-content/uploads/Donate-Icon-01.png";
       case "Landfill":
         return "https://static.thenounproject.com/png/576941-200.png";
+      case "medical waste":
+        return "https://marvel-b1-cdn.bc0a.com/f00000000229279/twu.edu/media/images/risk-management/biohazardwarninglabels.jpg";
+      case "hazardous waste":
+        return "https://image.shutterstock.com/image-vector/biohazard-sign-logo-circular-260nw-1459235717.jpg";
+      case "pharmacy":
+        return "https://cdn-icons-png.flaticon.com/512/169/169837.png";
+      case "metal recycler":
+        return "https://c8.alamy.com/comp/C131D4/two-arrow-metal-recycling-symbol-over-white-background-C131D4.jpg";
+      case "sink":
+        return "https://cdn-icons-png.flaticon.com/512/2373/2373426.png";
+      case "radioactive waste":
+        return "https://e7.pngegg.com/pngimages/994/144/png-clipart-nuclear-power-radioactive-decay-radioactive-waste-hazard-symbol-symbol-miscellaneous-sticker.png";
+      case "return":
+        return "https://cdn-icons-png.flaticon.com/512/61/61449.png";
+      case "reuse":
+        return "https://www.recycling.com/wp-content/uploads/2017/07/reuse-reusing-step-symbol-logo-blue.png";
       default:
         return "https://static.thenounproject.com/png/33699-200.png";
     }
@@ -40,7 +56,11 @@ const Info = ({ wasteType, showMoreInfo, toggleShowMoreInfo }) => {
   let moreInfoList;
   if (moreInfo) {
     moreInfoList = moreInfo.map((item) => {
-      return <li key={item.id}>{item}</li>;
+      return (
+        <li key={item.id} style={{ fontSize: 10 }}>
+          {item}
+        </li>
+      );
     });
   }
 
@@ -62,7 +82,8 @@ const Info = ({ wasteType, showMoreInfo, toggleShowMoreInfo }) => {
       )}
       {moreInfo[0] && showMoreInfo && moreInfoList}
       {category && <h4>Keywords:</h4>}
-      {/* {category && <p>{wasteType.keywords.join("; ")}</p>} */}
+      {/* Uncomment this when adding to database. It allows you to see keys for each entry. */}
+      {category && <p>{wasteType.keywords.join("; ")}</p>}
     </div>
   );
 };
