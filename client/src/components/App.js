@@ -28,7 +28,7 @@ function App() {
 
     if (searchResult) {
       console.log(searchResult);
-      setCurrentCategory(searchResult[0]);
+      setCurrentCategory(searchResult); // delete [0] when adding to database
     } else {
       setCurrentCategory(null);
       alert("nothing found");

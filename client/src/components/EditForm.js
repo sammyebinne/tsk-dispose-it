@@ -78,6 +78,42 @@ const EditForm = ({ currentCategory, setIsEdit, search }) => {
     });
     updatedEntry = await updatedEntry.json();
     console.log("updated entry:", updatedEntry);
+    // if the category name was edited, add a new entry with new name and delete the old. This is a workaround.
+    if (updatedEntry === null) {
+      let addedEntry = await fetch("/addItem", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          category,
+          keywords,
+          instruction: {
+            heading1: heading1,
+            body1: {
+              condition: condition1,
+              bin: bin1,
+            },
+            heading2: heading2,
+            body2: {
+              condition: condition2,
+              bin: bin2,
+            },
+          },
+          moreInfo,
+          image,
+          votes: currentCategory.votes,
+        }),
+      });
+      let deletedEntry = await fetch("/deleteItem", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          category: currentCategory.category,
+        }),
+      });
+      deletedEntry = await deletedEntry.json();
+      console.log("deleted entry:", deletedEntry);
+      return search(addedEntry.category);
+    }
     // this is a workaround for updating the page immediately to show changes.
     search(updatedEntry.category);
   };
@@ -94,11 +130,13 @@ const EditForm = ({ currentCategory, setIsEdit, search }) => {
       <label htmlFor="keywords">
         Keywords (separate by semicolon + space):
       </label>
-      <input
+      <textarea
         id="keywords"
         type="text"
         value={keywords.join("; ")}
         onChange={(e) => setKeywords(e.target.value.split("; "))}
+        style={{ height: 100, width: 400 }}
+        rows="5"
       />
       <br />
       <label htmlFor="heading1">Heading 1:</label>
