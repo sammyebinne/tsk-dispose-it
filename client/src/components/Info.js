@@ -35,6 +35,8 @@ const Info = ({ wasteType, showMoreInfo, toggleShowMoreInfo }) => {
         return "https://cdn-icons-png.flaticon.com/512/61/61449.png";
       case "reuse":
         return "https://www.recycling.com/wp-content/uploads/2017/07/reuse-reusing-step-symbol-logo-blue.png";
+      case "police":
+        return "https://cdn.iconscout.com/icon/free/png-256/police-1659481-1410003.png";
       default:
         return "https://static.thenounproject.com/png/33699-200.png";
     }
