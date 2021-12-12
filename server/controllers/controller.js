@@ -28,13 +28,19 @@ async function findItem(req, res) {
   let searchResult = await DisposeGuide.findOne({
     category: { $regex: new RegExp("^" + query + "$", "i") },
   });
+  // if no exact category match, seaches keywords for exact matches and returns one
   if (!searchResult) {
-    return res.json(searchResult);
+    searchResult = await DisposeGuide.findOne({
+      keywords: { $regex: new RegExp("^" + query + "$", "i") },
+    });
+    if (searchResult) {
+      return res.json(searchResult);
+    }
   }
-  if (searchResult.category.toLowerCase() === query.toLowerCase()) {
-    return res.json(searchResult);
-  }
-  return res.json(null);
+  // if (searchResult.category.toLowerCase() === query.toLowerCase()) {
+  //   return res.json(searchResult);
+  // }
+  return res.json(searchResult);
 
   // let query = {};
   // if (req.params.query) {
