@@ -10,7 +10,7 @@ import {
   deleteEntry,
 } from "../controllers/controller.js";
 import { signup, login, logout } from "../controllers/authController.js";
-import { auth } from "../middleware/auth.js";
+import auth from "../middleware/auth.js";
 
 // Create a new item
 router.post("/createItem", createItem);
