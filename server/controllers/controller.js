@@ -40,7 +40,7 @@ async function findItem(req, res) {
   // if (searchResult.category.toLowerCase() === query.toLowerCase()) {
   //   return res.json(searchResult);
   // }
-  return res.json(searchResult);
+  // return res.json(searchResult);
 
   // let query = {};
   // if (req.params.query) {

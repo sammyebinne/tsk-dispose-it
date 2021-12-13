@@ -10,6 +10,8 @@ import {
   deleteEntry,
 } from "../controllers/controller.js";
 
+import { signup, login, logout } from "../controllers/authController.js";
+
 // Create a new item
 router.post("/createItem", createItem);
 
@@ -28,6 +30,12 @@ router.post("/editItem", updateEntry);
 // add item to database
 router.post("/addItem", addEntry);
 
+// delete item from database
 router.post("/deleteItem", deleteEntry);
+
+// authentication routes
+router.post("/auth/signup", signup);
+router.post("/auth/login", login);
+router.get("/auth/logout", logout);
 
 export default router;
