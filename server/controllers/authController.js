@@ -29,17 +29,17 @@ async function signup(req, res) {
         .json({ message: "An account with this email already exists" });
     }
 
+    // hash password
+    const salt = await bcrypt.genSalt(10);
+    const passwordHash = await bcrypt.hash(password, salt);
+
     // create new user
     const newUser = new User({
       name,
       email,
-      password,
+      passwordHash,
       isAdmin: false,
     });
-
-    // hash password
-    const salt = await bcrypt.genSalt(10);
-    newUser.password = await bcrypt.hash(newUser.password, salt);
 
     // save user to db
     await newUser.save();
@@ -51,12 +51,15 @@ async function signup(req, res) {
       },
     };
 
-    jwt.sign(payload, process.env.JWT_SECRET, (err, token) => {
+    const token = jwt.sign(payload, process.env.JWT_SECRET, (err, token) => {
       if (err) throw err;
       res.json({ token });
     });
 
-    res.json({ message: "User created" });
+    // send the token in a HTTP-only cookie
+    res
+      .cookie("token", token, { httpOnly: true })
+      .send({ message: "User created" });
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
@@ -68,17 +71,21 @@ async function login(req, res) {
 
     // validate input
     if (!email || !password) {
-      return res.status(400).json({ message: "Please fill out all fields" });
+      return res
+        .status(400)
+        .json({ message: "Please enter all required fields" });
     }
 
     // check if user exists
     const user = await User.findOne({ email });
     if (!user) {
-      return res.status(400).json({ message: "User does not exist" });
+      return res
+        .status(400)
+        .json({ message: "Wrong email or password entered" });
     }
 
     // check if password is correct
-    const isMatch = await bcrypt.compare(password, user.password);
+    const isMatch = await bcrypt.compare(password, user.passwordHash);
     if (!isMatch) {
       return res
         .status(400)
@@ -92,12 +99,16 @@ async function login(req, res) {
       },
     };
 
-    jwt.sign(payload, process.env.JWT_SECRET, (err, token) => {
+    const token = jwt.sign(payload, process.env.JWT_SECRET, (err, token) => {
       if (err) throw err;
       res.json({ token });
     });
 
-    res.json({ message: "User logged in" });
+    res
+      .cookie("token", token, {
+        httpOnly: true,
+      })
+      .send({ message: "User logged in" });
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
@@ -105,7 +116,12 @@ async function login(req, res) {
 
 async function logout(req, res) {
   try {
-    res.json({ message: "User logged out" });
+    res
+      .cookie("token", "", {
+        httpOnly: true,
+        expires: new Date(Date.now()),
+      })
+      .send({ message: "User logged out" });
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
