@@ -37,6 +37,7 @@ async function findItem(req, res) {
       return res.json(searchResult);
     }
   }
+  return res.json(searchResult);
   // if (searchResult.category.toLowerCase() === query.toLowerCase()) {
   //   return res.json(searchResult);
   // }
