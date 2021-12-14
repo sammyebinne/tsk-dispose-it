@@ -21,37 +21,114 @@ async function listItems(req, res) {
 }
 
 async function findItem(req, res) {
-  // this will return exact category matches only. Case insensitive.
-
+  let result = [];
   let query = req.params.query;
-  let searchResults = [];
-  let exactCategory = await DisposeGuide.findOne({
+
+  console.log("query", query);
+  // get exact category match
+  let searchResult = await DisposeGuide.findOne({
     category: { $regex: new RegExp("^" + query + "$", "i") },
   });
-  if (exactCategory) {
-    searchResults.push(exactCategory);
-  };
-
-  let exactKeyword = await DisposeGuide.findOne({
+  if (searchResult) {
+    console.log("exact category match found", searchResult.category);
+    result.push(searchResult);
+    console.log(`added ${searchResult.category} to results`);
+  }
+  // get exact keyword match
+  searchResult = await DisposeGuide.findOne({
     keywords: { $regex: new RegExp("^" + query + "$", "i") },
   });
-  if (exactKeyword) {
-    searchResults.push(exactKeyword);
-  };
-
-  let partialCategory = await DisposeGuide.find({
-    category: { $regex: new RegExp("^" + query, "i") },
+  if (searchResult) {
+    console.log("exact keyword match found", searchResult.category);
+    // ensure no duplicates
+    if (result.length > 0) {
+      for (let r of result) {
+        if (r.id !== searchResult.id) {
+          result.push(searchResult);
+          console.log(`added ${searchResult.category} to results`);
+        }
+      }
+    } else {
+      result.push(searchResult);
+      console.log(`added ${searchResult.category} to results`);
+    }
+  }
+  // get approximate category matches
+  searchResult = await DisposeGuide.find({
+    category: { $regex: query, $options: "i" },
   });
-  if (partialCategory) {
-    searchResults.push(...partialCategory);
-  };
-
-  let partialKeyword = await DisposeGuide.find({
-    keywords: { $regex: new RegExp("^" + query, "i") },
+  if (searchResult.length > 0) {
+    console.log("approximate category matches found");
+    // ensure no duplicates added
+    if (result.length > 0) {
+      for (let item of searchResult) {
+        let shouldAdd = true;
+        for (let r of result) {
+          if (r.id === item.id) {
+            shouldAdd = false;
+          }
+        }
+        if (shouldAdd) {
+          result.push(item);
+        }
+      }
+    } else {
+      result = searchResult;
+    }
+  }
+  // get approximate keyword matches
+  searchResult = await DisposeGuide.find({
+    keywords: { $regex: query, $options: "i" },
   });
-  if (partialKeyword) {
-    searchResults.push(...partialKeyword);
-  };
+  if (searchResult) {
+    console.log("approximate keyword matches found");
+    // ensure no duplicates added
+    if (result.length > 0) {
+      for (let item of searchResult) {
+        let shouldAdd = true;
+        for (let r of result) {
+          if (r.id === item.id) {
+            shouldAdd = false;
+          }
+        }
+        if (shouldAdd) {
+          result.push(item);
+        }
+      }
+    } else {
+      result = searchResult;
+    }
+  }
+  return res.json(result);
+
+  // let searchResults = [];
+  // let exactCategory = await DisposeGuide.findOne({
+  //   category: { $regex: new RegExp("^" + query + "$", "i") },
+  // });
+  // if (exactCategory) {
+  //   searchResults.push(exactCategory);
+  // };
+
+  // let exactKeyword = await DisposeGuide.findOne({
+  //   keywords: { $regex: new RegExp("^" + query + "$", "i") },
+  // });
+  // if (exactKeyword) {
+  //   searchResults.push(exactKeyword);
+  // };
+
+  // let partialCategory = await DisposeGuide.find({
+  //   category: { $regex: new RegExp("^" + query, "i") },
+  // });
+  // if (partialCategory) {
+  //   searchResults.push(...partialCategory);
+  // };
+
+  // let partialKeyword = await DisposeGuide.find({
+  //   keywords: { $regex: new RegExp("^" + query, "i") },
+  // });
+  // if (partialKeyword) {
+  //   searchResults.push(...partialKeyword);
+  // };
 
   // if no exact category match, seaches keywords for exact matches and returns one
   // if (!searchResult) {
@@ -65,8 +142,8 @@ async function findItem(req, res) {
   // if (searchResult.category.toLowerCase() === query.toLowerCase()) {
   //   return res.json(searchResult);
   // }
-  return res.json(searchResults);
-  
+  // return res.json(searchResults);
+
   // let query = {};
   // if (req.params.query) {
   //   query.$or = [
