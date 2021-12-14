@@ -13,6 +13,7 @@ function App() {
   //   setWasteTypes(response);
   // });
   const [currentCategory, setCurrentCategory] = useState(null);
+  const [otherCategories, setOtherCategories] = useState(null);
   // is Edit button toggled?
   const [isEdit, setIsEdit] = useState(false);
   // is Add button toggled?
@@ -22,15 +23,20 @@ function App() {
   // search for something to dispose of
   const search = async (query) => {
     setCurrentCategory(null);
+    setOtherCategories(null);
     setIsEdit(false);
     let response = await fetch(`/findItem/${query}`);
     let searchResult = await response.json();
 
     if (searchResult) {
       console.log(searchResult);
-      setCurrentCategory(searchResult); // delete [0] when adding to database
+      setCurrentCategory(searchResult[0]); // delete [0] when adding to database
+      if (searchResult.length > 1) {
+        setOtherCategories(searchResult.slice(1));
+      }
     } else {
       setCurrentCategory(null);
+      setOtherCategories(null);
       alert("nothing found");
     }
   };
@@ -53,6 +59,16 @@ function App() {
       return newShowMoreInfo;
     });
   };
+  const onCategoryChange = () => {
+    if (otherCategories) {
+      let tempCurrentCategory = currentCategory;
+      setCurrentCategory(otherCategories[0]);
+      let tempOtherCategories = otherCategories.slice(1);
+      setOtherCategories([...tempOtherCategories, tempCurrentCategory]);
+    } else {
+      alert("No more results.");
+    }
+  };
 
   return (
     <div className="container">
@@ -70,6 +86,7 @@ function App() {
           wasteType={currentCategory}
           showMoreInfo={showMoreInfo}
           toggleShowMoreInfo={toggleShowMoreInfo}
+          onCategoryChange={onCategoryChange}
         />
       )}
 

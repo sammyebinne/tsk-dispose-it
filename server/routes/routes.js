@@ -31,7 +31,7 @@ router.post("/editItem", updateEntry);
 router.post("/addItem", addEntry);
 
 // delete item from database
-router.post("/deleteItem", auth, deleteEntry);
+router.post("/deleteItem", deleteEntry);
 
 // authentication routes
 router.post("/auth/signup", signup);

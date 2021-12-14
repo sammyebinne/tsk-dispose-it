@@ -21,27 +21,84 @@ async function listItems(req, res) {
 }
 
 async function findItem(req, res) {
-  // this will return exact category matches only. Case insensitive.
-
+  let result = [];
   let query = req.params.query;
   console.log("query", query);
+  // get exact category match
   let searchResult = await DisposeGuide.findOne({
     category: { $regex: new RegExp("^" + query + "$", "i") },
   });
-  // if no exact category match, seaches keywords for exact matches and returns one
-  if (!searchResult) {
-    searchResult = await DisposeGuide.findOne({
-      keywords: { $regex: new RegExp("^" + query + "$", "i") },
-    });
-    if (searchResult) {
-      return res.json(searchResult);
+  if (searchResult) {
+    console.log("exact category match found", searchResult.category);
+    result.push(searchResult);
+    console.log(`added ${searchResult.category} to results`);
+  }
+  // get exact keyword match
+  searchResult = await DisposeGuide.findOne({
+    keywords: { $regex: new RegExp("^" + query + "$", "i") },
+  });
+  if (searchResult) {
+    console.log("exact keyword match found", searchResult.category);
+    // ensure no duplicates
+    if (result.length > 0) {
+      for (let r of result) {
+        if (r.id !== searchResult.id) {
+          result.push(searchResult);
+          console.log(`added ${searchResult.category} to results`);
+        }
+      }
+    } else {
+      result.push(searchResult);
+      console.log(`added ${searchResult.category} to results`);
     }
   }
-  return res.json(searchResult);
-  // if (searchResult.category.toLowerCase() === query.toLowerCase()) {
-  //   return res.json(searchResult);
-  // }
-  // return res.json(searchResult);
+  // get approximate category matches
+  searchResult = await DisposeGuide.find({
+    category: { $regex: query, $options: "i" },
+  });
+  if (searchResult.length > 0) {
+    console.log("approximate category matches found");
+    // ensure no duplicates added
+    if (result.length > 0) {
+      for (let item of searchResult) {
+        let shouldAdd = true;
+        for (let r of result) {
+          if (r.id === item.id) {
+            shouldAdd = false;
+          }
+        }
+        if (shouldAdd) {
+          result.push(item);
+        }
+      }
+    } else {
+      result = searchResult;
+    }
+  }
+  // get approximate keyword matches
+  searchResult = await DisposeGuide.find({
+    keywords: { $regex: query, $options: "i" },
+  });
+  if (searchResult) {
+    console.log("approximate keyword matches found");
+    // ensure no duplicates added
+    if (result.length > 0) {
+      for (let item of searchResult) {
+        let shouldAdd = true;
+        for (let r of result) {
+          if (r.id === item.id) {
+            shouldAdd = false;
+          }
+        }
+        if (shouldAdd) {
+          result.push(item);
+        }
+      }
+    } else {
+      result = searchResult;
+    }
+  }
+  return res.json(result);
 
   // let query = {};
   // if (req.params.query) {
