@@ -28,12 +28,14 @@ function App() {
     let response = await fetch(`/findItem/${query}`);
     let searchResult = await response.json();
 
-    if (searchResult) {
+    if (searchResult.length > 0) {
       console.log(searchResult);
       setCurrentCategory(searchResult[0]); // delete [0] when adding to database
+
       if (searchResult.length > 1) {
         setOtherCategories(searchResult.slice(1));
       }
+
     } else {
       setCurrentCategory(null);
       setOtherCategories(null);
