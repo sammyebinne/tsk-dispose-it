@@ -26,9 +26,9 @@ function App() {
     let response = await fetch(`/findItem/${query}`);
     let searchResult = await response.json();
 
-    if (searchResult) {
+    if (searchResult.length > 0) {
       console.log(searchResult);
-      setCurrentCategory(searchResult); // delete [0] when adding to database
+      setCurrentCategory(searchResult[0]); // delete [0] when adding to database
     } else {
       setCurrentCategory(null);
       alert("nothing found");

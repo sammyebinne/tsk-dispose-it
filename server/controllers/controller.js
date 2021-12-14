@@ -24,24 +24,49 @@ async function findItem(req, res) {
   // this will return exact category matches only. Case insensitive.
 
   let query = req.params.query;
-  console.log("query", query);
-  let searchResult = await DisposeGuide.findOne({
+  let searchResults = [];
+  let exactCategory = await DisposeGuide.findOne({
     category: { $regex: new RegExp("^" + query + "$", "i") },
   });
+  if (exactCategory) {
+    searchResults.push(exactCategory);
+  };
+
+  let exactKeyword = await DisposeGuide.findOne({
+    keywords: { $regex: new RegExp("^" + query + "$", "i") },
+  });
+  if (exactKeyword) {
+    searchResults.push(exactKeyword);
+  };
+
+  let partialCategory = await DisposeGuide.find({
+    category: { $regex: new RegExp("^" + query, "i") },
+  });
+  if (partialCategory) {
+    searchResults.push(...partialCategory);
+  };
+
+  let partialKeyword = await DisposeGuide.find({
+    keywords: { $regex: new RegExp("^" + query, "i") },
+  });
+  if (partialKeyword) {
+    searchResults.push(...partialKeyword);
+  };
+
   // if no exact category match, seaches keywords for exact matches and returns one
-  if (!searchResult) {
-    searchResult = await DisposeGuide.findOne({
-      keywords: { $regex: new RegExp("^" + query + "$", "i") },
-    });
-    if (searchResult) {
-      return res.json(searchResult);
-    }
-  }
+  // if (!searchResult) {
+  //   searchResult = await DisposeGuide.findOne({
+  //     keywords: { $regex: new RegExp("^" + query + "$", "i") },
+  //   });
+  //   if (searchResult) {
+  //     return res.json([searchResult]);
+  //   }
+  // }
   // if (searchResult.category.toLowerCase() === query.toLowerCase()) {
   //   return res.json(searchResult);
   // }
-  // return res.json(searchResult);
-
+  return res.json(searchResults);
+  
   // let query = {};
   // if (req.params.query) {
   //   query.$or = [
