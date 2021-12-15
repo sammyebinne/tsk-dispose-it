@@ -30,7 +30,7 @@ function App() {
 
     if (searchResult.length > 0) {
       console.log(searchResult);
-      setCurrentCategory(searchResult[0]); // delete [0] when adding to database
+      setCurrentCategory(searchResult[0]);
 
       if (searchResult.length > 1) {
         setOtherCategories(searchResult.slice(1));
@@ -86,6 +86,7 @@ function App() {
         isEdit={isEdit}
         setCurrentCategory={setCurrentCategory}
         currentCategory={currentCategory}
+        setOtherCategories={setOtherCategories}
       />
       {currentCategory && !isEdit && !isAdd && (
         <Info

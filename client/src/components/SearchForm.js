@@ -1,6 +1,11 @@
 import { useState, useEffect } from "react";
 
-const SearchForm = ({ onSearch, setCurrentCategory, currentCategory }) => {
+const SearchForm = ({
+  onSearch,
+  setCurrentCategory,
+  currentCategory,
+  setOtherCategories,
+}) => {
   const [text, setText] = useState("");
   const [suggestions, setSuggestions] = useState([]);
   const onSubmit = async (e) => {
@@ -26,7 +31,11 @@ const SearchForm = ({ onSearch, setCurrentCategory, currentCategory }) => {
       setSuggestions(response);
     }
     fuzzySearch();
-    console.log(suggestions);
+    if (suggestions.length > 1) {
+      setOtherCategories(suggestions.slice(1));
+    } else {
+      setOtherCategories([]);
+    }
   }, [text]);
 
   return (
@@ -52,6 +61,7 @@ const SearchForm = ({ onSearch, setCurrentCategory, currentCategory }) => {
               <li
                 key={suggestion.id}
                 onClick={() => setCurrentCategory(suggestion)}
+                className="task"
               >
                 {suggestion.category}
               </li>
