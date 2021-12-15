@@ -33,6 +33,10 @@ router.post("/addItem", addEntry);
 // delete item from database
 router.post("/deleteItem", deleteEntry);
 
+// fuzzy search
+router.get("/fuzzySearch/:query", findItem);
+router.get("/fuzzySearch", () => []);
+
 // authentication routes
 router.post("/auth/signup", signup);
 router.post("/auth/login", login);
