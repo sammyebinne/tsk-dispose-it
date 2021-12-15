@@ -2,6 +2,8 @@ const Info = ({
   wasteType,
   showMoreInfo,
   toggleShowMoreInfo,
+  toggleShowKeywords,
+  showKeywords,
   onCategoryChange,
 }) => {
   const getIcon = (binNumber) => {
@@ -80,22 +82,42 @@ const Info = ({
       {/* if heading1 is different from category, show it. Otherwise, hide it. */}
       {heading1.slice(1) !== category && heading1 && <h3>{heading1}</h3>}
       <p>{condition1}</p>
-      <img src={getIcon(1)} />
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          marginBottom: 20,
+          marginTop: 20,
+        }}
+      >
+        <img src={getIcon(1)} />
+      </div>
       <h3>{heading2 && heading2}</h3>
       {<p>{body2 && condition2}</p>}
-      {body2 && <img src={getIcon(2)} />}
+      {body2 && (
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            marginBottom: 20,
+          }}
+        >
+          <img src={getIcon(2)} />
+        </div>
+      )}
       {moreInfo[0] && (
         <h4 onClick={toggleShowMoreInfo} style={{ cursor: "pointer" }}>
-          {showMoreInfo
-            ? "More info: (click to hide)"
-            : "More info: (click to show)"}
+          {showMoreInfo ? "More info" : "(click to show more info)"}
         </h4>
       )}
       {moreInfo[0] && showMoreInfo && moreInfoList}
       <br />
-      {category && <h4>Included:</h4>}
-      {/* Uncomment this when adding to database. It allows you to see keys for each entry. */}
       {category && (
+        <h4 onClick={toggleShowKeywords} style={{ cursor: "pointer" }}>
+          {showKeywords ? "Keywords" : "(click to show keywords)"}
+        </h4>
+      )}
+      {category && showKeywords && (
         <p style={{ fontSize: 10 }}>{wasteType.keywords.join("; ")}</p>
       )}
       <br />

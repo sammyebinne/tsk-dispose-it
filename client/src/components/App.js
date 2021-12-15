@@ -21,6 +21,8 @@ function App() {
   const [isAdd, setIsAdd] = useState(false);
   // show or hide more info
   const [showMoreInfo, setShowMoreInfo] = useState(true);
+  // show or hide keywords
+  const [showKeywords, setShowKeywords] = useState(false);
   // search for something to dispose of
   const search = async (query) => {
     setCurrentCategory(null);
@@ -55,6 +57,13 @@ function App() {
       let newShowMoreInfo = !old;
       console.log("showMoreInfo", newShowMoreInfo);
       return newShowMoreInfo;
+    });
+  };
+  const toggleShowKeywords = () => {
+    setShowKeywords((old) => {
+      let newShowKeywords = !old;
+      console.log("showKeywords", newShowKeywords);
+      return newShowKeywords;
     });
   };
   const onCategoryChange = () => {
@@ -98,6 +107,8 @@ function App() {
           wasteType={currentCategory}
           showMoreInfo={showMoreInfo}
           toggleShowMoreInfo={toggleShowMoreInfo}
+          toggleShowKeywords={toggleShowKeywords}
+          showKeywords={showKeywords}
           onCategoryChange={onCategoryChange}
         />
       )}
