@@ -1,13 +1,10 @@
-import { useState, useEffect } from "react";
-
 const SearchForm = ({
-  onSearch,
+  text,
   setCurrentCategory,
   currentCategory,
-  setOtherCategories,
+  setText,
+  suggestions,
 }) => {
-  const [text, setText] = useState("");
-  const [suggestions, setSuggestions] = useState([]);
   const onSubmit = async (e) => {
     e.preventDefault(); // prevents page from refreshing
 
@@ -16,27 +13,8 @@ const SearchForm = ({
       alert("Please enter something into the search bar");
       return;
     }
-    await onSearch(text);
-    setText("");
+    setCurrentCategory(suggestions[0]);
   };
-
-  useEffect(() => {
-    async function fuzzySearch() {
-      if (text.length < 3) {
-        return setSuggestions([]);
-      }
-      setCurrentCategory(null);
-      let response = await fetch(`/fuzzySearch/${text}`);
-      response = await response.json();
-      setSuggestions(response);
-    }
-    fuzzySearch();
-    if (suggestions.length > 1) {
-      setOtherCategories(suggestions.slice(1));
-    } else {
-      setOtherCategories([]);
-    }
-  }, [text]);
 
   return (
     <form onSubmit={onSubmit}>

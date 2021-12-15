@@ -1,7 +1,7 @@
 import Header from "./Header";
 import SearchForm from "./SearchForm";
 import Info from "./Info";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "../styles/old/App.css";
 import EditForm from "./EditForm";
 import AddForm from "./AddForm";
@@ -13,7 +13,8 @@ function App() {
   //   setWasteTypes(response);
   // });
   const [currentCategory, setCurrentCategory] = useState(null);
-  const [otherCategories, setOtherCategories] = useState(null);
+  const [text, setText] = useState("");
+  const [suggestions, setSuggestions] = useState([]);
   // is Edit button toggled?
   const [isEdit, setIsEdit] = useState(false);
   // is Add button toggled?
@@ -23,7 +24,7 @@ function App() {
   // search for something to dispose of
   const search = async (query) => {
     setCurrentCategory(null);
-    setOtherCategories(null);
+    // setOtherCategories(null);
     setIsEdit(false);
     let response = await fetch(`/findItem/${query}`);
     let searchResult = await response.json();
@@ -31,13 +32,9 @@ function App() {
     if (searchResult.length > 0) {
       console.log(searchResult);
       setCurrentCategory(searchResult[0]);
-
-      if (searchResult.length > 1) {
-        setOtherCategories(searchResult.slice(1));
-      }
     } else {
       setCurrentCategory(null);
-      setOtherCategories(null);
+      setSuggestions(null);
       alert("nothing found");
     }
   };
@@ -61,15 +58,21 @@ function App() {
     });
   };
   const onCategoryChange = () => {
-    if (otherCategories) {
-      let tempCurrentCategory = currentCategory;
-      setCurrentCategory(otherCategories[0]);
-      let tempOtherCategories = otherCategories.slice(1);
-      setOtherCategories([...tempOtherCategories, tempCurrentCategory]);
-    } else {
-      alert("No more results.");
-    }
+    setCurrentCategory(null);
   };
+
+  useEffect(() => {
+    async function fuzzySearch() {
+      if (text.length < 3) {
+        return setSuggestions([]);
+      }
+      setCurrentCategory(null);
+      let response = await fetch(`/fuzzySearch/${text}`);
+      response = await response.json();
+      setSuggestions(response);
+    }
+    fuzzySearch();
+  }, [text]);
 
   return (
     <div className="container">
@@ -82,11 +85,13 @@ function App() {
         search={search}
       />
       <SearchForm
-        onSearch={search}
+        text={text}
+        setText={setText}
         isEdit={isEdit}
         setCurrentCategory={setCurrentCategory}
         currentCategory={currentCategory}
-        setOtherCategories={setOtherCategories}
+        setSuggestions={setSuggestions}
+        suggestions={suggestions}
       />
       {currentCategory && !isEdit && !isAdd && (
         <Info
