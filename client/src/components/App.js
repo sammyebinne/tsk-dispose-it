@@ -35,7 +35,6 @@ function App() {
       if (searchResult.length > 1) {
         setOtherCategories(searchResult.slice(1));
       }
-
     } else {
       setCurrentCategory(null);
       setOtherCategories(null);
@@ -82,7 +81,12 @@ function App() {
         isAdd={isAdd}
         search={search}
       />
-      <SearchForm onSearch={search} isEdit={isEdit} />
+      <SearchForm
+        onSearch={search}
+        isEdit={isEdit}
+        setCurrentCategory={setCurrentCategory}
+        currentCategory={currentCategory}
+      />
       {currentCategory && !isEdit && !isAdd && (
         <Info
           wasteType={currentCategory}

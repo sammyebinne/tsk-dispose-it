@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-const SearchForm = ({ onSearch }) => {
+const SearchForm = ({ onSearch, setCurrentCategory, currentCategory }) => {
   const [text, setText] = useState("");
+  const [suggestions, setSuggestions] = useState([]);
   const onSubmit = async (e) => {
     e.preventDefault(); // prevents page from refreshing
 
@@ -13,6 +14,20 @@ const SearchForm = ({ onSearch }) => {
     await onSearch(text);
     setText("");
   };
+
+  useEffect(() => {
+    async function fuzzySearch() {
+      if (text.length < 3) {
+        return setSuggestions([]);
+      }
+      setCurrentCategory(null);
+      let response = await fetch(`/fuzzySearch/${text}`);
+      response = await response.json();
+      setSuggestions(response);
+    }
+    fuzzySearch();
+    console.log(suggestions);
+  }, [text]);
 
   return (
     <form onSubmit={onSubmit}>
@@ -30,6 +45,20 @@ const SearchForm = ({ onSearch }) => {
         onChange={(e) => setText(e.target.value)}
       />
       <input type="submit" className="btn btn-block" />
+      {!currentCategory && (
+        <ul>
+          {suggestions.map((suggestion) => {
+            return (
+              <li
+                key={suggestion.id}
+                onClick={() => setCurrentCategory(suggestion)}
+              >
+                {suggestion.category}
+              </li>
+            );
+          })}
+        </ul>
+      )}
     </form>
   );
 };
