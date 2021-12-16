@@ -80,7 +80,7 @@ async function findItem(req, res) {
   searchResult = await DisposeGuide.find({
     keywords: { $regex: query, $options: "i" },
   });
-  if (searchResult) {
+  if (searchResult.length > 0) {
     console.log("approximate keyword matches found");
     // ensure no duplicates added
     if (result.length > 0) {
