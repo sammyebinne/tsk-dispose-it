@@ -199,9 +199,8 @@ async function addEntry(req, res) {
 
 async function deleteEntry(req, res) {
   try {
-    let deletedEntry = await DisposeGuide.findOneAndDelete({
-      category: req.body.category,
-    });
+    console.log(req.body.id);
+    let deletedEntry = await DisposeGuide.findByIdAndDelete(req.body.id);
     console.log(`deleted item: ${deletedEntry}`);
     res.json(deletedEntry);
   } catch (err) {
