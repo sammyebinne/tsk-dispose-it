@@ -115,7 +115,7 @@ const EditForm = ({ currentCategory, setIsEdit, search }) => {
       return search(addedEntry.category);
     }
     // this is a workaround for updating the page immediately to show changes.
-    search(updatedEntry.category);
+    await search(updatedEntry.category);
   };
   return (
     <form onSubmit={saveChanges} className="form-control">

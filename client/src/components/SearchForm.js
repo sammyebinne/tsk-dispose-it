@@ -4,6 +4,7 @@ const SearchForm = ({
   currentCategory,
   setText,
   suggestions,
+  isAdd,
 }) => {
   const onSubmit = async (e) => {
     e.preventDefault(); // prevents page from refreshing
@@ -32,7 +33,7 @@ const SearchForm = ({
         onChange={(e) => setText(e.target.value)}
       />
       <input type="submit" className="btn btn-block" />
-      {!currentCategory && (
+      {!currentCategory && !isAdd && (
         <ul>
           {suggestions.map((suggestion) => {
             return (

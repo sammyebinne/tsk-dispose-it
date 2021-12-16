@@ -101,6 +101,7 @@ function App() {
         currentCategory={currentCategory}
         setSuggestions={setSuggestions}
         suggestions={suggestions}
+        isAdd={isAdd}
       />
       {currentCategory && !isEdit && !isAdd && (
         <Info

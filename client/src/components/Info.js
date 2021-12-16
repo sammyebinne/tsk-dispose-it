@@ -105,18 +105,34 @@ const Info = ({
           <img src={getIcon(2)} />
         </div>
       )}
-      {moreInfo[0] && (
-        <h4 onClick={toggleShowMoreInfo} style={{ cursor: "pointer" }}>
-          {showMoreInfo ? "More info" : "(click to show more info)"}
-        </h4>
-      )}
+      {moreInfo[0] &&
+        (showMoreInfo ? (
+          <h4 onClick={toggleShowMoreInfo} style={{ cursor: "pointer" }}>
+            More info
+          </h4>
+        ) : (
+          <p
+            onClick={toggleShowMoreInfo}
+            style={{ cursor: "pointer", fontSize: 8 }}
+          >
+            (show more info)
+          </p>
+        ))}
       {moreInfo[0] && showMoreInfo && moreInfoList}
       <br />
-      {category && (
-        <h4 onClick={toggleShowKeywords} style={{ cursor: "pointer" }}>
-          {showKeywords ? "Keywords" : "(click to show keywords)"}
-        </h4>
-      )}
+      {category &&
+        (showKeywords ? (
+          <h4 onClick={toggleShowKeywords} style={{ cursor: "pointer" }}>
+            Keywords
+          </h4>
+        ) : (
+          <p
+            onClick={toggleShowKeywords}
+            style={{ cursor: "pointer", fontSize: 8 }}
+          >
+            (show keywords)
+          </p>
+        ))}
       {category && showKeywords && (
         <p style={{ fontSize: 10 }}>{wasteType.keywords.join("; ")}</p>
       )}
