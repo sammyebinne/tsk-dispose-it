@@ -80,7 +80,7 @@ async function findItem(req, res) {
   searchResult = await DisposeGuide.find({
     keywords: { $regex: query, $options: "i" },
   });
-  if (searchResult) {
+  if (searchResult.length > 0) {
     console.log("approximate keyword matches found");
     // ensure no duplicates added
     if (result.length > 0) {
@@ -199,9 +199,8 @@ async function addEntry(req, res) {
 
 async function deleteEntry(req, res) {
   try {
-    let deletedEntry = await DisposeGuide.findOneAndDelete({
-      category: req.body.category,
-    });
+    console.log(req.body.id);
+    let deletedEntry = await DisposeGuide.findByIdAndDelete(req.body.id);
     console.log(`deleted item: ${deletedEntry}`);
     res.json(deletedEntry);
   } catch (err) {

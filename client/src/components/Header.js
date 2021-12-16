@@ -16,7 +16,7 @@ const Header = ({
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          category: currentCategory.category,
+          id: currentCategory._id,
         }),
       });
       deletedEntry = await deletedEntry.json();

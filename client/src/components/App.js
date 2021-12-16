@@ -26,7 +26,6 @@ function App() {
   // search for something to dispose of
   const search = async (query) => {
     setCurrentCategory(null);
-    // setOtherCategories(null);
     setIsEdit(false);
     let response = await fetch(`/findItem/${query}`);
     let searchResult = await response.json();
@@ -36,7 +35,7 @@ function App() {
       setCurrentCategory(searchResult[0]);
     } else {
       setCurrentCategory(null);
-      setSuggestions(null);
+      setSuggestions([]);
       alert("nothing found");
     }
   };
@@ -72,13 +71,13 @@ function App() {
 
   useEffect(() => {
     async function fuzzySearch() {
-      if (text.length < 3) {
-        return setSuggestions([]);
+      if (text.length > 2) {
+        setCurrentCategory(null);
+        let response = await fetch(`/fuzzySearch/${text}`);
+        response = await response.json();
+        return setSuggestions(response);
       }
-      setCurrentCategory(null);
-      let response = await fetch(`/fuzzySearch/${text}`);
-      response = await response.json();
-      setSuggestions(response);
+      return setSuggestions([]);
     }
     fuzzySearch();
   }, [text]);
@@ -101,6 +100,7 @@ function App() {
         currentCategory={currentCategory}
         setSuggestions={setSuggestions}
         suggestions={suggestions}
+        isAdd={isAdd}
       />
       {currentCategory && !isEdit && !isAdd && (
         <Info
