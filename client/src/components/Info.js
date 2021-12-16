@@ -1,4 +1,11 @@
-const Info = ({ wasteType, showMoreInfo, toggleShowMoreInfo }) => {
+const Info = ({
+  wasteType,
+  showMoreInfo,
+  toggleShowMoreInfo,
+  toggleShowKeywords,
+  showKeywords,
+  onCategoryChange,
+}) => {
   const getIcon = (binNumber) => {
     let bin;
     if (binNumber === 1) {
@@ -8,7 +15,7 @@ const Info = ({ wasteType, showMoreInfo, toggleShowMoreInfo }) => {
     }
     switch (bin) {
       case "Compost":
-        return "https://p.kindpng.com/picc/s/227-2279211_scraps-to-savings-compost-bin-icon-png-transparent.png";
+        return "https://media.istockphoto.com/vectors/compost-bin-icon-on-transparent-background-vector-id1284317590?k=20&m=1284317590&s=170667a&w=0&h=ensQTK-xSPKEtJtFb7ZPgg37kFEQlAIbJ_VqS8Sl4ts=";
       case "Recycling":
         return "https://image.shutterstock.com/image-vector/blue-recycle-bin-icon-vector-260nw-220733944.jpg";
       case "Garbage":
@@ -68,24 +75,55 @@ const Info = ({ wasteType, showMoreInfo, toggleShowMoreInfo }) => {
 
   return (
     <div>
-      <h2>{category}</h2>
+      <div className="header">
+        <h2>{category}</h2>
+        <img src={image} />
+      </div>
       {/* if heading1 is different from category, show it. Otherwise, hide it. */}
       {heading1.slice(1) !== category && heading1 && <h3>{heading1}</h3>}
       <p>{condition1}</p>
-      <img src={getIcon(1)} />
-      <img src={image} />
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          marginBottom: 20,
+          marginTop: 20,
+        }}
+      >
+        <img src={getIcon(1)} />
+      </div>
       <h3>{heading2 && heading2}</h3>
       {<p>{body2 && condition2}</p>}
-      {body2 && <img src={getIcon(2)} />}
+      {body2 && (
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            marginBottom: 20,
+          }}
+        >
+          <img src={getIcon(2)} />
+        </div>
+      )}
       {moreInfo[0] && (
         <h4 onClick={toggleShowMoreInfo} style={{ cursor: "pointer" }}>
-          More info: (click to show/hide)
+          {showMoreInfo ? "More info" : "(click to show more info)"}
         </h4>
       )}
       {moreInfo[0] && showMoreInfo && moreInfoList}
-      {category && <h4>Keywords:</h4>}
-      {/* Uncomment this when adding to database. It allows you to see keys for each entry. */}
-      {category && <p>{wasteType.keywords.join("; ")}</p>}
+      <br />
+      {category && (
+        <h4 onClick={toggleShowKeywords} style={{ cursor: "pointer" }}>
+          {showKeywords ? "Keywords" : "(click to show keywords)"}
+        </h4>
+      )}
+      {category && showKeywords && (
+        <p style={{ fontSize: 10 }}>{wasteType.keywords.join("; ")}</p>
+      )}
+      <br />
+      <button onClick={onCategoryChange} className="btn btn-block">
+        Not what you were looking for?
+      </button>
     </div>
   );
 };
