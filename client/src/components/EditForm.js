@@ -107,12 +107,12 @@ const EditForm = ({ currentCategory, setIsEdit, search }) => {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          category: currentCategory.category,
+          id: currentCategory._id,
         }),
       });
       deletedEntry = await deletedEntry.json();
       console.log("deleted entry:", deletedEntry);
-      return search(addedEntry.category);
+      return await search(addedEntry.category);
     }
     // this is a workaround for updating the page immediately to show changes.
     await search(updatedEntry.category);
