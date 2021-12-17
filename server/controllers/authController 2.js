@@ -1,5 +1,5 @@
 import User from "../models/user.js";
-import bcrypt from "bcryptjs";
+import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 
 async function signup(req, res) {
@@ -34,24 +34,33 @@ async function signup(req, res) {
     const passwordHash = await bcrypt.hash(password, salt);
 
     // create new user
-    let newUser = new User({
+    const newUser = new User({
       name,
       email,
       passwordHash,
-      isAdmin: true,
+      isAdmin: false,
     });
 
     // save user to db
-    newUser = await newUser.save();
+    await newUser.save();
 
     // return jsonwebtoken
-    const token = jwt.sign({ user: newUser._id }, process.env.JWT_SECRET);
+    const payload = {
+      user: {
+        id: newUser._id,
+      },
+    };
+
+    const token = jwt.sign(payload, process.env.JWT_SECRET, (err, token) => {
+      if (err) throw err;
+      res.json({ token });
+    });
+
     // send the token in a HTTP-only cookie
     res
       .cookie("token", token, { httpOnly: true })
       .send({ message: "User created" });
   } catch (err) {
-    console.error(err);
     res.status(500).json({ message: err.message });
   }
 }
@@ -84,7 +93,16 @@ async function login(req, res) {
     }
 
     // return jsonwebtoken
-    const token = jwt.sign({ user: user._id }, process.env.JWT_SECRET);
+    const payload = {
+      user: {
+        id: user._id,
+      },
+    };
+
+    const token = jwt.sign(payload, process.env.JWT_SECRET, (err, token) => {
+      if (err) throw err;
+      res.json({ token });
+    });
 
     res
       .cookie("token", token, {
