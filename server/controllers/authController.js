@@ -109,4 +109,16 @@ async function logout(req, res) {
   }
 }
 
-export { signup, login, logout };
+function isLoggedIn(req, res) {
+  try {
+    const token = req.cookies.token;
+    if (!token) return res.json(false);
+
+    jwt.verify(token, process.env.JWT_SECRET);
+    res.send(true);
+  } catch (error) {
+    res.json(false);
+  }
+}
+
+export { signup, login, logout, isLoggedIn };

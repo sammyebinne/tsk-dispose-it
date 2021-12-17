@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LandingPage from "./setup-pages/LandingPage";
 import App from "./components/App";
 
-function RoutePage() {
+function RouterPage() {
   return (
     <Router>
       <Routes>
@@ -15,4 +15,4 @@ function RoutePage() {
   );
 }
 
-export default RoutePage;
+export default RouterPage;

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Login from "./Login";
 import Signup from "./Signup";
-import "../styles/new/App.css";
+// import "../styles/new/App.css";
 
 function LandingPage() {
   const [login, setLogin] = useState(false);
