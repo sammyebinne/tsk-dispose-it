@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Login from "./Login";
 import Signup from "./Signup";
+import "../styles/new/App.css";
 
 function LandingPage() {
   const [login, setLogin] = useState(false);
@@ -24,8 +25,8 @@ function LandingPage() {
         </div>
       )}
       <div className="access-forms">
-        {login && <Login />}
-        {signup && <Signup />}
+        {login && <Login setLogin={setLogin} setSignup={setSignup} />}
+        {signup && <Signup setLogin={setLogin} setSignup={setSignup} />}
       </div>
     </div>
   );

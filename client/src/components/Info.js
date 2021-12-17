@@ -77,7 +77,7 @@ const Info = ({
     <div>
       <div className="header">
         <h2>{category}</h2>
-        <img src={image} />
+        <img src={image} alt=""/>
       </div>
       {/* if heading1 is different from category, show it. Otherwise, hide it. */}
       {heading1.slice(1) !== category && heading1 && <h3>{heading1}</h3>}
@@ -90,7 +90,7 @@ const Info = ({
           marginTop: 20,
         }}
       >
-        <img src={getIcon(1)} />
+        <img src={getIcon(1)} alt=""/>
       </div>
       <h3>{heading2 && heading2}</h3>
       {<p>{body2 && condition2}</p>}
@@ -102,7 +102,7 @@ const Info = ({
             marginBottom: 20,
           }}
         >
-          <img src={getIcon(2)} />
+          <img src={getIcon(2)} alt=""/>
         </div>
       )}
       {moreInfo[0] && (
