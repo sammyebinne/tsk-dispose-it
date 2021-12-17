@@ -24,11 +24,11 @@ $small-font: 0.9rem;
 $big-font: 2rem;
 
 body {
-  background: $base-color-light;
+  background: white;
   font-family: "Raleway", sans-serif;
 }
 
-.container {
+.container-landing {
   background: url("../../assets/images/banner.jpg") no-repeat center center;
   height: 100vh;
   width: 100vw;
@@ -49,6 +49,14 @@ body {
   align-items: center;
   justify-content: center;
 
+  .landing-text {
+    margin: 50px;
+  }
+
+  .landing-small {
+    margin-top: 30px;
+  }
+
   .landing-page__content {
     color: $base-color-dark;
     display: flex;
@@ -59,7 +67,7 @@ body {
     margin: 20% auto;
     width: 40%;
     background-color: $base-color-transparent;
-    border-radius: 50%;
+    border-radius: 20px;
 
     .landing-btn {
       button {

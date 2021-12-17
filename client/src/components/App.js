@@ -2,9 +2,9 @@ import Header from "./Header";
 import SearchForm from "./SearchForm";
 import Info from "./Info";
 import { useState, useEffect } from "react";
-import "../styles/old/App.css";
 import EditForm from "./EditForm";
 import AddForm from "./AddForm";
+import "../styles/old/App.css";
 
 function App() {
   // const [wasteTypes, setWasteTypes] = useState(async () => {
@@ -12,6 +12,7 @@ function App() {
   //   response = await response.json();
   //   setWasteTypes(response);
   // });
+
   const [currentCategory, setCurrentCategory] = useState(null);
   const [text, setText] = useState("");
   const [suggestions, setSuggestions] = useState([]);
