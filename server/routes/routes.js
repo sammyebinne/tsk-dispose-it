@@ -9,7 +9,12 @@ import {
   addEntry,
   deleteEntry,
 } from "../controllers/controller.js";
-import { signup, login, logout } from "../controllers/authController.js";
+import {
+  signup,
+  login,
+  logout,
+  isLoggedIn,
+} from "../controllers/authController.js";
 import auth from "../middleware/auth.js";
 
 // Create a new item
@@ -41,5 +46,7 @@ router.get("/fuzzySearch", () => []);
 router.post("/auth/signup", signup);
 router.post("/auth/login", login);
 router.get("/auth/logout", logout);
+// check if logged in
+router.get("/auth/loggedin", isLoggedIn);
 
 export default router;

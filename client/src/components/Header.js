@@ -1,3 +1,8 @@
+import axios from "axios";
+import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
+import AuthContext from "../context/AuthContext";
+
 const Header = ({
   currentCategory,
   toggleEdit,
@@ -6,6 +11,11 @@ const Header = ({
   isAdd,
   search,
 }) => {
+  const navigate = useNavigate();
+  //AuthContext to check if user is logged in
+  const { isLoggedIn, setLoggedIn } = useContext(AuthContext);
+  console.log("isLoggedIn", isLoggedIn);
+
   const deleteEntry = async () => {
     if (
       window.confirm(
@@ -27,11 +37,22 @@ const Header = ({
       console.log("item not deleted");
     }
   };
+
+  const logout = async () => {
+    if (window.confirm("Are you sure you want to log out?")) {
+      await axios.get("/auth/logout");
+      setLoggedIn();
+      navigate("/", { replace: true });
+    }
+  };
+
   return (
     <div className="header">
       <h1>Dispose It!</h1>
+      <br />
+
       {/* edit button only shows up when a waste type is found and when isAdd isn't toggled */}
-      {currentCategory && !isAdd && (
+      {isLoggedIn && currentCategory && !isAdd && (
         <button
           onClick={toggleEdit}
           type="button"
@@ -42,7 +63,7 @@ const Header = ({
         </button>
       )}
       {/* Add button disappears when Edit button is toggled */}
-      {!isEdit && (
+      {isLoggedIn && !isEdit && (
         <button
           onClick={toggleAdd}
           type="button"
@@ -52,7 +73,7 @@ const Header = ({
           {isAdd ? "Cancel" : "Add"}
         </button>
       )}
-      {currentCategory && !isEdit && !isAdd && (
+      {isLoggedIn && currentCategory && !isEdit && !isAdd && (
         <button
           onClick={deleteEntry}
           type="button"
@@ -62,6 +83,13 @@ const Header = ({
           Delete
         </button>
       )}
+      <div>
+        {isLoggedIn && !currentCategory && (
+          <button type="button" className="btn" onClick={logout}>
+            Logout
+          </button>
+        )}
+      </div>
     </div>
   );
 };

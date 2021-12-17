@@ -1,3 +1,7 @@
+import { Link } from "react-router-dom";
+import { useContext } from "react";
+import AuthContext from "../context/AuthContext";
+
 const Info = ({
   wasteType,
   showMoreInfo,
@@ -6,6 +10,8 @@ const Info = ({
   showKeywords,
   onCategoryChange,
 }) => {
+  const { isLoggedIn } = useContext(AuthContext);
+
   const getIcon = (binNumber) => {
     let bin;
     if (binNumber === 1) {
@@ -77,7 +83,7 @@ const Info = ({
     <div>
       <div className="header">
         <h2>{category}</h2>
-        <img src={image} />
+        <img src={image} alt="" />
       </div>
       {/* if heading1 is different from category, show it. Otherwise, hide it. */}
       {heading1.slice(1) !== category && heading1 && <h3>{heading1}</h3>}
@@ -90,7 +96,7 @@ const Info = ({
           marginTop: 20,
         }}
       >
-        <img src={getIcon(1)} />
+        <img src={getIcon(1)} alt="" />
       </div>
       <h3>{heading2 && heading2}</h3>
       {<p>{body2 && condition2}</p>}
@@ -102,7 +108,7 @@ const Info = ({
             marginBottom: 20,
           }}
         >
-          <img src={getIcon(2)} />
+          <img src={getIcon(2)} alt="" />
         </div>
       )}
       {moreInfo[0] &&
@@ -140,6 +146,14 @@ const Info = ({
       <button onClick={onCategoryChange} className="btn btn-block">
         Not what you were looking for?
       </button>
+      <div>
+        {!isLoggedIn && (
+          <small>
+            Not satisfied with the results?{" "}
+            <Link to={"/"}>Signup or Login</Link> to contribute to this guide.
+          </small>
+        )}
+      </div>
     </div>
   );
 };
